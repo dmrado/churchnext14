@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PostsPage from "../../components/PostsPage";
+import React from "react";
 
 export const metadata = {
     title: 'ProjectName | Blog',
@@ -12,9 +13,10 @@ const getPosts = async () => {
 
 const Blog = async () => {
     const posts = await getPosts()
-    console.log(posts)
+    // console.log(posts)
     return (
         <>
+            <h1>Список постов</h1>
 
             {/*    <ul>*/}
             {/*        {posts.map(post => (*/}

@@ -11,13 +11,11 @@ const PostsPage = ({
                        // setOpenModalPicture
                    }) => {
     const {userId, id, title, body } = item
-    console.log('link', link)
-    console.log('item', item)
+    console.log('link', link, 'item', item)
 
     return (<>
-                <h1>Список постов</h1>
-                <ul className="cards-list">
-                    <li className="card cards-list__item">
+                <div className="cards-list">
+                    <div className="card cards-list__item">
                         <img className="card__img" src="img/Binno.jpg" alt="Pic" />
                         <div className="card__body">
                             <div className="card__price-rating">
@@ -38,11 +36,11 @@ const PostsPage = ({
                             <button className="btn"><Link href={link}>Читать</Link></button>
 
                             <p className="card__description text">
-                                {body}
+                              <b>Текст поста: </b> {body}
                             </p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
         </>
     );
 };

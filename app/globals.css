@@ -72,7 +72,7 @@ body {
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 3px 3px 5px #8A8A8AFF;
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
 }
 
 /*.btn:active {*/
@@ -84,9 +84,7 @@ body {
   background-color: dodgerblue;
   color: #fff;
   font-size: 15px;
-  transform: scale(1);
-  box-shadow: none;
-  outline: 1px solid #0e0f16;
+  box-shadow: 3px 3px 5px #8A8A8AFF inset;
 }
 
 /*модификатор желтого цвета*/
