@@ -11,7 +11,7 @@ const getPosts = async () => {
     return res.json()
 }
 
-const Blog = async () => {
+const Posts = async () => {
     const posts = await getPosts()
     // console.log(posts)
     return (
@@ -48,4 +48,4 @@ const Blog = async () => {
 }
 
 
-export default Blog;
+export default Posts;

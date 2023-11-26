@@ -11,7 +11,7 @@ const PostsPage = ({
                        // setOpenModalPicture
                    }) => {
     const {userId, id, title, body } = item
-    console.log('link', link, 'item', item)
+    // console.log('link', link, 'item', item)
 
     return (<>
                 <div className="cards-list">
