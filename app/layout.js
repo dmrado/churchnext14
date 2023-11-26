@@ -1,4 +1,4 @@
-import './globals.css'
+// import './globals.css'
 import {Dosis,} from 'next/font/google'
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-
+        {/*todo заменить этот неправильный импорт на правильный там в css правильно прописать пути к баннерам параллаксным*/}
         <link href="/css/bem.css" rel="stylesheet" />
 
         <body className={inter.className}>
