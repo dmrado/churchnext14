@@ -1,4 +1,6 @@
-import React from 'react';
+export const generateMetadata = ({params: {id}}) => {
+    return {title: `ProjectName | Post ${id}`}
+}
 
 const Page = ({params: {id}}) => {
     return (

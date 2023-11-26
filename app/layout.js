@@ -6,8 +6,7 @@ import Header from "../components/Header";
 const inter = Dosis({subsets: ['latin']})
 
 export const metadata = {
-    title: 'Church',
-    description: 'Church page',
+    title: 'ProjectName | Church',
 }
 
 export default function RootLayout({children}) {

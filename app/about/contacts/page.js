@@ -1,4 +1,6 @@
-
+export const metadata = {
+    title: 'ProjectName | Contacts',
+}
 const Contacts = () => {
     return (
         <h1>

@@ -1,8 +1,7 @@
 import PostsPage from "../../components/PostsPage";
 
-
-const metadataGenerator = () => {
-
+export const metadata = {
+    title: 'ProjectName | Blog',
 }
 
 const Blog = () => {

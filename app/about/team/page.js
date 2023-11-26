@@ -1,3 +1,6 @@
+export const metadata = {
+    title: 'ProjectName | Team',
+}
 
 const Team = () => {
     return (
