@@ -1,5 +1,21 @@
+import {useEffect} from "react";
 
 const ChurchPage = () => {
+
+    useEffect(() => {
+        if(typeof window === "undefined"){
+            return
+        }
+          <!--    for nav_scrolled    -->
+        let elementNav = document.querySelector(".nav")
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 1) {
+                elementNav.classList.add("nav_scrolled")
+            } else {
+                elementNav.classList.remove("nav_scrolled")
+            }
+        })    }, [])
+
     return (
             <>
                 <div className="container">
