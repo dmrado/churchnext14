@@ -82,7 +82,7 @@ body {
     background-color: #FF6700;
     color: #f0f0f0;
     font-size: 19px;
-    /*box-shadow: 3px 3px 15px #002952;*/
+    box-shadow: 3px 3px 15px #002952;
 }
 
 .btn:focus {
