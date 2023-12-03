@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const inter = Dosis({subsets: ['latin']})
+// const inter = Ubuntu({subsets: ['latin']})
 
 export const metadata = {
     title: 'ProjectName | Church',

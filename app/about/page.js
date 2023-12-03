@@ -1,3 +1,4 @@
+
 export const metadata = {
     title: 'ProjectName | About',
 }
@@ -6,7 +7,7 @@ export const metadata = {
 const Page = () => {
     return (
         <h1>
-            ABOUT PAGE
+            {/*<AboutPage/>*/}
         </h1>
     );
 };
