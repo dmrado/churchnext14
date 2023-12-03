@@ -1,9 +1,13 @@
 import Image from 'next/image'
-import ChurchPage from "../components/ChurchPage";
+import AboutPage from "../components/AboutPage";
 
-const Church = () => {
+export const metadata = {
+    title: 'Beit-Ieshua | About us',
+}
+
+const About = () => {
     return (
-            <ChurchPage/>
+            <AboutPage/>
     )
 }
-export default Church
+export default About

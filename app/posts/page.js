@@ -3,7 +3,7 @@ import PostsPage from "../../components/PostsPage";
 import React from "react";
 
 export const metadata = {
-    title: 'ProjectName | Blog',
+    title: 'Beit-Ieshua | Blog',
 }
 
 const getPosts = async () => {

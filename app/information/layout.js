@@ -6,7 +6,7 @@ export default function RootLayout({children}) {
             <h1>О нас</h1>
             <ul>
                 <li>
-                    <Link href="/about/contacts">Контакты</Link>
+                    <Link href="/about/contacts">Информация</Link>
                 </li>
                 <li>
                     <Link href="/about/team">Наша команда</Link>

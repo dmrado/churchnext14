@@ -6,10 +6,6 @@ import Header from "../components/Header";
 const inter = Dosis({subsets: ['latin']})
 // const inter = Ubuntu({subsets: ['latin']})
 
-export const metadata = {
-    title: 'ProjectName | Church',
-}
-
 export default function RootLayout({children}) {
     return (
         <html lang="en">

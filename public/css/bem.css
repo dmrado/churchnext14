@@ -24,6 +24,12 @@ img {
     max-width: 100%;
 }
 
+p{
+    margin: 0;
+    text-align: justify;
+    padding: 15px 15px;
+}
+
 body {
     background-color: #F1F1F1;
     margin-top: 90px; /*Вынимаем сайт из под навигашки  */
@@ -54,43 +60,36 @@ body {
     border: none;
     padding: 13px 20px;
     min-width: 130px;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #082a93;
+    border-radius: 12px;
+    background-color: #FF6700;
     color: #f0f0f0;
-    font-size: 18px;
+    font-size: 19px;
     transition: .3s;
 }
 
 .btn:hover {
-    background-color: #4267d7;
-    /*background-color: dodgerblue;*/
+    background-color: #FF6700;
     color: #fff;
-    font-size: 17px;
-    text-shadow: 10px 10px 30px #ffffff;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 3px 3px 5px #8A8A8AFF;
-    transform: scale(1.1);
+    font-size: 19px;
+    box-shadow: 3px 3px 15px #002952;
 }
 
-/*.btn:active {*/
-/*    background-color: #dc270c;*/
-/*    color: #41fd16;*/
-/*}*/
+.btn:active {
+    border: none;
+    padding: 13px 20px;
+    min-width: 130px;
+    border-radius: 12px;
+    background-color: #FF6700;
+    color: #f0f0f0;
+    font-size: 19px;
+    box-shadow: 3px 3px 15px #002952;
+}
 
 .btn:focus {
-    background-color: dodgerblue;
+    background-color: #FF6700;
     color: #fff;
-    font-size: 15px;
-    transform: scale(1);
-    box-shadow: none;
-    outline: 1px solid #0e0f16;
-}
-
-/*модификатор желтого цвета*/
-.btn_yellow {
-    background-color: #919109;
+    font-size: 19px;
+    box-shadow: 3px 3px 5px #002952 inset;
 }
 
 
@@ -124,35 +123,33 @@ body {
     box-shadow: 0 3px 5px #8a8a8a;
 }
 
-.logo {
+.nav-text{
+    position: absolute;
     display: block;
+    left: 250px;
 }
 
-.logo__img {
-    /*для текстового лого*/
-    /*font-size: 20px;*/
-    /*font-width: 900;*/
-    /*color: #000000;*/
-    max-width: 120px;
-    max-height: 66px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2px;
-    border-top-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    transition: 0.2s;
+.nav-text_1{
+    color: #004E98;
+    /*font-family: Ubuntu;*/
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 2px;
 }
-
-.logo__img:hover {
-    transform: scale(1.1);
-    box-shadow: 2px 2px 5px #8a8a8a;
+.nav-text_2{
+    color: #FF6700;
+    /*font-family: Open Sans;*/
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 2px;
 }
-
-.logo__img:focus {
-    transform: scale(1);
-    box-shadow: none;
-    /*outline: 1px solid #000;*/
-}
+/*.logo {*/
+/*    display: block;*/
+/*}*/
 
 .header__burger-btn {
     display: none;
@@ -181,17 +178,16 @@ body {
 }
 
 .header__burger-btn span:nth-child(1) {
-    background-color: #003ff9;
+    background-color: #004E98;
     transform: translateY(-10px);
 }
 
 .header__burger-btn span:nth-child(2) {
-    background-color: #05b09c;
-
+    background-color: #004E98;
 }
 
 .header__burger-btn span:nth-child(3) {
-    background-color: #262626;
+    background-color: #004E98;
     transform: translateY(10px);
 }
 
@@ -231,26 +227,22 @@ body {
 .menu__link {
     display: inline-block;
     font-size: 22px;
-    font-weight: 700;
-    color: #082a93;
+    font-weight: 400;
+    color: #004E98;
     font-family: "Dosis", "Helvetica Neue", Helvetica, sans-serif;
     margin-left: 5px;
     transition: .1s ease;
 }
 
 .menu__link:hover {
-    /*transform: scale(1.1);*/
-    color: #05b09c;
-    text-shadow: 5px 5px 50px #140254;
-    /*    для инверсии элементов навигации*/
-    /*background: #140254;*/
-
+    color: #FF6700;
+    text-shadow: 5px 5px 50px #01213f;
 }
 
 .menu__link:focus {
     font-size: 20px;
     text-shadow: none;
-    box-shadow: #8a8a8a;
+    box-shadow: #01213f;
 }
 
 @media (max-width: 992px) {
@@ -294,9 +286,10 @@ body {
 /*конец медиазапроса для menu навигации*/
 
 .header__banner {
-    /*position: relative;*/
+    position: relative;
     height: 80vh;
-    background-image: url("../img/banner/hero-bg.jpg");
+    /*background-image: url("../img/banner/Film Grain Texture.png");*/
+    background-image: url("../img/banner/clouds.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -305,29 +298,65 @@ body {
     text-align: center;
 }
 
+/*.header__banner-texture {*/
+/*    position: absolute;*/
+/*    height: 80vh;*/
+/*    !*background-image: url("../img/banner/Film Grain Texture.png");*!*/
+/*    background-image: url("../img/banner/clouds.jpeg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-attachment: fixed;*/
+/*    !*padding: 30vh 0 70vh 0;*!*/
+/*    text-align: center;*/
+/*}*/
+
 .header__img {
     width: 100%;
     max-width: 100%;
 }
 
-.header__greeting {
-    margin: 14% 18%;
-    text-align: left;
-    color: #fff;
-    font-family: "Dosis", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 95px;
-    letter-spacing: 2px;
-    /*padding: 30vh 0 70vh 0;*/
-    transition: 0.3s;
+.header__banner h3 {
+    display: block;
+    position: absolute;
+    top: 250px;
+    left:400px;
+    color: #E3E7E1;
+    /*font-family: Ubuntu;*/
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
 }
 
-.header__greeting:hover {
-    text-shadow: 2px 2px 5px #f6f2f2;
-    color: #05b09c;
+.header__banner h1 {
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 290px;
+    color: #E3E7E1;
+    text-align: center;
+    /*font-family: Ubuntu;*/
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
+
+.header__btn {
+    position: absolute;
+    width: 182px;
+    height: 62px;
+    top: 407px;
+    left: 465px;
+    border-radius: 12px
+}
+
+/*header конец*/
 
 /*about начало*/
-.about__wrapper{
+.about__wrapper {
     padding: 50px 0;
 }
 
@@ -352,7 +381,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 50px;
+    margin: 10px 10px;
 }
 
 .about__list-item_final {
@@ -373,7 +402,7 @@ body {
     object-fit: cover;
 }
 
-.mission__wrapper{
+.mission__wrapper {
     padding-bottom: 200px;
 }
 
@@ -382,7 +411,7 @@ body {
     color: #FF6700;
     justify-content: center;
     align-items: center;
-    transform: translateX(43%);
+    transform: translateX(40%);
     grid-column: 1 / 3;
     /*font-family: Ubuntu;*/
     font-size: 24px;
@@ -409,13 +438,13 @@ body {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 4px 20px 0px rgba(81, 81, 81, 0.25);
-    transform: translateX(2%) translateY(30%);
+    transform: translateX(8%) translateY(30%);
 }
 
 .mission__list-item_1 p {
-    width: 444px;
+    width: 490px;
     color: #000;
-    font-family: Open Sans;
+    /*font-family: Open Sans;*/
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -452,9 +481,9 @@ body {
 }
 
 .mission__list-item_4 p {
-    width: 444px;
+    width: 490px;
     color: #000;
-    font-family: Open Sans;
+    /*font-family: Open Sans;*/
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -499,7 +528,6 @@ body {
 /* TEXT */
 .text {
     max-width: 1000px;
-    text-align: justify;
     color: #000;
     /*font-family: Open Sans;*/
     font-size: 16px;
@@ -510,7 +538,7 @@ body {
 }
 
 .text::first-letter {
-    /*color: dodgerblue;*/
+    color: #002952;
     font-size: 32px;
     font-weight: 700;
 }
@@ -520,7 +548,7 @@ body {
 /*}*/
 
 .text::selection {
-    background-color: dodgerblue;
+    background-color: #002952;
     color: #fff
 }
 
@@ -637,14 +665,14 @@ body {
 }
 
 .card__link {
-    color: rgb(15, 2, 112);
+    color: #004E98;
     display: inline-block;
     margin-bottom: 15px;
     transition: .5s;
 }
 
 .card__link:hover {
-    color: blueviolet;
+    color: #012a50;
     font-size: 20px;
     transition: .5s;
     text-shadow: 1px 0px 3px #8a8a8a;
@@ -1022,9 +1050,9 @@ body {
 }
 
 .modal__close-btn:hover {
-    border-top-color: #05b09c;
-    border-bottom-color: #05b09c;
-    color: #05b09c;
+    border-top-color: #004E98;
+    border-bottom-color: #004E98;
+    color: #004E98;
 }
 
 .modal__close-btn {
@@ -1042,7 +1070,7 @@ body {
 
 /*todo добавить svg закрытия модального окна либо убрать svg, а вставить просто кнопку из churchskala*/
 .modal__close-btn:hover svg path {
-    fill: #0c4128;
+    fill: #004E98;
 }
 
 .modal__close-btn:focus {
@@ -1078,7 +1106,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
-    background: #222;
+    background: #004E98;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1109,11 +1137,11 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    border-bottom: .5px solid #05b09c;
+    border-bottom: .5px solid #004E98;
 }
 
 .contacts .form textarea {
-    border: .5px solid #05b09c;
+    border: .5px solid #004E98;
     height: 150px;
     resize: none;
 }
@@ -1121,7 +1149,7 @@ body {
 .contacts .form input[type=submit] {
     width: 120px;
     padding: 7px;
-    background: #05b09c;
+    background: #004E98;
     border-radius: 6px;
     font-size: 12px;
     color: #fff;
@@ -1131,11 +1159,11 @@ body {
 
 .contacts .form input[type=submit]:hover {
     box-shadow: 2px 2px 5px gray;
-    background: rgba(89, 225, 209, 0.99);
+    background: #004E98;
 }
 
 .contacts .form input[type=submit]:focus {
-    box-shadow: 2px 2px 5px #10493d inset;
+    box-shadow: 2px 2px 5px #001d38 inset;
 }
 
 /*.contacts .form input[type=submit]:active {*/
@@ -1157,7 +1185,7 @@ body {
 }
 
 .contacts .contact h3 {
-    color: #04ecd1;
+    color: #004E98;
     font-size: 28px;
     margin-bottom: 16px;
 }
@@ -1197,7 +1225,8 @@ body {
     /*bottom: 0;*/
     height: 70px;
     width: 100%;
-    background-color: #c7c8ff;
+    background-color: #004E98;
+    color: #fff;
     padding-left: 20px;
     z-index: 20;
 }

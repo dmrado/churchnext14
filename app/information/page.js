@@ -1,13 +1,13 @@
 
 export const metadata = {
-    title: 'ProjectName | About',
+    title: 'Beit-Ieshua | Information',
 }
 
 
 const Page = () => {
     return (
         <h1>
-            {/*<AboutPage/>*/}
+            {/*<InformationPage/>*/}
         </h1>
     );
 };

@@ -1,7 +1,40 @@
-const ChurchPage = () => {
+'use client'
 
-    return (
-        <>
+import {useEffect} from "react";
+import Link from "next/link";
+
+const AboutPage = () => {
+
+    useEffect(() => {
+        // defer
+        // for nav_scrolled
+        if (typeof window === "undefined") {
+            return
+        }
+        let elementNav = document.querySelector(".nav")
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 1) {
+                elementNav.classList.add("nav_scrolled")
+            } else {
+                elementNav.classList.remove("nav_scrolled")
+            }
+        })
+    }, [])
+
+    return (<>
+            {/*header-block*/}
+            <div className="body-wrapper">
+                {/*    body-wrapper нужен для меню навигации справа в режиме телефона*/}
+                <div className="header">
+                        <div className="header__banner">
+                            <img className="header__img" src="" alt=""/>
+                            <h3>Шалом и добро пожаловать</h3>
+                            <h1>в Еврейскую общину города Артем</h1>
+                            {/*<img className="header__img" src="/img/banner/Film Grain Texture.png" alt=""/>*/}
+                            <button className="btn header__btn">Наша миссия</button>
+                        </div>
+                </div>
+            </div>
             <div className="container">
                 <div className="about__wrapper">
                     <div className="about__list">
@@ -107,4 +140,4 @@ const ChurchPage = () => {
     );
 };
 
-export default ChurchPage
+export default AboutPage
