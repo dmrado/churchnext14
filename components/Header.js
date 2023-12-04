@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 const Header = () => {
+    // todo useEffect для адаптивности меню навигации
 
     return (<>
             {/*header-block*/}

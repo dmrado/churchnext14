@@ -1,6 +1,7 @@
 'use client'
 
 import {useEffect} from "react";
+import Link from "next/link";
 
 const AboutPage = () => {
 
@@ -25,19 +26,21 @@ const AboutPage = () => {
             {/*    body-wrapper нужен для меню навигации справа в режиме телефона*/}
             <div className="body-wrapper">
 
-                {/*<div className="header">*/}
+                <div className="header">
                     <div className="header__banner">
 
                         <div className="header_info">
                             <h3>Шалом и добро пожаловать</h3>
                             <h1>в Еврейскую общину города Артем</h1>
-                            <button className="btn header__btn">Наша миссия</button>
-                            {/*это затемнение которое наезжает на облакаs*/}
+                            {/*<a href="mission">*/}
+                                <button className="btn header__btn">Наша миссия</button>
+                        {/*</a>*/}
+                            {/*это затемнение которое наезжает на облака*/}
                             <img className="header__img" src="/img/banner/Film Grain Texture.png" alt=""/>
                         </div>
 
                     </div>
-                {/*</div>*/}
+                </div>
             </div>
             <div className="container">
                 <div className="about__wrapper">
@@ -45,12 +48,12 @@ const AboutPage = () => {
                         <div className="about__list-item">
                             <h3>О нас</h3>
                             <p className="text">
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
                                 ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur distinctio
-                                enim esse et excepturi facilis nulla pariatur saepe veniam.
+                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
                             </p>
                         </div>
 
@@ -82,11 +85,26 @@ const AboutPage = () => {
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
                                 Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
+                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
+                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum l
+                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
+                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                Impedit ipsum vel iste quibusdam mollitia nihil laborum l
 
                             </p>
                         </div>
 
-                        <div className="about__list-item_final">
+                        <div className="about__list-item_last">
                             <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
                         </div>
                     </div>
@@ -97,7 +115,7 @@ const AboutPage = () => {
                 <div className="mission__wrapper">
                     <div className="mission__list-header"><h2>Наша миссия</h2></div>
 
-                    <div className="mission__list">
+                    <div className="mission__list" id="mission">
                         <div className="mission__list-item_1">
                             <p className="text">
                                 Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
@@ -110,6 +128,7 @@ const AboutPage = () => {
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
                                 Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+
 
                             </p>
                         </div>
@@ -131,10 +150,10 @@ const AboutPage = () => {
                                 Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
                                 ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
+                                nesciuntore, nesciunt
                                 Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
                                 nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequatur cum fugiat fugit libero, magni perspiciatis! Alias animi aperiam architecto consequuntur cupiditate debitis dolore eligendi eos, facere facilis incidunt laboriosam laborum libero minima modi odit optio pariatur provident quae quia quis quod repellendus, rerum sapiente sequi velit veritatis. Cumque, eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam culpa cupiditate dicta dolores eaque ex exercitationem, itaque neque nihil odio praesentium quod reiciendis similique soluta veniam vero voluptas. Accusantium aliquid at beatae eius enim eos hic perferendis possimus quam ratione. Accusantium corporis nemo nihil officia provident saepe sapiente suscipit.
                             </p>
                         </div>
                     </div>
