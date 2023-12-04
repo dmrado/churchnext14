@@ -36,7 +36,7 @@ const AboutPage = () => {
                                 <button className="btn header__btn">Наша миссия</button>
                         {/*</a>*/}
                             {/*это затемнение которое наезжает на облака*/}
-                            <img className="header__img" src="/img/banner/Film Grain Texture.png" alt=""/>
+                            {/*<img className="header__img" src="/img/banner/Film Grain Texture.png" alt=""/>*/}
                         </div>
 
                     </div>

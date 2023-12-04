@@ -98,12 +98,12 @@ const Header = () => {
                             <ul className="menu__list">
                                 <li className="menu__item">
                                     <Link className="menu__link" href="#">
-                                        telegram
+                                        t
                                     </Link>
                                 </li>
                                 <li className="menu__item">
                                     <Link className="menu__link" href="#">
-                                        whatsupp
+                                        w
                                     </Link>
                                 </li>
                             </ul>
