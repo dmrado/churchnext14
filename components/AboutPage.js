@@ -23,10 +23,10 @@ const AboutPage = () => {
 
     return (<>
             {/*header-block*/}
-            {/*    body-wrapper нужен для меню навигации справа в режиме телефона*/}
+            {/*    body-wrapper нужен для меню навигации справа в режиме телефона именно здесь тогад корректно работает и нет горизонтального скролла*/}
             <div className="body-wrapper">
 
-                <div className="header">
+                {/*<div className="header">*/}
                     <div className="header__banner">
 
                         <div className="header_info">
@@ -40,7 +40,7 @@ const AboutPage = () => {
                         </div>
 
                     </div>
-                </div>
+                {/*</div>*/}
             </div>
             <div className="container">
                 <div className="about__wrapper">
