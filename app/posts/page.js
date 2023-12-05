@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PostsPage from "../../components/PostsPage";
 import React from "react";
+import {revalidatePath} from "next/cache";
 
 export const metadata = {
     title: 'Beit-Ieshua | Blog',
@@ -11,12 +12,16 @@ const getPosts = async () => {
     return res.json()
 }
 
+//добавляет новый пост в том месте где неходится
+revalidatePath('/posts')
+
 const Posts = async () => {
     const posts = await getPosts()
     // console.log(posts)
     return (
         <>
             <h1>Список постов</h1>
+            <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
 
             {/*    <ul>*/}
             {/*        {posts.map(post => (*/}
