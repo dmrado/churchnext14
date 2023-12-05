@@ -36,3 +36,14 @@ next-env.d.ts
 
 server/config/mail_password.json
 server/config/config.json
+
+node_modules
+server/.env
+.env.local
+.next
+
+# local env files
+.env.development.local
+.env.test.local
+.env.production.local
+

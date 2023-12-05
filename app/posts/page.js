@@ -2,13 +2,15 @@ import Link from "next/link";
 import PostsPage from "../../components/PostsPage";
 import React from "react";
 import {revalidatePath} from "next/cache";
+import {BACKEND_URL, SHOW_BANNER} from "../../config";
+
 
 export const metadata = {
     title: 'Beit-Ieshua | Blog',
 }
 
 const getPosts = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const res = await fetch(BACKEND_URL + '/posts')
     return res.json()
 }
 
@@ -21,7 +23,7 @@ const Posts = async () => {
     return (
         <>
             <h1>Список постов</h1>
-            <button className="btn"><Link href='/posts/     new'>Новый пост</Link></button>
+            <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
 
             {/*    <ul>*/}
             {/*        {posts.map(post => (*/}
