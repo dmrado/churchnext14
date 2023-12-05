@@ -42,6 +42,9 @@ const create = async (req, res) => {
         // const {title = "ТАЙТЛ", text = "ТЕКСТ"} = req.body
         const title = req.body.title
         const text = req.body.text
+        // console.log('title', title)
+        // console.log('text', text)
+
         // console.log('text in controller Post', text)
         const newPost = await Post.create({title: title, text: text})
         // console.log('newPost in controller', newPost)

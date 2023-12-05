@@ -1,21 +1,20 @@
-import {Metadata} from 'next'
 import Link from "next/link";
-import React from "react";
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
+import {BACKEND_URL} from "../../../config";
 
 export const generateMetadata = ({params: {id}}) => {
     return {title: `ProjectName | Post ${id}`}
 }
 
 const getPost = async (id) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+const res = await fetch(BACKEND_URL + `/posts/${id}`)
     return res.json()
 }
 
 const removePost = async (id) => {
     'use server'
-    await fetch(`/${id}`, {method: 'DELETE'})
+    await fetch(BACKEND_URL + `/posts/${id}`, {method: 'DELETE'})
     revalidatePath('/posts')
     redirect(`/posts`)
 }

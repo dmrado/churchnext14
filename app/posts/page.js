@@ -14,12 +14,16 @@ const getPosts = async () => {
     return res.json()
 }
 
-//добавляет новый пост в том месте где неходится
-revalidatePath('/posts')
+//добавляет новый пост в том месте где находится
+// revalidatePath('/posts')
 
 const Posts = async () => {
-    const posts = await getPosts()
-    console.log(posts)
+    const data = await getPosts();
+    const posts = data.items;
+
+    console.log('data - объект data.items', data)
+    console.log('posts - массив', posts)
+
     return (
         <>
             <h1>Список постов</h1>
@@ -33,7 +37,7 @@ const Posts = async () => {
             {/*        ))}*/}
             {/*    </ul>*/}
             {/*</>*/}
-
+            {/*todo не забыть пагинацию на странице реализовать, из контроллера нормально работает*/}
             {!!posts && posts.map(post => {
                 return <div key={post.id}>
                     <PostsPage
@@ -49,7 +53,7 @@ const Posts = async () => {
                         // deleteHandler={token ? () => deletePost(post) : null}
                     />
                 </div>
-            })}
+            }).sort()}
         </>
     )
 }
