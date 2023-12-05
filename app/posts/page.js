@@ -19,7 +19,7 @@ revalidatePath('/posts')
 
 const Posts = async () => {
     const posts = await getPosts()
-    // console.log(posts)
+    console.log(posts)
     return (
         <>
             <h1>Список постов</h1>

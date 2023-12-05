@@ -48,13 +48,25 @@ const Header = () => {
                 <nav className="nav">
 
                     <Link href="/" className="logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="69" height="71" viewBox="0 0 69 71"
-                             fill="none">
-                            <path d="M34.9408 5L63.5709 50.6217H6.31069L34.9408 5Z" stroke="#004E98"
-                                  stroke-width="5"/>
-                            <path d="M34.0592 65.829L5.42908 20.2073L62.6893 20.2073L34.0592 65.829Z"
-                                  stroke="#004E98" stroke-width="5"/>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={69}
+                            height={71}
+                            viewBox="0 0 69 71"
+                            fill="none"
+                        >
+                            <path
+                                d="M34.9408 5L63.5709 50.6217H6.31069L34.9408 5Z"
+                                stroke="#004E98"
+                                strokeWidth={5}
+                            />
+                            <path
+                                d="M34.0592 65.829L5.42908 20.2073L62.6893 20.2073L34.0592 65.829Z"
+                                stroke="#004E98"
+                                strokeWidth={5}
+                            />
                         </svg>
+
                     </Link>
 
                     <div className="nav-text">
