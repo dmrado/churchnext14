@@ -21,7 +21,7 @@ const Posts = async () => {
     return (
         <>
             <h1>Список постов</h1>
-            <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
+            <button className="btn"><Link href='/posts/     new'>Новый пост</Link></button>
 
             {/*    <ul>*/}
             {/*        {posts.map(post => (*/}

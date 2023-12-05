@@ -1,0 +1,13 @@
+{
+  "host": "some_site.some",
+  "port": 111,
+  "secure": false,
+  "to": "some@any.any",
+  "auth": {
+    "user": "any@any.any",
+    "pass": "any"
+  },
+  "tls":{
+    "rejectUnauthorized": false
+  }
+}
