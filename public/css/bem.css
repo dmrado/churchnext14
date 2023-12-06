@@ -514,11 +514,6 @@ body {
     object-fit: cover;
 }
 
-@media (max-width: 576px) {
-    .about__list {
-        grid-template-columns: 1fr;
-    }
-}
 
 @media (max-width: 876px) {
     .header__banner,
@@ -566,6 +561,16 @@ body {
         width: 100%;
     }
 }
+
+@media (max-width: 576px) {
+    .about__list {
+        grid-template-columns: 1fr;
+    }
+    .about__list-item_last {
+        grid-column: 1 / 2;
+    }
+}
+
 
 
 /*about и mission конец*/
