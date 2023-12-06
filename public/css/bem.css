@@ -332,10 +332,10 @@ body {
     max-width: 100%;
 }
 
-.header_info {
+.header__info {
     display: flex;
     flex-direction: column;
-    padding-top: 12%;
+    padding-top: 14%;
     /*flex-wrap: wrap;*/
     justify-content: center;
     align-items: center;
@@ -391,6 +391,9 @@ body {
     height: 218px;
     width: 100%;
     overflow: hidden;
+    object-fit: cover;
+    z-index: 5;
+
 }
 
 .about__list-item h3 {
@@ -447,7 +450,7 @@ body {
 
 .mission__list-item_1 {
     width: 490px;
-    height: 350px;
+    height: 340px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
@@ -468,7 +471,7 @@ body {
 
 .mission__list-item_2 {
     width: 463px;
-    height: 350px;
+    height: 340px;
     flex-shrink: 0;
     border-radius: 20px;
     transform: translateX(-25%);
@@ -513,13 +516,17 @@ body {
     .about__list {
         grid-template-columns: 1fr;
     }
-
-    .mission__list {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 876px) {
+    .header__banner,
+    .header__img{
+        height: 70%;
+    }
+    .header__info{
+        padding-bottom: 20px;
+    }
+
     .mission__list{
         grid-template-columns: 1fr;
         /*todo  grid-row-gap появляется только у первого элемента*/
@@ -1288,9 +1295,8 @@ body {
     margin-top: 20px;
 }
 
-.footer__socials:not(:last-child) {
-    /*todo не хотят разлепляться svg-хи*/
-    margin-right: 300px;
+.footer__socials-item {
+    margin-right: 20px;
 }
 
 .footer_signature {
@@ -1320,6 +1326,18 @@ body {
     }
 }
 
+@media(max-width: 490px){
+    .footer__socials-item{
+        margin-right: 7px;
+    }
+}
+
+
+@media(max-width: 373px){
+    .footer__socials-item{
+        margin-right: 1px;
+    }
+}
 
 .footer_signature {
     /*todo не работает*/

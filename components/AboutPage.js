@@ -29,7 +29,7 @@ const AboutPage = () => {
                 {/*<div className="header">*/}
                     <div className="header__banner">
 
-                        <div className="header_info">
+                        <div className="header__info">
                             <h3>Шалом и добро пожаловать</h3>
                             <h1>в Еврейскую общину города Артем</h1>
                             {/*<a href="mission">*/}
@@ -48,12 +48,8 @@ const AboutPage = () => {
                         <div className="about__list-item">
                             <h3>О нас</h3>
                             <p className="text">
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
+                                Шалом вам дорогие друзья братья и сëстры!
+                                Рад приветствовать вас на сайте нашей мессианской общины "Бейт Йешуа". Меня зовут Николай Феоктистов и я пастор этой общины со дня её основания. Я женат имею жену помощницу она играет и поёт в нашей общине. У нас трое взрослых детей, шесть внуков, две внучки, и один правнук.
                             </p>
                         </div>
 
@@ -75,32 +71,8 @@ const AboutPage = () => {
 
                         <div className="about__list-item">
                             <p className="text">
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum l
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum l
-
+                                Община была образована в 2011 году Приморский край г. Артём, мы входим в международную конгрегацию "Чозен пипл министриз" или "Служение избранному народу".
+                                В нашей общине много прихожан. Мы регулярно собираемся там-то и во столько-то. Отмечаем праздники и проводи время вместе, изучая Слово Божье в простоте сердца.
                             </p>
                         </div>
 
@@ -118,18 +90,11 @@ const AboutPage = () => {
                     <div className="mission__list" id="mission">
                         <div className="mission__list-item_1">
                             <p className="text">
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-
-
+                                Мы евреи, уверовавшие в Иисуса Христа исповедуем мессианский иудаизм, соблюдаем день Шаббата, а также все праздники которые определил Творец в Торе (Левит 23 глава).
+                                В нашей общине есть разные национальности, которые разделяют с нами наше учение основанное на Слове Божьем.
+                                <br/>
+                                Одна из основных целей нашего учения: Рим 1:16 донести Благую весть до еврейского народа, а также и другим людям. которая заключается в том, что "Иисус Христос пришел в этот мир, что бы спасти грешников!... " "Праведный верою жив будет..."
+                                Это касается каждого человека, рожденного на земле, сотворенному Всевышним.
                             </p>
                         </div>
 
@@ -143,17 +108,11 @@ const AboutPage = () => {
 
                         <div className="mission__list-item_4">
                             <p className="text">
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                                ipsum vel iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntore, nesciunt
-                                Impedit ipsum vel iste quibusdam mollitia nihil laborum labore,
-                                nesciuntquibusdam mollitia nihil laborum labore, nesciunt
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequatur cum fugiat fugit libero, magni perspiciatis! Alias animi aperiam architecto consequuntur cupiditate debitis dolore eligendi eos, facere facilis incidunt laboriosam laborum libero minima modi odit optio pariatur provident quae quia quis quod repellendus, rerum sapiente sequi velit veritatis. Cumque, eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam culpa cupiditate dicta dolores eaque ex exercitationem, itaque neque nihil odio praesentium quod reiciendis similique soluta veniam vero voluptas. Accusantium aliquid at beatae eius enim eos hic perferendis possimus quam ratione. Accusantium corporis nemo nihil officia provident saepe sapiente suscipit.
+                                Смысл жизни каждого человека познать Его искупительную жертву - оправдательный приговор для каждого человека, из-за того что Иисус - человек безгрешный, не подвластный даже первородному греху - умер вместо каждого из нас на кресте! И искупил нас от смерти духовной. И Сила, которая воскресила Его, воскресит и каждого, кто уверовал в то, что Иисус умер за него! И предстать перед Ним беспорочными в великий День его пришествия!
+                                <br/>
+                                Согласно Божьему Слову, каждому человеку положено умереть, а потом предстать перед Божьим судом. Однако "Верующий в Него не судится и на суд не приходит, но перешел от смерти в жизнь".
+                                <br/>
+                                Эту Благую весть мы исповедуем и проповедуем, для спасения каждого верующего, как иудея, так и каждого человека, ибо все находятся под властью одного и того же греха и нет различия. И нет иного имени под небесами, кроме имени Иисуса Христа, которым суждено человеку спастись.
                             </p>
                         </div>
                     </div>

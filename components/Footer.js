@@ -45,7 +45,7 @@ const Footer = () => {
 
 
                     <div className="footer__socials">
-                        <svg
+                        <svg className="footer__socials-item"
                             xmlns="http://www.w3.org/2000/svg"
                             width={36}
                             height={36}
@@ -55,7 +55,7 @@ const Footer = () => {
                             <circle cx={18} cy={18} r={18} fill="#004E98"/>
                         </svg>
 
-                        <svg
+                        <svg className="footer__socials-item"
                             xmlns="http://www.w3.org/2000/svg"
                             width={36}
                             height={36}
@@ -65,7 +65,7 @@ const Footer = () => {
                             <circle cx={18} cy={18} r={18} fill="#004E98"/>
                         </svg>
 
-                        <svg
+                        <svg className="footer__socials-item"
                             xmlns="http://www.w3.org/2000/svg"
                             width={36}
                             height={36}
