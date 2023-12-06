@@ -9,9 +9,7 @@ export const generateMetadata = ({params: {id}}) => {
 
 const getPost = async (id) => {
     const res = await fetch(BACKEND_URL + `/posts/${id}`)
-    const post = await res.json()
-    console.log(post)
-    return post
+    return await res.json()
 }
 
 const removePost = async (id) => {
@@ -21,14 +19,15 @@ const removePost = async (id) => {
     revalidatePath('/posts')
     redirect(`/posts`)
 }
-//todo не работает сортировка, не работает Post одного поста, сделать компоненты алерты Successful, Unsuccessful,
+//todo сделать компоненты алерты Successful, Unsuccessful,
 
 const Post = async ({params: {id}}) => {
-    const post = await getPost(id)
+    const data = await getPost(id)
+    const post = data.item
 
     return (<>
             <h1>{post.title}</h1>
-            <h2>Автор №{post.userId}, его пост {id}</h2>
+            <h2>Автор № {post.userId}, его пост {id}</h2>
             <p>Текст поста: {post.text}</p>
 
             <button className="btn"><Link href="/posts">Назад</Link></button>
