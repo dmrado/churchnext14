@@ -278,6 +278,11 @@ body {
 
     .menu__list {
         display: block;
+        height: fit-content;
+    }
+
+    .menu__link {
+        color: #fff !important;
     }
 
     .menu__item {
@@ -288,7 +293,17 @@ body {
         color: #fff;
         font-size: 21px;
         display: block;
-        padding: 10px 0;
+        padding: 12px 0;
+    }
+
+    .menu_socials {
+        position: absolute;
+        display: flex;
+        transform: translateY(-110%);
+    }
+
+    .menu_socials_first {
+        margin-right: 20px;
     }
 
     .header.open .menu {
@@ -514,19 +529,19 @@ body {
     object-fit: cover;
 }
 
-@media(max-width: 998px){
+@media (max-width: 998px) {
     .mission__list-item_4 {
         height: 450px;
         padding: 0 5px;
-    }
-    .mission__list-item_4 p {
-        width: 100%;
-    }
-    .mission__list-item_4{
         width: 100%;
         transform: translateX(-16%)
     }
+
+    .mission__list-item_4 p {
+        width: 100%;
+    }
 }
+
 @media (max-width: 876px) {
     .header__banner,
     .header__img {
@@ -539,8 +554,7 @@ body {
 
     .mission__list {
         grid-template-columns: 1fr;
-        /*todo  grid-row-gap появляется только у первого элемента*/
-        grid-row-gap: 5px;
+        grid-row-gap: 10px;
     }
 
     .mission__list-item_1 {
@@ -552,18 +566,18 @@ body {
     .mission__list-item_2 {
         width: 100%;
         transform: translateX(0%);
+        overflow: hidden;
     }
 
     .mission__list-item_3 {
         width: 100%;
         transform: translateX(0%) translateY(0%);
+        overflow: hidden;
     }
 
     .mission__list-item_4 {
         width: 100%;
         transform: translateX(0%) translateY(0%);
-        overflow: auto;
-        margin-right: 20px;
     }
 
     .mission__list-item_1 p {
@@ -591,6 +605,12 @@ body {
     .about__list-item_last {
         grid-column: 1 / 2;
     }
+
+    .mission__list {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+
     .mission__list-item_4 {
         height: 550px;
         padding: 0 5px;

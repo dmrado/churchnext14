@@ -107,9 +107,10 @@ const Header = () => {
 
                     <div>
                         <div className="menu" id="menu">
-                            <ul className="menu__list">
+                            <ul className="menu__list menu_socials">
                                 <li className="menu__item">
-                                    <Link className="menu__link" href="#">
+                                    <Link className="menu__link menu_socials_first" href="#">
+                                        {/*todo заменить на иконки или svg-шки*/}
                                         t
                                     </Link>
                                 </li>
