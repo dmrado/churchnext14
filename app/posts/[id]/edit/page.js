@@ -21,10 +21,10 @@ const updatePost = async (formData) => {
         body: JSON.stringify({title, text})
     })
     // так как метод PUT в случае успеха возвращает единицу cм Postman и не возвращает никакого поста мы используем все тот же id, по которому вернется пост
-    if (response) {
+
         revalidatePath(`/posts/${id}`)
         redirect(`/posts/${id}`)
-    }
+
 }
 
 const Page = async ({params: {id}}) => {

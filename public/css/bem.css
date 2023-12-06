@@ -16,8 +16,9 @@
     box-sizing: inherit;
 }
 
-a {
+a:-webkit-any-link{
     text-decoration: none;
+    color: #fff;
 }
 
 img {
@@ -74,7 +75,7 @@ body {
     background-color: #FF6700;
     color: #fff;
     font-size: 19px;
-    box-shadow: 3px 3px 15px #002952;
+    box-shadow: 2px 2px 10px #002952;
 }
 
 .btn:active {
@@ -85,7 +86,7 @@ body {
     background-color: #FF6700;
     color: #f0f0f0;
     font-size: 19px;
-    box-shadow: 3px 3px 15px #002952;
+    box-shadow: 2px 2px 10px #002952;
 }
 
 .btn:focus {
@@ -231,14 +232,14 @@ body {
     display: inline-block;
     font-size: 22px;
     font-weight: 400;
-    color: #004E98;
+    color: #004E98 !important;
     /*font-family: "Dosis", "Helvetica Neue", Helvetica, sans-serif;*/
     margin-left: 5px;
     transition: .1s ease;
 }
 
 .menu__link:hover {
-    color: #FF6700;
+    color: #FF6700 !important;
     text-shadow: 5px 5px 50px #01213f;
 }
 
@@ -512,6 +513,7 @@ body {
     border-radius: 20px;
     object-fit: cover;
 }
+
 @media (max-width: 576px) {
     .about__list {
         grid-template-columns: 1fr;
@@ -520,14 +522,15 @@ body {
 
 @media (max-width: 876px) {
     .header__banner,
-    .header__img{
+    .header__img {
         height: 70%;
     }
-    .header__info{
+
+    .header__info {
         padding-bottom: 20px;
     }
 
-    .mission__list{
+    .mission__list {
         grid-template-columns: 1fr;
         /*todo  grid-row-gap появляется только у первого элемента*/
         grid-row-gap: 5px;
@@ -601,7 +604,7 @@ body {
     justify-content: center;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 60px 0;
     gap: 30px;
 }
 
@@ -635,120 +638,120 @@ body {
 /*    }*/
 /*}*/
 
-.cards-list__item {
+/*blog header on the posts/page.js START*/
+
+.blog-header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 10px;
+    margin-bottom: 60px;
 }
 
-/* Card */
-.card {
-    position: relative;
-    /*width: 372px;*/
-    /*min-height: 440px;*/
-    /*max-height: 600px;*/
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    box-shadow: 5px 5px 5px #8a8a8a;
-    overflow: hidden;
-}
-
-.card_promo {
-    /* position: relative; */
-    outline: 5px solid #3bf80c;
-}
-
-.card_promo::before {
-    content: "Новинка";
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    background-color: #6bff02;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 10px 30px;
-    color: #fff;
-    text-shadow: 2px 0 2px #005425;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-/*todo этот скидочный ::after не работает*/
-.card[data_badge]::after {
-    content: attr(data-badge);
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 0;
-    background-color: #ff0202;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 10px 30px;
-    color: white;
-}
-
-.card[data-badge="Скидка"]::after {
-    background-color: red;
-}
-
-.card__img {
-    display: block;
+.blog-header img {
+    height: 170px;
     width: 100%;
-    height: 217px;
+    border-radius: 50%;
     object-fit: cover;
-    /* z-index: 6; */
 }
+
+.blog-header h1 {
+    /*font-family: Open Sans;*/
+}
+.blog-header Link {
+    color: #fff;
+}
+
+.blog-header .btn {
+
+}
+
+
+/*blog header on the posts/page.js FINISH*/
+/* Card block*/
+.cards-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 120px;
+}
+
+.card {
+    border: 0;
+    padding: 0 30px;
+    /*у блока не должно быть марджина вместо него grid-gap*/
+    /*margin-bottom: 60px;*/
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+/*todo пофиксить ширину и z-index card__img*/
+.card__img {
+    height: 350px;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    overflow: hidden;
+    z-index: -1;
+    border-radius: 0;
+    transition: all .5s ease-in-out;
+}
+
+.card__img img {
+    max-width: 100%;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+
+
+.card__img:hover {
+    transform: scale(1.1);
+}
+
 
 .card__body {
-    padding: 43px 36px;
-    /* transform: rotate(-5deg); */
-    /* z-index: 15; */
-}
-
-.card__link {
-    color: #004E98;
-    display: inline-block;
-    margin-bottom: 15px;
-    transition: .5s;
-}
-
-.card__link:hover {
-    color: #012a50;
-    font-size: 20px;
-    transition: .5s;
-    text-shadow: 1px 0 3px #8a8a8a;
-    cursor: pointer;
-}
-
-.card__price-rating {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.card__price {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-/*не смотря на то что card__rating это блок и ему нельзя присваивать марджин, ему можно присваивать марджин, потому что он блок может быть элементом другого блока в данном случае блока card__price-rating*/
-.card__rating {
-    margin-left: 20px;
+    z-index: 2;
+    background: #fff;
+    border-top: 4px solid #fff;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+    margin-top: -60px;
+    transition: 3.3s;
+    /*flex: 1 1 auto;*/
 }
 
 .card__title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-weight: normal;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.card__location {
-    display: block;
+.card__title p {
+    font-style: italic;
+    text-align: center;
+}
+
+.card__link {
+    color: #004E98 !important;
+    font-size: 1.4rem;
+    /*display: inline-block;*/
     margin-bottom: 15px;
-    font-size: 16px;
-    color: #999;
+    transition: .3s;
+}
+
+.card__link:hover {
+    cursor: pointer;
+    color: #FF6700 !important;
+}
+
+.card__post-data {
+    text-align: center !important;
+    font-style: italic !important;
+}
+
+.card__title:last-child {
+    margin-bottom: 0;
+
 }
 
 .card__description {
@@ -765,40 +768,19 @@ body {
     transition: .3s;
 }
 
-.card__description:hover {
-    transform: scale(1.1);
-    box-shadow: 1px 1px 5px #8a8a8a;
+@media (max-width: 1240px) {
+    .cards-list {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-.card__description-resized {
-    color: #646363;
-    font-size: 18px;
-    box-shadow: 1px 1px 10px #8a8a8a;
-    /*resize: initial;*/
-    /*transform: translate(100%);*/
+@media (max-width: 740px) {
+    .cards-list {
+        grid-template-columns: 1fr;
+    }
 }
 
-/*Rating*/
-.rating {
-    display: flex;
-}
-
-.rating__star:not(:last-child) {
-    margin-right: 6px;
-}
-
-/*модификатор размера элемента star, блока рейтинг c доп параметрами*/
-.rating__star_size_small {
-    transform: scale(1.1);
-}
-
-.rating__star_size_middle {
-    transform: scale(1.2);
-}
-
-.rating__star_size_large {
-    transform: scale(1.3);
-}
+/*Card finish*/
 
 /* Tabs */
 .tabs__nav {
@@ -1326,15 +1308,15 @@ body {
     }
 }
 
-@media(max-width: 490px){
-    .footer__socials-item{
+@media (max-width: 490px) {
+    .footer__socials-item {
         margin-right: 7px;
     }
 }
 
 
-@media(max-width: 373px){
-    .footer__socials-item{
+@media (max-width: 373px) {
+    .footer__socials-item {
         margin-right: 1px;
     }
 }

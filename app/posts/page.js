@@ -14,8 +14,8 @@ const getPosts = async () => {
     return res.json()
 }
 
-//добавляет новый пост в том месте где находится
-// revalidatePath('/posts')
+//добавляет новый пост в том месте где находится очищая кеш рендерит именно изменный пост
+revalidatePath('/posts')
 
 const Posts = async () => {
     const data = await getPosts();
@@ -26,34 +26,32 @@ const Posts = async () => {
 
     return (
         <>
-            <h1>Список постов</h1>
-            <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
+            <div className="blog-header">
+                <img src="img/Alex.jpg" alt="Photo"/>
+                <h1>Блог пастора</h1>
+                <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
+            </div>
 
-            {/*    <ul>*/}
-            {/*        {posts.map(post => (*/}
-            {/*            <li key={post.id}>*/}
-            {/*                <Link href={`/posts/${post.id}`}>{post.title}</Link>*/}
-            {/*            </li>*/}
-            {/*        ))}*/}
-            {/*    </ul>*/}
-            {/*</>*/}
-            {/*todo не забыть пагинацию на странице реализовать, из контроллера нормально работает*/}
+            <div className="container">
+                <div className="cards-list">
             {!!posts && posts.map(post => {
-                return <div key={post.id}>
-                    <PostsPage
-                        item={post}
-                        link={`/posts/${post.id}`}
-                        // postPicture={postPicture}
-                        // setOpenModalPicture={setOpenModalPicture}
-                        // setEditedPost={setEditedPost}
-                        // updateHandler={token ? () => {
-                        //     setEditedPost(post)
-                        //     setOpenModal(true)
-                        // } : null}
-                        // deleteHandler={token ? () => deletePost(post) : null}
-                    />
-                </div>
+                return <PostsPage key={post.id}
+                                item={post}
+                                link={`/posts/${post.id}`}
+                                // postPicture={postPicture}
+                                // setOpenModalPicture={setOpenModalPicture}
+                                // setEditedPost={setEditedPost}
+                                // updateHandler={token ? () => {
+                                //     setEditedPost(post)
+                                //     setOpenModal(true)
+                                // } : null}
+                                // deleteHandler={token ? () => deletePost(post) : null}
+                            />
+
             }).sort()}
+
+                </div>
+            </div>
         </>
     )
 }
