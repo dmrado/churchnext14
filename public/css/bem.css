@@ -693,7 +693,7 @@ body {
 
 .cards-list {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 250px;
     padding: 0;
@@ -702,6 +702,9 @@ body {
 }
 
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 350px;
     border: 0;
     padding: 0 30px;
@@ -710,7 +713,7 @@ body {
 
 .card__img {
     position: absolute;
-    height: 350px;
+    height: 100%;
     width: calc(100% + 60px);
     margin-left: -30px;
     /*overflow: hidden;*/
@@ -723,7 +726,8 @@ body {
     bottom: 0;
     height: 270px;
     width: 370px;
-    transform: translateX(10%) translateY(30%);
+    transform: translateX(-2%) translateY(30%);
+
     z-index: 2;
     background: #fff;
     border-top: 4px solid #fff;
@@ -778,36 +782,29 @@ body {
 }
 
 
-@media (max-width: 1060px) {
+@media (max-width: 870px) {
     .cards-list {
         grid-template-columns: 1fr;
     }
-
     .card__body {
-        transform: translateX(60%) translateY(30%);
-    }
-}
-@media (max-width: 870px) {
-
-    .card__body {
-        transform: translateX(30%) translateY(30%);
+        /*transform: translateX(30%) translateY(30%);*/
     }
 }
 
 @media (max-width: 740px) {
     .card__body {
-        transform: translateX(20%) translateY(30%);
+        /*transform: translateX(20%) translateY(30%);*/
     }
 }
 
 @media (max-width: 670px) {
     .card__body {
-        transform: translateX(18%) translateY(30%);
+        /*transform: translateX(18%) translateY(30%);*/
     }
 }
 @media (max-width: 590px) {
     .card__body {
-        transform: translateX(5%) translateY(30%);
+        /*transform: translateX(5%) translateY(30%);*/
     }
 }
 
