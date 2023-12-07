@@ -1,8 +1,8 @@
 'use client'
 import {useState, useEffect} from "react";
-import dynamic from 'next/dynamic'
 import Link from "next/link";
 
+import dynamic from 'next/dynamic'
 const QuillEditor = dynamic(
     () => import('./Quill'),
     {ssr: false}
@@ -23,7 +23,7 @@ const EditPost = ({post, updatePost}) => {
     return (<>
             <form className="form" action={updatePost}>
 
-                <input defaultValue={post.title}
+                <input defaultValue={title}
                        onChange={e => setTitle(e.target.value)}
                        type="text" placeholder="Заголовок" required name="title"
                 />
@@ -32,11 +32,18 @@ const EditPost = ({post, updatePost}) => {
 
 
                 <label htmlFor="exampleFormControlTextarea1" className="form-label">Ваш пост</label>
-                <QuillEditor planeValue={text} setPlaneValue={setText} value={htmlBody} setValue={setHtmlBody}/>
 
-                <div>
-                    <input type="submit" value="Отправить"/>
-                </div>
+                <textarea  value={text} onChange = {e => setText(e.target.value)} name="text" id="" cols="30" rows="10"/>
+
+                {/*<QuillEditor planeValue={text}*/}
+                {/*             setPlaneValue={setText}*/}
+                {/*             value={htmlBody}*/}
+                {/*             setValue={setHtmlBody}*/}
+                {/*             onChange = {e => setText(e.target.value)}*/}
+                {/*    />*/}
+                {text}
+                <br/>
+                <div><input type="submit" value="Отправить"/></div>
                 <button className="btn" type="submit" value="Add post">Сохранить</button>
             </form>
 

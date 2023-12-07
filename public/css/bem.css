@@ -648,38 +648,6 @@ body {
 }
 
 /* Сетка карточек */
-.cards-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 60px 0;
-    gap: 30px;
-}
-
-@media (min-width: 576px) {
-    .cards-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .header__greeting {
-        font-size: 95px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header__greeting {
-        margin: 40% 18%;
-        font-size: 55px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .cards-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 /*todo сдвиг баннера  с параллаксом не работает, возможно не будет работать и с каруселькой поэтому верхний паралакс убрать*/
 /*@media (min-width: 576px) {*/
@@ -710,7 +678,7 @@ body {
 }
 
 .blog-header Link {
-    color: #fff;
+    color: #f30101;
 }
 
 .blog-header .btn {
@@ -719,22 +687,27 @@ body {
 
 
 /*blog header on the posts/page.js FINISH*/
-/* Card block*/
+
+/*Card block*/
+
+
 .cards-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 30px;
-    grid-row-gap: 120px;
+    grid-row-gap: 100px;
+    padding: 0;
+    /*отталкиваем от футера*/
+    margin-bottom: 60px;
 }
 
 .card {
     border: 0;
     padding: 0 30px;
     /*у блока не должно быть марджина вместо него grid-gap*/
-    /*margin-bottom: 60px;*/
     position: relative;
-    width: 100%;
-    z-index: 5;
+    margin: 0;
+    /*box-shadow: none;*/
 }
 
 /*todo пофиксить ширину и z-index card__img*/
@@ -742,40 +715,38 @@ body {
     height: 350px;
     width: calc(100% + 60px);
     margin-left: -30px;
-    overflow: hidden;
-    z-index: -1;
-    border-radius: 0;
+    /*overflow: hidden;*/
     transition: all .5s ease-in-out;
 }
 
-.card__img img {
-    max-width: 100%;
-    width: 100%;
-    transition: all .3s ease-in-out;
-    z-index: 1;
-}
 
+.card__body {
+    height: 270px;
+    width: 370px;
+    transform: translateX(2%);
+    z-index: 2;
+    background: #fff;
+    border-top: 4px solid #fff;
+    padding: 10px 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+    margin-top: -60px;
+    transition: .5s;
+    overflow: hidden;
+    border-radius: 2px;
+}
 
 .card__img:hover {
     transform: scale(1.1);
 }
 
-
-.card__body {
-    z-index: 2;
-    background: #fff;
-    border-top: 4px solid #fff;
-    padding: 30px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
-    margin-top: -60px;
-    transition: 3.3s;
-    /*flex: 1 1 auto;*/
+.card__body:hover {
+    border-top: 4px solid #002952;
 }
 
 .card__title {
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .card__title p {
@@ -787,7 +758,7 @@ body {
     color: #004E98 !important;
     font-size: 1.4rem;
     /*display: inline-block;*/
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     transition: .3s;
 }
 
@@ -806,21 +777,8 @@ body {
 
 }
 
-.card__description {
-    font-size: 16px;
-    margin: 0;
-    padding: 10px;
-    /*ellipsis уход первой и единственной строки в многоточье.....*/
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    border-radius: 15px;
-    box-shadow: none;
-    cursor: pointer;
-    transition: .3s;
-}
 
-@media (max-width: 1240px) {
+@media (max-width: 1440px) {
     .cards-list {
         grid-template-columns: 1fr 1fr;
     }
