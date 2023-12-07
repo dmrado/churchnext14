@@ -693,25 +693,23 @@ body {
 
 .cards-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-column-gap: 30px;
-    grid-row-gap: 100px;
+    grid-row-gap: 250px;
     padding: 0;
     /*отталкиваем от футера*/
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 .card {
+    height: 350px;
     border: 0;
     padding: 0 30px;
-    /*у блока не должно быть марджина вместо него grid-gap*/
     position: relative;
-    margin: 0;
-    /*box-shadow: none;*/
 }
 
-/*todo пофиксить ширину и z-index card__img*/
 .card__img {
+    position: absolute;
     height: 350px;
     width: calc(100% + 60px);
     margin-left: -30px;
@@ -721,16 +719,18 @@ body {
 
 
 .card__body {
+    position: absolute;
+    bottom: 0;
     height: 270px;
     width: 370px;
-    transform: translateX(2%);
+    transform: translateX(10%) translateY(30%);
     z-index: 2;
     background: #fff;
     border-top: 4px solid #fff;
     padding: 10px 30px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
-    margin-top: -60px;
-    transition: .5s;
+    margin-bottom: -60px;
+    transition: .2s;
     overflow: hidden;
     border-radius: 2px;
 }
@@ -778,15 +778,36 @@ body {
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1060px) {
     .cards-list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .card__body {
+        transform: translateX(60%) translateY(30%);
+    }
+}
+@media (max-width: 870px) {
+
+    .card__body {
+        transform: translateX(30%) translateY(30%);
     }
 }
 
 @media (max-width: 740px) {
-    .cards-list {
-        grid-template-columns: 1fr;
+    .card__body {
+        transform: translateX(20%) translateY(30%);
+    }
+}
+
+@media (max-width: 670px) {
+    .card__body {
+        transform: translateX(18%) translateY(30%);
+    }
+}
+@media (max-width: 590px) {
+    .card__body {
+        transform: translateX(5%) translateY(30%);
     }
 }
 
