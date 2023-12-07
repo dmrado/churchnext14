@@ -2,6 +2,7 @@ import Link from "next/link";
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../../config";
+import EditPost from "../../../../components/editor/EditPost";
 
 
 const getPostById = async (id) => {
@@ -23,6 +24,7 @@ const updatePost = async (formData) => {
     // так как метод PUT в случае успеха возвращает единицу cм Postman и не возвращает никакого поста мы используем все тот же id, по которому вернется пост
 
         revalidatePath(`/posts/${id}`)
+        revalidatePath(`/posts/${id}/edit`)
         redirect(`/posts/${id}`)
 
 }
@@ -35,16 +37,7 @@ const Page = async ({params: {id}}) => {
             <h1>Редактирование поста {post.title}</h1>
             <h2>post id: {post.id}</h2>
 
-            <form className="form" action={updatePost}>
-                <input defaultValue={post.title} type="text" placeholder="Заголовок" required name="title"/>
-                <textarea defaultValue={post.text} placeholder="Ваш пост" rows="10" cols="80" name="text"/>
-                <input type="hidden" name="id" value={post.id}/>
-                <div>
-                    <input type="submit" value="Отправить"/>
-                </div>
-
-            </form>
-            <button className="btn"><Link href={`/posts/${id}`}>Назад</Link></button>
+            <EditPost post={post} updatePost={updatePost}/>
 
         </>
     );

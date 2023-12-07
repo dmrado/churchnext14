@@ -17,12 +17,13 @@ const getPosts = async () => {
 //добавляет новый пост в том месте где находится очищая кеш рендерит именно изменный пост
 revalidatePath('/posts')
 
+
 const Posts = async () => {
     const data = await getPosts();
     const posts = data.items;
 
-    console.log('data - объект data.items', data)
-    console.log('posts - массив', posts)
+    // console.log('data - объект data.items', data)
+    // console.log('posts - массив', posts)
 
     return (
         <>

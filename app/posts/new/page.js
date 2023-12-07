@@ -1,6 +1,9 @@
 import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../config";
 import {revalidatePath} from "next/cache";
+import AddPost from "../../../components/editor/AddPost";
+
+
 
 const createPost = async (formData) => {
     'use server'
@@ -22,11 +25,7 @@ const createPost = async (formData) => {
 
 const Page = () => {
     return (<>
-            <form className="form" action={createPost}>
-                <input type="text" placeholder="Заголовок" required name="title"/>
-                <textarea placeholder="Ваш пост" required name="text"/>
-                <button className="btn" type="submit" value="Add post">Сохранить</button>
-            </form>
+            <AddPost createPost={createPost}/>
         </>
     );
 };
