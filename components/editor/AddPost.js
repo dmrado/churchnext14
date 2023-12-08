@@ -16,7 +16,7 @@ const EditPost = ({createPost}) => {
     // const [previewId, setPreviewId] = useState(null)
 
     return (<>
-            <form className="form" action={createPost}>
+            <form className="form" action={formData => createPost(formData, htmlBody, text)}>
 
                 <input defaultValue={title}
                        onChange={e => setTitle(e.target.value)}

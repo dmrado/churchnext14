@@ -40,13 +40,11 @@ const getById = async (req, res) => {
 const create = async (req, res) => {
     try {
         // const {title = "ТАЙТЛ", text = "ТЕКСТ"} = req.body
-        const title = req.body.title
-        const text = req.body.text
-        // console.log('title', title)
-        // console.log('text', text)
+        const {title, text, htmlBody, userId} = req.body
+
 
         // console.log('text in controller Post', text)
-        const newPost = await Post.create({title: title, text: text})
+        const newPost = await Post.create({title, text, htmlBody, userId})
         // console.log('newPost in controller', newPost)
         if (!newPost) {
             return res.status(400).json({message: 'Не удалось записать пост, попробуйте еще раз'})

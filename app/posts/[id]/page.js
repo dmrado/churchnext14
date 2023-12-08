@@ -28,7 +28,11 @@ const Post = async ({params: {id}}) => {
     return (<>
             <h1>{post.title}</h1>
             <h2>Автор № {post.userId}, его пост {id}</h2>
-            <p>Текст поста: {post.text}</p>
+            <p>
+                {/*Специальный атрибут dangerouslySetInnerHTML позволяющий встраивать произвольный html c бекенда, для безопастности*/}
+                {post.htmlBody ? <div dangerouslySetInnerHTML={{__html: post.htmlBody}}>
+                    </div> :
+                    <p>{post.text}</p>}</p>
 
             <button className="btn"><Link href="/posts">Назад</Link></button>
 

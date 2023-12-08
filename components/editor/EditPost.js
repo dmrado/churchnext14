@@ -12,8 +12,7 @@ const EditPost = ({post, updatePost}) => {
     const [title, setTitle] = useState(post ? post.title : '')
     const [text, setText] = useState(post?.text || '')
     console.log("text", text)
-    //изменил строку ниже
-    const [htmlBody, setHtmlBody] = useState(post?.text ? post?.text : post?.htmlBody)
+    const [htmlBody, setHtmlBody] = useState(post?.htmlBody || '')
     const [previewId, setPreviewId] = useState(post?.previewId || null)
 
     //для Alert
@@ -21,7 +20,7 @@ const EditPost = ({post, updatePost}) => {
 
 
     return (<>
-            <form className="form" action={updatePost}>
+            <form className="form" action={formData => updatePost(formData, htmlBody, text)}>
 
                 <input defaultValue={title}
                        onChange={e => setTitle(e.target.value)}
@@ -33,16 +32,16 @@ const EditPost = ({post, updatePost}) => {
 
                 <label htmlFor="exampleFormControlTextarea1" className="form-label">Ваш пост</label>
 
-                <textarea  value={text} onChange = {e => setText(e.target.value)} name="text" id="" cols="30" rows="10"/>
+                {/*<textarea  value={text} onChange = {e => setText(e.target.value)} name="text" id="" cols="30" rows="10"/>*/}
 
-                {/*<QuillEditor planeValue={text}*/}
-                {/*             setPlaneValue={setText}*/}
-                {/*             value={htmlBody}*/}
-                {/*             setValue={setHtmlBody}*/}
-                {/*             onChange = {e => setText(e.target.value)}*/}
-                {/*    />*/}
-                {text}
-                <br/>
+                <QuillEditor planeValue={text}
+                             setPlaneValue={setText}
+                             value={htmlBody}
+                             setValue={setHtmlBody}
+                             onChange = {e => setText(e.target.value)}
+                    />
+                {/*{text}*/}
+                {/*<br/>*/}
                 <div><input type="submit" value="Отправить"/></div>
                 <button className="btn" type="submit" value="Add post">Сохранить</button>
             </form>
