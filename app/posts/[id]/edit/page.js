@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../../config";
@@ -14,7 +13,7 @@ const updatePost = async (formData, htmlBody, text) => {
     'use server'
     const {title, id} = Object.fromEntries(formData)
 
-    console.log('это id поста, который мы отправляем методом PUT', id)
+    // console.log('это id поста, который мы отправляем методом PUT', id)
 
     await fetch(BACKEND_URL + `/posts/${id}`, {
         method: 'PUT',

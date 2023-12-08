@@ -8,15 +8,15 @@ import AddPost from "../../../components/editor/AddPost";
 const createPost = async (formData, htmlBody, text) => {
     'use server'
     const {title} = Object.fromEntries(formData)
+
     const response = await fetch(BACKEND_URL + '/posts', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-//todo userId: 1 не приходит в БД и соотв не рендерится при чтении поста дальше
         body: JSON.stringify({title, text, htmlBody, userId: 1})
     })
     const data = await response.json()
-    const newPost = await data.item
-//todo newPost куда? и где return
+    await data.item
+
     //мы получим в результате выполнения запроса весь пост и редиректнем на страницу всех постов, но там закешировано поэтому ревалидейтим
     revalidatePath('/posts')
     redirect(`/posts`)

@@ -21,8 +21,8 @@ const Posts = async () => {
     const data = await getPosts();
     const posts = data.items;
 
-    console.log('data - объект data.items', data)
-    console.log('posts - массив', posts)
+    // console.log('data - объект data.items', data)
+    // console.log('posts - массив', posts)
 
     return (
         <>
@@ -33,22 +33,22 @@ const Posts = async () => {
             </div>
 
             <div className="container">
-                <div className="cards-list">
-            {!!posts && posts.map(post => {
-                return <PostsPage key={post.id}
-                                item={post}
-                                link={`/posts/${post.id}`}
-                                // postPicture={postPicture}
-                                // setOpenModalPicture={setOpenModalPicture}
-                                // setEditedPost={setEditedPost}
-                                // updateHandler={token ? () => {
-                                //     setEditedPost(post)
-                                //     setOpenModal(true)
-                                // } : null}
-                                // deleteHandler={token ? () => deletePost(post) : null}
-                            />
 
-            }).sort()}
+                <div className="cards-list">
+                    {!!posts && posts.map(post => {
+                        return <PostsPage key={post.id}
+                                          item={post}
+                                          link={`/posts/${post.id}`}
+                            // postPicture={postPicture}
+                            // setOpenModalPicture={setOpenModalPicture}
+                            // setEditedPost={setEditedPost}
+                            // updateHandler={token ? () => {
+                            //     setEditedPost(post)
+                            //     setOpenModal(true)
+                            // } : null}
+                            // deleteHandler={token ? () => deletePost(post) : null}
+                        />
+                    }).sort()}
 
                 </div>
             </div>

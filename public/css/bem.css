@@ -28,10 +28,11 @@ img {
 p {
     margin: 0;
     text-align: justify;
-    padding: 15px 15px;
+    padding: 5px 15px;
 }
 
 body {
+    /*scroll-behavior: smooth;*/
     padding: 0;
     background-color: #fff;
     margin-top: 90px; /*Вынимаем сайт из под навигашки  */
@@ -327,25 +328,17 @@ body {
 
 
 .header__banner {
-    /*position: relative;*/
-    height: 80vh;
+    height: 100%;
+    top: 100px;
+    left: 0;
     /*это облака*/
     background-image: url("../img/banner/cloudsWIDE.webp");
-    /*background-image: url("../img/banner/clouds.jpeg");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     /*padding: 30vh 0 70vh 0;*/
     text-align: center;
-}
-
-.header__img {
-    position: absolute;
-    margin-top: 70px;
-    height: 130%;
-    width: 100%;
-    max-width: 100%;
 }
 
 .header__info {
@@ -357,6 +350,14 @@ body {
     align-items: center;
     position: relative;
     z-index: 4;
+}
+.header__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -384,6 +385,7 @@ body {
 .header__btn {
     width: 182px;
     height: 62px;
+    margin-bottom: 100px;
     border-radius: 12px;
     z-index: 11;
 }
@@ -543,10 +545,6 @@ body {
 }
 
 @media (max-width: 876px) {
-    .header__banner,
-    .header__img {
-        height: 70%;
-    }
 
     .header__info {
         padding-bottom: 20px;
@@ -750,7 +748,7 @@ body {
 .card__title {
     font-weight: 700;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
 }
 
 .card__title p {

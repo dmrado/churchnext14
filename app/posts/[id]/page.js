@@ -14,12 +14,12 @@ const getPost = async (id) => {
 
 const removePost = async (id) => {
     'use server'
-    console.log('id удаляемого поста', id)
+    // console.log('id удаляемого поста', id)
     await fetch(BACKEND_URL + `/posts/${id}`, {method: 'DELETE'})
     revalidatePath('/posts')
     redirect(`/posts`)
 }
-//todo сделать компоненты алерты Successful, Unsuccessful,
+//todo сделать компоненты Аалерты
 
 const Post = async ({params: {id}}) => {
     const data = await getPost(id)

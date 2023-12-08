@@ -23,18 +23,16 @@ const EditPost = ({createPost}) => {
                        type="text" placeholder="Заголовок" required name="title"
                 />
 
-
-
                 <label htmlFor="exampleFormControlTextarea1" className="form-label">Ваш пост</label>
+
                 <QuillEditor planeValue={text}
                              setPlaneValue={setText}
                              value={htmlBody}
                              setValue={setHtmlBody}
                              onChange={e => setText(e.target.value)}
                 />
-                {text}
-                <br/>
                 <button className="btn" type="submit" value="Add post">Сохранить</button>
+
             </form>
         </>
     );
