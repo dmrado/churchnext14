@@ -2,6 +2,7 @@
 import {useEffect, useState} from "react";
 import {BACKEND_URL} from "../config";
 import {useRouter} from 'next/router'
+import Link from "next/link";
 
 
 const setTokenToLocalstorage = token => {
@@ -87,12 +88,13 @@ const LoginModal = () => {
     }
 
 
-    const logoutHandler = () => {
+    const logoutHandler = (e) => {
+        e.preventDefault()
         setToken(null)
         localStorage.removeItem("token-churchscala")
         setOpenLogin(false)
-        const router = useRouter()
-        router.push('/posts')
+        // const router = useRouter()
+        // router.push('/posts')
     }
 
 
@@ -128,53 +130,61 @@ const LoginModal = () => {
                         <div>{message}</div>
 
                         {!!token ?
+                            <form action="">
+                                <div className="col-auto">
+                                    <h3>Хотите выйти?</h3>
+                                    {/*<Link href='/posts'>*/}
+                                        <button type="submit" className="btn btn-outline-danger mb-3"
+                                                onClick={e => logoutHandler(e)}
+                                                style={{marginRight: "30px"}}>Выйти
+                                        </button>
+                                    {/*</Link>*/}
 
-                            <div className="col-auto">
-                                <h3>Хотите выйти?</h3>
-                                <button type="submit" className="btn btn-outline-danger mb-3"
-                                        onClick={logoutHandler}
-                                        style={{marginRight: "30px"}}>Выйти
-                                </button>
 
-                                <button type="submit" className="btn btn-outline-success mb-3"
-                                        onClick={() => setOpenLogin(false)}>Остаться
-                                </button>
+                                    <button type="submit" className="btn btn-outline-success mb-3"
+                                            onClick={() => setOpenLogin(false)}>Остаться
+                                    </button>
+                                </div>
+                            </form>
 
-                            </div>
 
                             :
+                            <form>
 
-                            <div>
-                                <h3>Здравствуйте, пастор, пожалуйста авторизуйтесь</h3>
-                                <div className="modal__text-field-wrapper">
-                                    <div className="modal__input-wrapper">
-                                        <input type="text"
-                                               className="modal__input-text"
-                                               value={email}
-                                               onChange={e => setEmail(e.target.value)}
-                                        />
-                                        <label htmlFor="staticEmail"
-                                               className="modal__input-label">Email</label>
-                                    </div>
-                                </div>
-                                <div className="modal__text-field-wrapper">
-                                    <div className="modal__input-wrapper">
-                                        <input type="password"
-                                               className="modal__input-text"
-                                               id="inputPassword"
-                                               value={password}
-                                               onChange={e => setPassword(e.target.value)}
-                                        />
-                                        <label htmlFor="inputPassword"
-                                               className="modal__input-label">Пароль</label>
-                                    </div>
-                                </div>
 
-                                <button type="submit" className="btn btn-outline-success mb-3"
-                                        onClick={submitLoginHandler}>Войти
-                                </button>
-                            </div>
+                                <div>
+                                    <h3>Здравствуйте, пастор, пожалуйста авторизуйтесь</h3>
+                                    <div className="modal__text-field-wrapper">
+                                        <div className="modal__input-wrapper">
+                                            <input type="text"
+                                                   className="modal__input-text"
+                                                   value={email}
+                                                   onChange={e => setEmail(e.target.value)}
+                                            />
+                                            <label htmlFor="staticEmail"
+                                                   className="modal__input-label">Email</label>
+                                        </div>
+                                    </div>
+                                    <div className="modal__text-field-wrapper">
+                                        <div className="modal__input-wrapper">
+                                            <input type="password"
+                                                   className="modal__input-text"
+                                                   id="inputPassword"
+                                                   value={password}
+                                                   onChange={e => setPassword(e.target.value)}
+                                            />
+                                            <label htmlFor="inputPassword"
+                                                   className="modal__input-label">Пароль</label>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" className="btn btn-outline-success mb-3"
+                                            onClick={submitLoginHandler}>Войти
+                                    </button>
+                                </div>
+                            </form>
                         }
+
                     </div>
                 </div>
             </div>
