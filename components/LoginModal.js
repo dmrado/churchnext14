@@ -1,7 +1,7 @@
 'use client'
 import {useEffect, useState} from "react";
 import {BACKEND_URL} from "../config";
-import {useRouter} from 'next/router'
+import {usePathname, useRouter, useSearchParams} from 'next/navigation'
 import Link from "next/link";
 
 
@@ -51,10 +51,6 @@ const LoginModal = () => {
         setToken(getTokenFromLocalstorage())
     }, [])
 
-    useEffect(() => {
-        setToken(getTokenFromLocalstorage())
-    }, [token])
-
 
     const submitLoginHandler = (event) => {
         //login админа идет без базы данных, юзеров - через БД
@@ -87,14 +83,17 @@ const LoginModal = () => {
             }).catch(err => console.log(err))
     }
 
+    //редирект в клиентском компоненте, уводим при выходе
+    const router = useRouter()
+    const searchParams = useSearchParams()
+    searchParams.get('/posts')
 
     const logoutHandler = (e) => {
         e.preventDefault()
         setToken(null)
         localStorage.removeItem("token-churchscala")
         setOpenLogin(false)
-        // const router = useRouter()
-        // router.push('/posts')
+        router.push('/posts')
     }
 
 
