@@ -2,6 +2,7 @@
 import {useState, useEffect} from "react";
 import Link from "next/link";
 import dynamic from 'next/dynamic'
+import LoginModal from "../LoginModal";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
@@ -16,6 +17,8 @@ const EditPost = ({createPost}) => {
     // const [previewId, setPreviewId] = useState(null)
 
     return (<>
+            <LoginModal/>
+
             <form className="form" action={formData => createPost(formData, htmlBody, text)}>
 
                 <input defaultValue={title}

@@ -1,8 +1,7 @@
 'use client'
-
-
 import {useEffect, useState} from "react";
 import {BACKEND_URL} from "../config";
+import {useRouter} from 'next/router'
 
 
 const setTokenToLocalstorage = token => {
@@ -30,15 +29,14 @@ const setTokenExpiresToLocalstorage = expires => {
 
 
 const LoginModal = () => {
-
-    //для показа модального окна логина
-    const [openLogin, setOpenLogin] = useState(false)
     //для логина
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     //для id админа
     const [token, setToken] = useState('')
-
+    //для модального окна логина
+    const [openLogin, setOpenLogin] = useState(true)
+    const [message, setMessage] = useState(true)
 
     //для записи количества постов для задания коичества страниц
     // const [postsCount, setPostsCount] = useState(1)
@@ -52,35 +50,10 @@ const LoginModal = () => {
         setToken(getTokenFromLocalstorage())
     }, [])
 
-    // работа модального окна
     useEffect(() => {
-        // Modal
-        let modal = document.getElementById('my-modal')
-        let openModalBtn = document.getElementById("open-modal-btn")
-        openModalBtn.addEventListener('click', () => {
-            modal.classList.add('open')
-        })
-        let closeModalBtn = document.getElementById("close-my-modal-btn")
-        closeModalBtn.addEventListener('click', () => {
-            modal.classList.remove('open')
-        })
-//    закрыть по esc
-        window.addEventListener('keydown', (e) => {
-            console.log(e)
-            if (e.key === "Escape") {
-                modal.classList.remove('open')
-            }
-        })
-//    закрыть при клике вне его
-        document.querySelector('#my-modal .modal__box').addEventListener('click', event => {
-            event._isClickWithInModal = true
-        })
-        document.getElementById('my-modal').addEventListener('click', event => {
-            if (event._isClickWithInModal) return
-            event.currentTarget.classList.remove('open')
+        setToken(getTokenFromLocalstorage())
+    }, [token])
 
-        })
-    }, [])
 
     const submitLoginHandler = (event) => {
         //login админа идет без базы данных, юзеров - через БД
@@ -99,7 +72,8 @@ const LoginModal = () => {
                     //чистим и закрываем модальное окно логина
                     setEmail('')
                     setPassword('')
-                    setOpenLogin(false)
+                    setOpenLogin(true)
+                    setMessage(data.message)
                     return
                 } else {
                     setToken(data.token)
@@ -117,6 +91,8 @@ const LoginModal = () => {
         setToken(null)
         localStorage.removeItem("token-churchscala")
         setOpenLogin(false)
+        const router = useRouter()
+        router.push('/posts')
     }
 
 
@@ -145,75 +121,64 @@ const LoginModal = () => {
 
     return (
         <>
-            {/*      Modal*/}
-                <div className="container">
-                    <h1>Modal</h1>
-                    <button className="modal__close-btn" id="open-modal-btn">
-                        Open modal
-                    </button>
-                    <div className="modal" id="my-modal">
-                        <div className="modal__box">
-                            <svg onClick={() => setOpenLogin(false)}
-                                 id="close-my-modal-btn"
-                                 className="close-my-modal-btn"
-                                 width={50}
-                                 height={50}
-                                 viewBox="0 0 50 50"
-                                 fill="none"
-                                 xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <ellipse cx={25} cy={25} rx={25} ry={25} fill="#CACACA"/>
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                    fill="black"
-                                />
-                            </svg>
+            {!!openLogin && <div className="container">
+                <div className="modal open" id="my-modal">
+                    <div className="modal__box">
 
-                            <h2>Здравствуйте, пастор, пожалуйста авторизуйтесь</h2>
+                        <div>{message}</div>
+
+                        {!!token ?
+
+                            <div className="col-auto">
+                                <h3>Хотите выйти?</h3>
+                                <button type="submit" className="btn btn-outline-danger mb-3"
+                                        onClick={logoutHandler}
+                                        style={{marginRight: "30px"}}>Выйти
+                                </button>
+
+                                <button type="submit" className="btn btn-outline-success mb-3"
+                                        onClick={() => setOpenLogin(false)}>Остаться
+                                </button>
+
+                            </div>
+
+                            :
 
                             <div>
-                                <div>
-                                    {!token && <div className="mb-3 row">
-                                        <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
-                                        <div className="col-sm-10">
-                                            <input type="text"
-                                                   className="form-control"
-                                                   value={email}
-                                                   onChange={e => setEmail(e.target.value)}
-                                            />
-                                        </div>
-                                    </div>}
-                                    {!token && <div className="mb-3 row">
-                                        <label htmlFor="inputPassword"
-                                               className="col-sm-2 col-form-label">Пароль</label>
-                                        <div className="col-sm-10">
-                                            <input type="password"
-                                                   className="form-control"
-                                                   id="inputPassword"
-                                                   value={password}
-                                                   onChange={e => setPassword(e.target.value)}
-                                            />
-                                        </div>
-                                    </div>}
-                                    <div className="col-auto">
-                                        {!!token &&
-                                        <button type="submit" className="btn btn-outline-danger mb-3"
-                                                onClick={logoutHandler}
-                                                style={{marginRight: "30px"}}>Выйти
-                                        </button>
-                                        }
-
-                                        <button type="submit" className="btn btn-outline-success mb-3"
-                                                onClick={submitLoginHandler}>{!!token ? 'Остаться' : 'Войти'}
-                                        </button>
+                                <h3>Здравствуйте, пастор, пожалуйста авторизуйтесь</h3>
+                                <div className="modal__text-field-wrapper">
+                                    <div className="modal__input-wrapper">
+                                        <input type="text"
+                                               className="modal__input-text"
+                                               value={email}
+                                               onChange={e => setEmail(e.target.value)}
+                                        />
+                                        <label htmlFor="staticEmail"
+                                               className="modal__input-label">Email</label>
                                     </div>
                                 </div>
+                                <div className="modal__text-field-wrapper">
+                                    <div className="modal__input-wrapper">
+                                        <input type="password"
+                                               className="modal__input-text"
+                                               id="inputPassword"
+                                               value={password}
+                                               onChange={e => setPassword(e.target.value)}
+                                        />
+                                        <label htmlFor="inputPassword"
+                                               className="modal__input-label">Пароль</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" className="btn btn-outline-success mb-3"
+                                        onClick={submitLoginHandler}>Войти
+                                </button>
                             </div>
-                        </div>
+                        }
                     </div>
                 </div>
+            </div>
+            }
         </>
     )
 }

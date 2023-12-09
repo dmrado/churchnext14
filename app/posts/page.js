@@ -29,10 +29,9 @@ const Posts = async () => {
         <>
             <div className="blog-header">
                 <img src="img/Alex.jpg" alt="Photo"/>
-                <h1>Блог пастора</h1>
-                <button className="btn"><Link href='/posts/new'>Новый пост</Link></button>
+                <Link href='/posts/new'><h1>Блог пастора</h1></Link>
             </div>
-<LoginModal/>
+
             <div className="container">
 
                 <div className="cards-list">
