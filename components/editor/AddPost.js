@@ -21,22 +21,37 @@ const EditPost = ({createPost}) => {
 
             <form className="form" action={formData => createPost(formData, htmlBody, text)}>
 
-                <input defaultValue={title}
-                       onChange={e => setTitle(e.target.value)}
-                       type="text" placeholder="Заголовок" required name="title"
-                />
+                <h1>Давайте создадим новый пост, дорогой пастор...</h1>
 
-                <label htmlFor="exampleFormControlTextarea1" className="form-label">Ваш пост</label>
+                <div className="modal__text-field-wrapper">
+                    <div className="modal__input-wrapper">
+                        <input defaultValue={title}
+                               onChange={e => setTitle(e.target.value)}
+                               type="text" required name="title" className="modal__input-text"
+                        />
+                        <label htmlFor="staticEmail"
+                               className="modal__input-label">Заголовок</label>
+                    </div>
+                </div>
 
-                <QuillEditor planeValue={text}
-                             setPlaneValue={setText}
-                             value={htmlBody}
-                             setValue={setHtmlBody}
-                             onChange={e => setText(e.target.value)}
-                />
-                <button className="btn" type="submit" value="Add post">Сохранить</button>
 
+                <div className="modal__text-field-wrapper">
+                    <QuillEditor classmName="modal__input-text"
+                                 planeValue={text}
+                                 setPlaneValue={setText}
+                                 value={htmlBody}
+                                 setValue={setHtmlBody}
+                                 onChange={e => setText(e.target.value)}
+                    />
+                </div>
+
+                <div className="btn-blog-wrapper">
+                    <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
+                    <button className="btn btn-blog"><Link href={'/posts'}>Вернутся</Link></button>
+                </div>
             </form>
+
+
         </>
     );
 };

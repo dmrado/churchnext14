@@ -3,6 +3,8 @@ import {useState} from "react";
 import Link from "next/link";
 
 import dynamic from 'next/dynamic'
+import LoginModal from "../LoginModal";
+
 const QuillEditor = dynamic(
     () => import('./Quill'),
     {ssr: false}
@@ -18,28 +20,41 @@ const EditPost = ({post, updatePost}) => {
     const [openAlert, setOpenAlert] = useState(false)
 
     return (<>
+            <LoginModal/>
+
             <form className="form" action={formData => updatePost(formData, htmlBody, text)}>
 
-                <input defaultValue={title}
-                       onChange={e => setTitle(e.target.value)}
-                       type="text" placeholder="Заголовок" required name="title"
-                />
+                <h1>Приступим к редактированию...</h1>
+
+                <div className="modal__text-field-wrapper">
+                    <div className="modal__input-wrapper">
+                        <input defaultValue={title}
+                               onChange={e => setTitle(e.target.value)}
+                               type="text" required name="title"
+                               className="modal__input-text"
+                        />
+                        <label htmlFor="staticEmail"
+                                 className="modal__input-label">Заголовок</label>
+                    </div>
+                </div>
 
                 <input type="hidden" name="id" value={post.id}/>
-
-                <label htmlFor="exampleFormControlTextarea1" className="form-label">Ваш пост</label>
-
-                <QuillEditor planeValue={text}
-                             setPlaneValue={setText}
-                             value={htmlBody}
-                             setValue={setHtmlBody}
-                             onChange = {e => setText(e.target.value)}
+                <div className="modal__text-field-wrapper">
+                    <QuillEditor classmName="modal__input-text"
+                                 planeValue={text}
+                                 setPlaneValue={setText}
+                                 value={htmlBody}
+                                 setValue={setHtmlBody}
+                                 onChange={e => setText(e.target.value)}
                     />
+                </div>
 
-                <button className="btn" type="submit" value="Add post">Сохранить</button>
+                <div className="btn-blog-wrapper">
+                    <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
+                    <button className="btn btn-blog"><Link href={`/posts/${post.id}`}>Вернутся</Link></button>
+                </div>
             </form>
 
-            <button className="btn"><Link href={`/posts/${post.id}`}>Вернутся</Link></button>
         </>
     );
 };

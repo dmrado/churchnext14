@@ -47,10 +47,10 @@ app.get('/logout', authController.logout)
 //здесь req.query незримо содержит часть строки запроса после вопросительного знака
 app.get('/posts', postController.list)
 app.get('/posts/:id', postController.getById)
-app.post('/posts', isPrivate, postController.create)
-app.put('/posts/:id', isPrivate, postController.update)
+app.post('/posts', postController.create)
+app.put('/posts/:id', postController.update)
 //req.params - это динамическая часть пути :id
-app.delete('/posts/:id', isPrivate, postController.remove)
+app.delete('/posts/:id', postController.remove)
 
 //files Api
 app.post('/files/upload', isPrivate, upload.single('file'), fileController.uploadFile)

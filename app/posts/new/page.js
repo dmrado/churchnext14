@@ -15,7 +15,7 @@ const createPost = async (formData, htmlBody, text) => {
         body: JSON.stringify({title, text, htmlBody, userId: 1})
     })
     const data = await response.json()
-    await data.item
+    const newPost = await data.item
 
     //мы получим в результате выполнения запроса весь пост и редиректнем на страницу всех постов, но там закешировано поэтому ревалидейтим
     revalidatePath('/posts')

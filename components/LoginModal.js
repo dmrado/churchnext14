@@ -133,10 +133,10 @@ const LoginModal = () => {
                                 <div className="col-auto">
                                     <h3>Хотите выйти?</h3>
                                     {/*<Link href='/posts'>*/}
-                                        <button type="submit" className="btn btn-outline-danger mb-3"
-                                                onClick={e => logoutHandler(e)}
-                                                style={{marginRight: "30px"}}>Выйти
-                                        </button>
+                                    <button type="submit" className="btn btn-outline-danger mb-3"
+                                            onClick={e => logoutHandler(e)}
+                                            style={{marginRight: "30px"}}>Выйти
+                                    </button>
                                     {/*</Link>*/}
 
 
@@ -145,7 +145,6 @@ const LoginModal = () => {
                                     </button>
                                 </div>
                             </form>
-
 
                             :
                             <form>
@@ -177,9 +176,14 @@ const LoginModal = () => {
                                         </div>
                                     </div>
 
-                                    <button type="submit" className="btn btn-outline-success mb-3"
+                                    <button type="submit" className="btn btn-blog"
                                             onClick={submitLoginHandler}>Войти
                                     </button>
+
+                                    <button className="btn btn-blog">
+                                        <Link href={'/posts'}>Вернутся</Link>
+                                    </button>
+
                                 </div>
                             </form>
                         }

@@ -73,11 +73,16 @@ body {
     transition: .3s;
 }
 
+
 .btn:hover {
     background-color: #FF6700;
     color: #fff;
     font-size: 19px;
     box-shadow: 2px 2px 10px #002952;
+}
+
+.ql-editor {
+    min-height: 200px;
 }
 
 .btn:active {
@@ -445,10 +450,10 @@ body {
 }
 
 .mission__wrapper {
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
-.mission__list-header {
+.mission__list-h eader {
     display: flex;
     /*flex-direction: column;*/
     justify-content: center;
@@ -663,7 +668,7 @@ body {
     justify-content: center;
     align-items: center;
     grid-row-gap: 10px;
-    margin-bottom: 60px;
+    margin: 150px 0 60px 0;
 }
 
 .blog-header img {
@@ -690,8 +695,51 @@ body {
 /*blog header on the posts/page.js FINISH*/
 
 /*Card block*/
+.one-post-banner {
+    position: relative;
+    align-items: center;
+    height: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
 
+.one-post-banner__img {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 
+.one-post__text-wrapper {
+    position: relative;
+    display: block;
+    /*padding: 200px 0;*/
+}
+
+.one-post__text {
+    position: relative;
+}
+
+.one-post__text h1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-blog-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-blog {
+    margin-right: 20px;
+}
 .cards-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1195,15 +1243,30 @@ body {
     transition: .2s ease-in-out;
     left: 12px;
     color: #6b6b6b;
-    top: 4px
+    top: 4px;
+    border: none;
+}
+
+.ql-editor {
+    height: 300px;
+    padding: 29px 12px 7px;
+    background-color: #EBEBEB;
+    color: #0e3263;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
 }
 
 .modal__input-label:focus {
     transform: translateY(-100%);
 }
 
-
 /*Modal end*/
+
+/*Blog start*/
+
+
+/*Blog finish*/
 /*Контаты*/
 .contacts {
     font-family: Dosis, sans-serif;
@@ -1335,6 +1398,7 @@ body {
     z-index: 20;
     padding: 15px 143px;
     transition: .7s;
+    margin-top: 50px;
 }
 
 .footer__info {

@@ -11,6 +11,9 @@
   "dependencies": {
     "autoprefixer": "10.4.16",
     "express-async-handler": "^1.2.0",
+    "from": "^0.1.7",
+    "import": "^0.0.6",
+    "moment": "^2.29.4",
     "mysql2": "^3.6.5",
     "next": "14.0.3",
     "postcss": "8.4.31",

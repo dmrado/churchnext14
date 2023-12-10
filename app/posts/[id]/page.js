@@ -26,21 +26,39 @@ const Post = async ({params: {id}}) => {
     const post = data.item
 
     return (<>
-            <h1>{post.title}</h1>
-            <h2>Автор № {post.userId}, его пост {id}</h2>
-            <p>
-                {/*Специальный атрибут dangerouslySetInnerHTML позволяющий встраивать произвольный html c бекенда, для безопастности*/}
-                {post.htmlBody ? <div dangerouslySetInnerHTML={{__html: post.htmlBody}}>
-                    </div> :
-                    <p>{post.text}</p>}</p>
 
-            <button className="btn"><Link href="/posts">Назад</Link></button>
+            <div className="one-post-banner">
+                <img className="one-post-banner__img" src="/img/banner/cloudsWIDE.webp" alt=""/>
+            </div>
 
-            <form className="form" action={removePost.bind(null, id)}>
-                <button className="btn" type="submit" value="Delete post">Удалить пост</button>
-            </form>
+            <div className="container">
+                <div className="one-post__text-wrapper">
+                    <div className="one-post__text">
+                        <h1>{post.title}</h1>
 
-            <button className="btn"><Link href={`/posts/${id}/edit`}>Редактировать пост</Link></button>
+                        <p>
+                            {/*Специальный атрибут dangerouslySetInnerHTML позволяющий встраивать произвольный html c бекенда, для безопастности*/}
+                            {post.htmlBody ? <div dangerouslySetInnerHTML={{__html: post.htmlBody}}>
+                                </div> :
+                                <p>{post.text}</p>}
+                        </p>
+                    </div>
+
+
+                    <div className="btn-blog-wrapper">
+                        <button className="btn btn-blog"><Link href="/posts">Назад</Link></button>
+
+                        <form className="form" action={removePost.bind(null, id)}>
+                            <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
+                        </form>
+
+                        <button className="btn btn-blog"><Link href={`/posts/${id}/edit`}>Редактировать</Link></button>
+
+                    </div>
+                </div>
+
+            </div>
+
         </>
     );
 };

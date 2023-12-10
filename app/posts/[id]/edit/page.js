@@ -32,8 +32,7 @@ const Page = async ({params: {id}}) => {
     const post = data.item
 
     return (<>
-            <h1>Редактирование поста {post.title}</h1>
-            <h2>post id: {post.id}</h2>
+            <h5>post id: {post.id}</h5>
 
             <EditPost post={post} updatePost={updatePost}/>
 
