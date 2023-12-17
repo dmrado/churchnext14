@@ -448,7 +448,8 @@ body {
     /*ниже для сохранения пропорций картинок*/
     object-fit: cover;
 }
-.about__img-5{
+
+.about__img-5 {
     height: 288px;
     width: 100%;
     border-radius: 20px;
@@ -629,8 +630,58 @@ body {
     }
 }
 
-
 /*about и mission конец*/
+
+
+/*photo__list-header начало*/
+.photo__list-header {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #FF6700 !important;
+    /*font-family: Ubuntu;*/
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.photo__list-wrapper p {
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    /*font-family: Ubuntu;*/
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.photo__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.photo__list-item {
+    height: 218px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 5;
+}
+
+.photo__list-item1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+/*photo__list-header конец*/
 
 /* TEXT */
 .text {
@@ -731,7 +782,7 @@ body {
     position: relative;
 }
 
-.one-post__text h1{
+.one-post__text h1 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -747,6 +798,7 @@ body {
 .btn-blog {
     margin-right: 20px;
 }
+
 .cards-list {
     display: grid;
     grid-template-columns: 1fr 1fr;

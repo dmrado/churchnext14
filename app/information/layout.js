@@ -6,10 +6,10 @@ export default function RootLayout({children}) {
             <h1>О нас</h1>
             <ul>
                 <li>
-                    <Link href="/about/contacts">Информация</Link>
+                    <Link style={{color: 'black'}} href="/about/contacts">Информация</Link>
                 </li>
                 <li>
-                    <Link href="/about/team">Наша команда</Link>
+                    <Link style={{color: 'black'}} href="/about/team">Наша команда</Link>
                 </li>
             </ul>
             {children}

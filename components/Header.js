@@ -102,6 +102,11 @@ const Header = () => {
                                     Контакты
                                 </Link>
                             </li>
+                            <li className="menu__item">
+                                <Link className="menu__link" href="/media">
+                                    Медиа
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
