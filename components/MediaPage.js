@@ -1,49 +1,59 @@
+import Link from "next/link";
+
 const MediaPage = () => {
 
 
     return (<>
             <div className="container">
-                <div className="photo__list-wrapper">
+                <div className="media__list-wrapper">
 
-                    <div className="photo__list-header">
+                    <div className="media__list-header">
                         <h2>Наш фотоальбом</h2>
                     </div>
                     <p>Чтобы посмотреть все фотографии с мероприятия, наведите на фото и нажмите для перехода на диск
                     </p>
 
+                    <div className="media__list">
+                        <div className="media__list-item1">
+                            <h3>АЛЬБОМ 1</h3>
+                            <Link href="http://google.com">
+                                <img className="media__img vertical" src="/img/aboutpage/2.webp" alt="Pic"/>
+                            </Link>
 
-                    <div className="photo__list">
+                        </div>
+                        <div className="media__list-item2">
+                            <h3>АЛЬБОМ 2</h3>
+                            <Link href="#">
+                                <img className="media__img" src="/img/aboutpage/3.webp" alt="Pic"/>
+                            </Link>
 
-                        <div className="photo__list-item1">
-                            <img className="about__img" src="/img/aboutpage/1.webp" alt="Pic"/>
+                        </div>
+                        <div className="media__list-item3">
+                            <h3>АЛЬБОМ 3</h3>
+                            <Link href="#">
+                                <img className="media__img" src="/img/aboutpage/3.webp" alt="Pic"/>
+                            </Link>
+
+                        </div>
+                        <div className="media__list-item4">
+                            <h3>АЛЬБОМ 4</h3>
+                            <Link href="#">
+                                <img className="media__img" src="/img/aboutpage/4.webp" alt="Pic"/>
+                            </Link>
+                        </div>
+                        <div className="media__list-item5">
+                            <h3>АЛЬБОМ 5</h3>
+                            <Link href="#">
+                                <img className="media__img" src="/img/aboutpage/1.webp" alt="Pic"/>
+                            </Link>
+                        </div>
+                        <div className="media__list-item6"><h3>АЛЬБОМ 1</h3>
+                            <h3>АЛЬБОМ 6</h3>
+                            <Link href="#">
+                                <img className="media__img vertical" src="/img/aboutpage/2.webp" alt="Pic"/>
+                            </Link>
                         </div>
 
-                        <div className="photo__list-item2">
-                            <img className="about__img" src="/img/aboutpage/2.webp" alt="Pic"/>
-                        </div>
-
-                        <div className="photo__list-item3">
-                            <img className="about__img" src="/img/aboutpage/3.webp" alt="Pic"/>
-                        </div>
-
-                        <div className="photo__list-item4">
-                            <img className="about__img" src="/img/aboutpage/4.webp" alt="Pic"/>
-                        </div>
-                        <div className="photo__list-item5">
-                            <img className="about__img" src="/img/aboutpage/1.webp" alt="Pic"/>
-                        </div>
-
-                        <div className="photo__list-item6">
-                            <img className="about__img" src="/img/aboutpage/2.webp" alt="Pic"/>
-                        </div>
-
-                        <div className="photo__list-item7">
-                            <img className="about__img" src="/img/aboutpage/3.webp" alt="Pic"/>
-                        </div>
-
-                        <div className="photo__list-item8">
-                            <img className="about__img" src="/img/aboutpage/4.webp" alt="Pic"/>
-                        </div>
                     </div>
                 </div>
             </div>
