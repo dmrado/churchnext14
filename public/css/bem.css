@@ -448,18 +448,25 @@ body {
     /*ниже для сохранения пропорций картинок*/
     object-fit: cover;
 }
+.about__img-5{
+    height: 288px;
+    width: 100%;
+    border-radius: 20px;
+    /*ниже для сохранения пропорций картинок*/
+    object-fit: cover;
+}
 
 .mission__wrapper {
     padding-bottom: 50px;
 }
 
-.mission__list-h eader {
+.mission__list-header {
     display: flex;
     /*flex-direction: column;*/
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color: #FF6700;
+    color: #FF6700 !important;
     /*font-family: Ubuntu;*/
     font-size: 24px;
     font-style: normal;
@@ -499,7 +506,7 @@ body {
     height: 340px;
     flex-shrink: 0;
     border-radius: 20px;
-    transform: translateX(-25%);
+    transform: translateX(-16%);
     z-index: -3;
 }
 
@@ -508,7 +515,7 @@ body {
     height: 350px;
     flex-shrink: 0;
     border-radius: 20px;
-    transform: translateX(25%) translateY(20%);
+    transform: translateX(20%) translateY(25%);
     z-index: -3;
 }
 

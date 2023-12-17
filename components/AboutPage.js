@@ -55,19 +55,19 @@ const AboutPage = () => {
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/1.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/2.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/3.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/4.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
@@ -80,7 +80,7 @@ const AboutPage = () => {
                         </div>
 
                         <div className="about__list-item_last">
-                            <img className="about__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="about__img-5" src="/img/aboutpage/5555.webp" alt="Pic"/>
                         </div>
                     </div>
                 </div>
@@ -107,11 +107,11 @@ const AboutPage = () => {
                         </div>
 
                         <div className="mission__list-item_2">
-                            <img className="mission__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="mission__img" src="/img/aboutpage/6.webp" alt="Pic"/>
                         </div>
 
                         <div className="mission__list-item_3">
-                            <img className="mission__img" src="/img/about/about.jpg" alt="Pic"/>
+                            <img className="mission__img" src="/img/aboutpage/7.webp" alt="Pic"/>
                         </div>
 
                         <div className="mission__list-item_4">

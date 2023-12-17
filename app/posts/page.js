@@ -28,7 +28,7 @@ const Posts = async () => {
     return (
         <>
             <div className="blog-header">
-                <img src="img/Alex.jpg" alt="Photo"/>
+                <img src="img/postspage/blog1.webp" alt="Photo"/>
                 <Link href='/posts/new'><h1>Блог пастора</h1></Link>
             </div>
 
