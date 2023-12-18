@@ -26,14 +26,12 @@ const MediaPage = () => {
                             <Link href="#">
                                 <img className="media__img" src="/img/aboutpage/3.webp" alt="Pic"/>
                             </Link>
-
                         </div>
                         <div className="media__li media__li_3">
                             <h3>АЛЬБОМ 3</h3>
                             <Link href="#">
                                 <img className="media__img" src="/img/aboutpage/3.webp" alt="Pic"/>
                             </Link>
-
                         </div>
                         <div className="media__li media__li_4">
                             <h3>АЛЬБОМ 4</h3>
@@ -53,7 +51,6 @@ const MediaPage = () => {
                                 <img className="media__img vertical" src="/img/aboutpage/2.webp" alt="Pic"/>
                             </Link>
                         </div>
-
                     </div>
                 </div>
             </div>

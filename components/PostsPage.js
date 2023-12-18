@@ -20,15 +20,16 @@ const PostsPage = ({
                     <img className="card__img" src="img/banner/clouds.jpeg" alt="Pic"/>
                 {/*</div>*/}
 
-                <div className="card__body">
-                    <h5 className="card__title">
-                        <Link className="card__link" href={link}>Пост {id}</Link>
-                    </h5>
-                    <p className="card__post-data">{moment(updatedAt).format("DD.MM.YYYY")}</p>
-                    <h3 className="card__title"><b>{title.slice(0, 55)}...</b></h3>
-                    <p className="text">{text.slice(0, 100)}...</p>
-                </div>
-
+                {/*<div className="card__body-wrapper">*/}
+                    <div className="card__body">
+                        <h5 className="card__title">
+                            <Link className="card__link" href={link}>Пост {id}</Link>
+                        </h5>
+                        <p className="card__post-data">{moment(updatedAt).format("DD.MM.YYYY")}</p>
+                        <h3 className="card__title"><b>{title.slice(0, 55)}...</b></h3>
+                        <p className="text">{text.slice(0, 100)}...</p>
+                    </div>
+                {/*</div>*/}
             </div>
         </>
     );
