@@ -16,7 +16,9 @@ const PostsPage = ({
 
     return (<>
             <div className="card">
-                <img className="card__img" src="img/banner/clouds.jpeg" alt="Pic"/>
+                {/*<div className="card__img-wrapper">*/}
+                    <img className="card__img" src="img/banner/clouds.jpeg" alt="Pic"/>
+                {/*</div>*/}
 
                 <div className="card__body">
                     <h5 className="card__title">
