@@ -1,3 +1,4 @@
+import ContactsPage from "../../components/ContactsPage";
 
 export const metadata = {
     title: 'Beit-Ieshua | Information',
@@ -6,10 +7,15 @@ export const metadata = {
 
 const Page = () => {
     return (
-        <h1>
-            Дорогие друзья! Эта страница находится в разработке. Мы хотим подобрать для вас самую полезную и самую свежую информацию. Вскоре!
+        <>
+            <h1 style={{textAlign: 'center'}}>
+                Дорогие друзья! <br/> Эта страница находится в разработке. <br/>Мы хотим подобрать для вас самую полезную и самую свежую информацию. Вскоре!
+            </h1>
             {/*<InformationPage/>*/}
-        </h1>
+
+            <ContactsPage/>
+        </>
+
     );
 };
 
