@@ -180,9 +180,11 @@ const LoginModal = () => {
                                             onClick={submitLoginHandler}>Войти
                                     </button>
 
-                                    <button className="btn btn-blog">
-                                        <Link href={'/posts'}>Вернутся</Link>
-                                    </button>
+                                    <Link href={'/posts'}>
+                                        <button className="btn btn-blog">
+                                            Вернутся
+                                        </button>
+                                    </Link>
 
                                 </div>
                             </form>

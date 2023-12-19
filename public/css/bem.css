@@ -633,10 +633,27 @@ body {
 /*about и mission конец*/
 
 
-/*photo__list-header начало*/
+/*media начало*/
+.youtube{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-youtube {
+    /*width: 50%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #FF6700 !important;
+    color: #FF6700;
+    margin-top: 50px;
+}
 
 .media__list-wrapper {
-    padding: 50px 20px;
+    padding: 0 20px;
 }
 
 .media__list-header {
@@ -663,6 +680,7 @@ body {
     font-weight: 700;
     line-height: normal;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .media__list {
@@ -735,7 +753,7 @@ body {
 
 .media__li_6 {
     grid-column: 2 / 3;
-    grid-row: 3 / 6;
+    grid-row: 3 / 5;
 }
 
 @media (max-width: 650px) {
@@ -918,24 +936,17 @@ body {
     position: relative;
 }
 
-.card__img-wrapper {
-    /*position: relative;*/
-    overflow: hidden;
-}
-
-.card__body-wrapper {
-    /*position: relative;*/
-    overflow: hidden;
-}
-
 .card__img {
     position: absolute;
     height: 100%;
     width: calc(100% + 60px);
     margin-left: -30px;
     transition: all .5s ease-in-out;
+    overflow: hidden;
 }
-
+.card__img img{
+    max-width: 100%;
+}
 
 .card__body {
     /*position: absolute;*/
@@ -948,14 +959,14 @@ body {
     border-top: 4px solid #fff;
     padding: 10px 30px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
-    margin-bottom: -60px;
+    margin-bottom: -70%;
     transition: .2s;
     overflow: hidden;
     border-radius: 2px;
 }
 
 .card__img:hover {
-    transform: scale(1.5);
+    /*transform: scale(1.5);*/
 }
 
 .card__body:hover {

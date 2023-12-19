@@ -47,7 +47,7 @@ const EditPost = ({createPost}) => {
 
                 <div className="btn-blog-wrapper">
                     <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
-                    <button className="btn btn-blog"><Link href={'/posts'}>Вернутся</Link></button>
+                    <Link href={'/posts'}><button className="btn btn-blog">Вернутся</button></Link>
                 </div>
             </form>
 

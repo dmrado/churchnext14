@@ -16,11 +16,8 @@ const PostsPage = ({
 
     return (<>
             <div className="card">
-                {/*<div className="card__img-wrapper">*/}
                     <img className="card__img" src="img/banner/clouds.jpeg" alt="Pic"/>
-                {/*</div>*/}
 
-                {/*<div className="card__body-wrapper">*/}
                     <div className="card__body">
                         <h5 className="card__title">
                             <Link className="card__link" href={link}>Пост {id}</Link>
@@ -29,7 +26,6 @@ const PostsPage = ({
                         <h3 className="card__title"><b>{title.slice(0, 55)}...</b></h3>
                         <p className="text">{text.slice(0, 100)}...</p>
                     </div>
-                {/*</div>*/}
             </div>
         </>
     );

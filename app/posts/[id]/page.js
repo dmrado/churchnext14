@@ -46,13 +46,13 @@ const Post = async ({params: {id}}) => {
 
 
                     <div className="btn-blog-wrapper">
-                        <button className="btn btn-blog"><Link href="/posts">Назад</Link></button>
+                        <Link href="/posts"><button className="btn btn-blog">Назад</button></Link>
 
                         <form className="form" action={removePost.bind(null, id)}>
                             <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
                         </form>
 
-                        <button className="btn btn-blog"><Link href={`/posts/${id}/edit`}>Редактировать</Link></button>
+                        <Link href={`/posts/${id}/edit`}><button className="btn btn-blog">Редактировать</button></Link>
 
                     </div>
                 </div>

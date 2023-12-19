@@ -32,7 +32,7 @@ const AboutPage = () => {
                         <h3>Шалом и добро пожаловать</h3>
                         <h1>в Еврейскую общину города Артем</h1>
 
-                        <button className="btn header__btn"><a href="#mission">Наша миссия</a></button>
+                        <a href="#mission"><button className="btn header__btn">Наша миссия</button></a>
                         {/*это затемнение которое наезжает на облака*/}
                     </div>
                     <img className="header__img" src="/img/banner/Film Grain Texture.png" alt=""/>

@@ -51,7 +51,7 @@ const EditPost = ({post, updatePost}) => {
 
                 <div className="btn-blog-wrapper">
                     <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
-                    <button className="btn btn-blog"><Link href={`/posts/${post.id}`}>Вернутся</Link></button>
+                   <Link href={`/posts/${post.id}`}><button className="btn btn-blog">Вернутся</button></Link>
                 </div>
             </form>
 
