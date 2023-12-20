@@ -6,7 +6,7 @@ import {BACKEND_URL} from "../config";
 const CONTACTS = {
     headerAddres1: 'Адрес: ',
     headerAddres2: 'Приморский край г. Артем, ул. Пушкина 16. Остановка автобуса "Дом Культуры Угольщиков"',
-    refMail: 'halom6755@yandex.ru',
+    refMail: 'shalom6755@yandex.ru',
     phone1: '+7 924 269 30 05',
     phone2: '+7 914 652 09 55',
     instructionTransport: '',

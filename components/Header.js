@@ -114,14 +114,13 @@ const Header = () => {
                         <div className="menu" id="menu">
                             <ul className="menu__list menu_socials">
                                 <li className="menu__item">
-                                    <Link className="menu__link menu_socials_first" href="#">
-                                        {/*todo заменить на иконки или svg-шки*/}
-                                        t
+                                    <Link className="menu__link menu_socials_first" target="_blank" href="https://t.me/+79146520955">
+                                        <i className="fa-brands fa-telegram" />
                                     </Link>
                                 </li>
                                 <li className="menu__item">
-                                    <Link className="menu__link" href="#">
-                                        w
+                                    <Link className="menu__link" target="_blank" href="https://api.whatsapp.com/send/?phone=79242693005">
+                                        <i className="fa-brands fa-square-whatsapp" />
                                     </Link>
                                 </li>
                             </ul>

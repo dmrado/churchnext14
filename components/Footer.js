@@ -43,37 +43,59 @@ const Footer = () => {
                         +7 924 269 30 05
                     </div>
 
-
                     <div className="footer__socials">
-                        <svg className="footer__socials-item"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={36}
-                            height={36}
-                            viewBox="0 0 36 36"
-                            fill="none"
-                        >
-                            <circle cx={18} cy={18} r={18} fill="#004E98"/>
-                        </svg>
 
-                        <svg className="footer__socials-item"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={36}
-                            height={36}
-                            viewBox="0 0 36 36"
-                            fill="none"
-                        >
-                            <circle cx={18} cy={18} r={18} fill="#004E98"/>
-                        </svg>
+                        <ul className="menu__list menu_socials">
+                            <li className="menu__item">
+                                <Link className="menu__link menu_socials_first" target="_blank" href="https://t.me/+79146520955">
+                                    <i className="fa-brands fa-telegram" />
+                                </Link>
+                            </li>
+                            <li className="menu__item">
+                                <Link className="menu__link" target="_blank" href="https://api.whatsapp.com/send/?phone=79242693005">
+                                    <i className="fa-brands fa-square-whatsapp" />
+                                </Link>
+                            </li>
+                            <li className="menu__item">
+                                <Link className="menu__link" target="_blank" href="https://www.youtube.com/channel/UCXA60JCdNpDZwlTLBJaTJyg">
+                                    <i className="fa-brands fa-square-youtube"></i>
+                                </Link>
+                            </li>
+                        </ul>
 
-                        <svg className="footer__socials-item"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={36}
-                            height={36}
-                            viewBox="0 0 36 36"
-                            fill="none"
-                        >
-                            <circle cx={18} cy={18} r={18} fill="#004E98"/>
-                        </svg>
+
+
+                        {/*<svg className="footer__socials-item"*/}
+                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                        {/*    width={36}*/}
+                        {/*    height={36}*/}
+                        {/*    viewBox="0 0 36 36"*/}
+                        {/*    fill="none"*/}
+                        {/*>*/}
+                        {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
+                        {/*</svg>*/}
+
+                        {/*<svg className="footer__socials-item"*/}
+                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                        {/*    width={36}*/}
+                        {/*    height={36}*/}
+                        {/*    viewBox="0 0 36 36"*/}
+                        {/*    fill="none"*/}
+                        {/*>*/}
+                        {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
+                        {/*</svg>*/}
+
+                        {/*<svg className="footer__socials-item"*/}
+                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                        {/*    width={36}*/}
+                        {/*    height={36}*/}
+                        {/*    viewBox="0 0 36 36"*/}
+                        {/*    fill="none"*/}
+                        {/*>*/}
+                        {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
+                        {/*</svg>*/}
+
+
                     </div>
                 </div>
 

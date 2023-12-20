@@ -107,6 +107,9 @@ body {
 
 /*Header*/
 
+.fa-brands, .fab{
+    font-size: 30px;
+}
 
 .nav {
     display: flex;
@@ -1850,10 +1853,12 @@ form h1{
 
 .footer__socials {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer__socials-item {
-    margin-right: 20px;
+    /*margin-left: 10px;*/
 }
 
 .footer_signature {
@@ -1866,6 +1871,16 @@ form h1{
 @media (max-width: 982px) {
     .footer {
         padding-left: 17px;
+    }
+    .menu_socials_first{
+        margin-right: 0;
+    }
+    .footer__socials{
+        margin-top: 70px;
+    }
+    .menu_socials{
+        align-items: end;
+        color: #004E98;
     }
 
     .footer__info {
