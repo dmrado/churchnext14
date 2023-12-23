@@ -94,18 +94,18 @@ const ContactsPage = () => {
                     <div className="address thin">
                         <i className="bi bi-geo-alt"/>
                         <h4>{CONTACTS.headerAddres1}</h4>
-                        <p>{CONTACTS.headerAddres2}</p>
+                        <p><i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.headerAddres2}</p>
                     </div>
                     <div className="email thin">
                         <i className="bi bi-envelope"/>
                         <h4>Напишите нам:</h4>
-                        <p>{CONTACTS.refMail}</p>
+                        <p><i className="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.refMail}</p>
                     </div>
                     <div className="phone thin">
                         <i className="bi bi-phone"/>
                         <h4>Позвоните нам:</h4>
-                        <p>{CONTACTS.phone1}</p>
-                        <p>{CONTACTS.phone2}</p>
+                        <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone1}</p>
+                        <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone2}</p>
                     </div>
                     <div className="coordinates thin">
                         <i className="bi bi-geo-alt"/>
