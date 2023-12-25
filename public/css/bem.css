@@ -107,7 +107,7 @@ body {
 
 /*Header*/
 
-.fa-brands, .fab{
+.fa-brands, .fab {
     font-size: 30px;
 }
 
@@ -393,6 +393,10 @@ body {
     z-index: 4;
 }
 
+.header__info h1 span{
+    font-size: 26px;
+}
+
 .header__img {
     position: absolute;
     top: 0;
@@ -421,6 +425,7 @@ body {
     font-weight: 900;
     line-height: normal;
     margin-top: 0;
+    margin-bottom: 50px;
 }
 
 .header__banner p {
@@ -461,7 +466,7 @@ body {
     z-index: 5;
 }
 
-.about__list-item p{
+.about__list-item p {
     text-align: justify;
 }
 
@@ -696,10 +701,16 @@ body {
     border: 2px solid #FF6700 !important;
     color: #FF6700;
     margin-top: 50px;
+    text-transform: uppercase;
 }
 
 .media__list-wrapper {
     padding: 0 20px;
+}
+
+
+.media__list-wrapper p {
+    color: #9c9c9c;
 }
 
 .media__list-header {
@@ -1644,6 +1655,7 @@ body {
 .contact__map {
     margin-top: 5px;
 }
+
 /*@media (max-width: 1000px){*/
 /*    .contact__map {*/
 /*        width: 1000px;*/
@@ -1686,7 +1698,7 @@ body {
     width: 100%;
 }
 
-form h1{
+form h1 {
     color: #004E98;
     text-align: center;
 }
@@ -1773,9 +1785,11 @@ form h1{
         text-align: center;
         font-size: 26px;
     }
+
     .address__list {
         height: 100%;
     }
+
     .contact__form-inputs-wrapper {
         grid-template-columns: 1fr;
         justify-content: center;
@@ -1880,21 +1894,30 @@ form h1{
 .footer_signature {
     position: absolute;
     left: 145px;
+    font-size: 11px;
     margin-bottom: -300px;
     transition: 0.7s;
+}
+
+.footer_signature p{
+    font-size: 7px;
 }
 
 @media (max-width: 982px) {
     .footer {
         padding-left: 17px;
+        height: 353px;
     }
-    .menu_socials_first{
+
+    .menu_socials_first {
         margin-right: 0;
     }
-    .footer__socials{
+
+    .footer__socials {
         margin-top: 70px;
     }
-    .menu_socials{
+
+    .menu_socials {
         align-items: end;
         color: #004E98;
     }
@@ -1918,7 +1941,8 @@ form h1{
     .footer__socials-item {
         margin-right: 7px;
     }
-    .nav-text{
+
+    .nav-text {
         left: 220px;
     }
 }
@@ -1928,7 +1952,8 @@ form h1{
     .footer__socials-item {
         margin-right: 1px;
     }
-    .nav-text{
+
+    .nav-text {
         left: 200px;
     }
 }

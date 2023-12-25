@@ -54,6 +54,7 @@ const Footer = () => {
                             <li className="menu__item">
                                 <Link className="menu__link" target="_blank" href="https://api.whatsapp.com/send/?phone=79242693005">
                                     <i className="fa-brands fa-square-whatsapp" />
+                                    {/*<i className="fa-brands fa-whatsapp"></i>*/}
                                 </Link>
                             </li>
                             <li className="menu__item">
@@ -100,6 +101,8 @@ const Footer = () => {
                 </div>
 
                 <div className="footer_signature">
+                    <p>*Полное наименование организации "Местная религиозная организация мессианских христиан Мессианская община "Бейт Йешуа" г. Артем*. Запись о некоммерческой организации внесена  в ЕГРЮЛ за основным государственным регистрационным номером 1182500001617</p>
+
                     Designed by Polina&copy; Powered by Dm&copy; {fullYear}
                 </div>
             </footer>
