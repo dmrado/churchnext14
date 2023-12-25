@@ -34,11 +34,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-server/config/mail_password.json
-server/config/config.json
+backend/config/mail_password.json
+backend/config/config.json
 
-node_modules
-server/.env
+backend/.env
 .env.local
 .next
 
