@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PostsPage from "../../components/PostsPage";
 import React from "react";
-import {revalidatePath} from "next/cache";
+// import {revalidatePath} from "next/cache";
 import {BACKEND_URL, SHOW_BANNER} from "../../config";
 import LoginModal from "../../components/LoginModal";
 
@@ -11,16 +11,17 @@ export const metadata = {
 }
 
 const getPosts = async () => {
-    const res = await fetch(BACKEND_URL + '/posts')
-    return res.json()
+    return []
+    // const res = await fetch(BACKEND_URL + '/posts')
+    // return await res.json()
 }
 
 //добавляет новый пост в том месте где находится очищая кеш рендерит именно изменный пост
-revalidatePath('/posts')
+// revalidatePath('/posts')
 
 const Posts = async () => {
-    const data = await getPosts();
-    const posts = data.items;
+    const data = await getPosts()
+    const posts = data.items || []
 
     // console.log('data - объект data.items', data)
     // console.log('posts - массив', posts)

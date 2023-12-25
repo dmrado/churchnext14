@@ -8,6 +8,7 @@ export const generateMetadata = ({params: {id}}) => {
 }
 
 const getPost = async (id) => {
+    return null
     const res = await fetch(BACKEND_URL + `/posts/${id}`)
     return await res.json()
 }
@@ -19,11 +20,14 @@ const removePost = async (id) => {
     revalidatePath('/posts')
     redirect(`/posts`)
 }
-//todo сделать компоненты Аалерты
+//todo сделать компоненты алерты
 
 const Post = async ({params: {id}}) => {
     const data = await getPost(id)
-    const post = data.item
+    const post = data?.item
+    if(!post){
+        return ''
+    }
 
     return (<>
 

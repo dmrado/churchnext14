@@ -37,6 +37,7 @@ next-env.d.ts
 backend/config/mail_password.json
 backend/config/config.json
 
+node_modules
 backend/.env
 .env.local
 .next
