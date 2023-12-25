@@ -182,7 +182,7 @@ const LoginModal = () => {
 
                                     <Link href={'/posts'}>
                                         <button className="btn btn-blog">
-                                            Вернутся
+                                            Вернуться
                                         </button>
                                     </Link>
 
