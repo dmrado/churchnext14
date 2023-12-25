@@ -413,7 +413,11 @@ body {
     font-weight: 900;
     line-height: normal;
     margin-top: 0;
-    margin-bottom: 50px;
+}
+
+.header__banner p {
+    color: #E3E7E1;
+    margin-bottom: 20px;
 }
 
 .header__btn {

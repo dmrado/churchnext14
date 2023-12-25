@@ -31,6 +31,8 @@ const AboutPage = () => {
                     <div className="header__info">
                         <h3>Шалом и добро пожаловать</h3>
                         <h1>в Еврейскую общину города Артем</h1>
+                        <p>*Полное наименование организации "Местная религиозная организация мессианских христиан Мессианская община "Бейт Йешуа" г. Артем*. Запись о некоммерческой организации внесена  в ЕГРЮЛ за основным государственным регистрационным номером 1182500001617</p>
+
 
                         <a href="#mission"><button className="btn header__btn">Наша миссия</button></a>
                         {/*это затемнение которое наезжает на облака*/}
@@ -55,19 +57,19 @@ const AboutPage = () => {
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/1.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/11.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/2.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/22.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/3.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/33.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/4.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/44.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
@@ -107,11 +109,11 @@ const AboutPage = () => {
                         </div>
 
                         <div className="mission__list-item_2">
-                            <img className="mission__img" src="/img/aboutpage/6.webp" alt="Pic"/>
+                            <img className="mission__img" src="/img/aboutpage/66.webp" alt="Pic"/>
                         </div>
 
                         <div className="mission__list-item_3">
-                            <img className="mission__img" src="/img/aboutpage/7.webp" alt="Pic"/>
+                            <img className="mission__img" src="/img/aboutpage/77.webp" alt="Pic"/>
                         </div>
 
                         <div className="mission__list-item_4">
@@ -131,7 +133,7 @@ const AboutPage = () => {
                                 Эту Благую весть мы исповедуем и проповедуем. Мы всем сердцем хотим, что бы спасся
                                 каждый, как еврей, так и не еврей, потому что все находятся под властью одного и того же
                                 греха и нет различия. И, как написано в Деяниях Апостолов 4:12, нет другого имени под
-                                небои, кроме имени Иисуса Христа, которым надлежало бы человеку спастись.
+                                небом, кроме имени Иисуса Христа, которым надлежало бы человеку спастись.
                             </p>
                         </div>
                     </div>
