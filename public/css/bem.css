@@ -393,8 +393,8 @@ body {
     z-index: 4;
 }
 
-.header__info h1 span{
-    font-size: 26px;
+.header__info h1 span {
+    font-size: 20px;
 }
 
 .header__img {
@@ -441,6 +441,12 @@ body {
     z-index: 11;
     font-size: 18px;
     text-transform: uppercase;
+}
+
+@media(max-width: 360px) {
+    .header__btn {
+        font-size: 14px;
+    }
 }
 
 /*header конец*/
@@ -600,7 +606,7 @@ body {
 
 @media (max-width: 998px) {
     .mission__list-item_4 {
-        height: 450px;
+        height: 100%;
         padding: 0 5px;
         width: 100%;
         transform: translateX(-16%)
@@ -630,6 +636,7 @@ body {
 
     .mission__list-item_2 {
         width: 100%;
+        height: 100%;
         transform: translateX(0%);
         overflow: hidden;
     }
@@ -642,6 +649,7 @@ body {
 
     .mission__list-item_4 {
         width: 100%;
+        height: 100%;
         transform: translateX(0%) translateY(0%);
     }
 
@@ -677,7 +685,7 @@ body {
     }
 
     .mission__list-item_4 {
-        height: 550px;
+        height: 100%;
         padding: 0 5px;
     }
 }
@@ -1900,7 +1908,7 @@ form h1 {
     transition: 0.7s;
 }
 
-.footer_signature p{
+.footer_signature p {
     font-size: 7px;
 }
 
@@ -1950,6 +1958,10 @@ form h1 {
 
 
 @media (max-width: 373px) {
+    .footer {
+        height: 363px;
+    }
+
     .footer__socials-item {
         margin-right: 1px;
     }

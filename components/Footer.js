@@ -47,23 +47,25 @@ const Footer = () => {
 
                         <ul className="menu__list menu_socials">
                             <li className="menu__item">
-                                <Link className="menu__link menu_socials_first" target="_blank" href="https://t.me/+79146520955">
-                                    <i className="fa-brands fa-telegram" />
+                                <Link className="menu__link menu_socials_first" target="_blank"
+                                      href="https://t.me/+79146520955">
+                                    <i className="fa-brands fa-telegram"/>
                                 </Link>
                             </li>
                             <li className="menu__item">
-                                <Link className="menu__link" target="_blank" href="https://api.whatsapp.com/send/?phone=79242693005">
-                                    <i className="fa-brands fa-square-whatsapp" />
+                                <Link className="menu__link" target="_blank"
+                                      href="https://api.whatsapp.com/send/?phone=79242693005">
+                                    <i className="fa-brands fa-square-whatsapp"/>
                                     {/*<i className="fa-brands fa-whatsapp"></i>*/}
                                 </Link>
                             </li>
                             <li className="menu__item">
-                                <Link className="menu__link" target="_blank" href="https://www.youtube.com/channel/UCXA60JCdNpDZwlTLBJaTJyg">
+                                <Link className="menu__link" target="_blank"
+                                      href="https://www.youtube.com/channel/UCXA60JCdNpDZwlTLBJaTJyg">
                                     <i className="fa-brands fa-square-youtube"></i>
                                 </Link>
                             </li>
                         </ul>
-
 
 
                         {/*<svg className="footer__socials-item"*/}
@@ -101,9 +103,10 @@ const Footer = () => {
                 </div>
 
                 <div className="footer_signature">
-                    <p>*Полное наименование организации "Местная религиозная организация мессианских христиан Мессианская община "Бейт Йешуа" г. Артем*. Запись о некоммерческой организации внесена  в ЕГРЮЛ за основным государственным регистрационным номером 1182500001617</p>
-
-                    Designed by Polina&copy; Powered by Dm&copy; {fullYear}
+                    <p>*Полное наименование организации "Местная религиозная организация мессианских христиан
+                        Мессианская община "Бейт Йешуа" г. Артем*. Запись о некоммерческой организации внесена в ЕГРЮЛ
+                        за основным государственным регистрационным номером 1182500001617</p>
+                    <p> Designed by Polina&copy; Powered by Dm&copy; {fullYear}</p>
                 </div>
             </footer>
         </>
