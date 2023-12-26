@@ -110,7 +110,7 @@ const ContactsPage = () => {
                     <div className="coordinates thin">
                         <i className="bi bi-geo-alt"/>
                         {/*todo remove this style when will put reach the place sheme*/}
-                        <h4 style={{color: '#FF6700', fontSize: '22px'}}>Приезжайте к нам!</h4>
+                        {/*<h4 style={{color: '#FF6700', fontSize: '22px', textAlign: 'center'}}>Мы рады вам!</h4>*/}
                         {/*<p>{CONTACTS.instructionTransport}</p>*/}
                         {/*<p className="address">{CONTACTS.textAddres2}*/}
                         {/*    <a target="_blank" href={CONTACTS.yandexMaps}>{CONTACTS.yandexMaps}</a>*/}
@@ -119,11 +119,9 @@ const ContactsPage = () => {
                     </div>
                 </div>
 
-
-                <form onSubmit={submitHandler} method="post" role="form" className="">
+                <div className="form__wrapper">
                     <h1>Напишите нам</h1>
-
-                    <div className="contact__form-inputs-wrapper">
+                    <form onSubmit={submitHandler} method="post" role="form" className="form">
 
                         <input type="text" name="name" className="form-control input_name" id="name"
                                placeholder="Ваше имя" required
@@ -147,19 +145,15 @@ const ContactsPage = () => {
                                   required defaultValue={""}
                                   value={body}
                                   onChange={e => setBody(e.target.value)}
-                            // rows={12}
                         />
 
                         {/*<div className="loading">Загрузка...</div>*/}
                         {/*<div className="error-message"/>*/}
                         {/*<div className="sent-message">Ваше сообщение отправлено. Большое спасибо!</div>*/}
-                        <div className="text-center">
-                            <button className="btn contact__form_btn" type="submit">Отправить</button>
-                        </div>
-                    </div>
-                </form>
 
-
+                        <button className="btn contact__form_btn" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
