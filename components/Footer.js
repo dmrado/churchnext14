@@ -61,7 +61,7 @@ const Footer = () => {
                             </li>
                             <li className="menu__item">
                                 <Link className="menu__link" target="_blank"
-                                      href="https://www.youtube.com/channel/UCXA60JCdNpDZwlTLBJaTJyg">
+                                      href="https://www.youtube.com/@Stranger-pilgrim">
                                     <i className="fa-brands fa-square-youtube"></i>
                                 </Link>
                             </li>

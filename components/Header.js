@@ -123,6 +123,12 @@ const Header = () => {
                                         <i className="fa-brands fa-square-whatsapp" />
                                     </Link>
                                 </li>
+                                <li className="menu__item">
+                                    <Link className="menu__link" target="_blank"
+                                          href="https://www.youtube.com/@Stranger-pilgrim">
+                                        <i className="fa-brands fa-square-youtube"></i>
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
