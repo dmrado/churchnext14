@@ -31,8 +31,7 @@ const removePost = async ({id, token}) => {
 //todo сделать компоненты алерты
 
 const Post = async ({params: {id}}) => {
-    //todo пофиксить ниже
-    // const {token} = useMainContext()
+    const {token} = useMainContext()
     const data = await getPost(id)
     const post = data?.item
     if(!post){
@@ -63,7 +62,7 @@ const Post = async ({params: {id}}) => {
                         <Link href="/posts"><button className="btn btn-blog">Назад</button></Link>
 
                         {/*<form className="form__add-post" action={removePost.bind(null, id, token)}>*/}
-                        <form className="form__add-post" action={removePost.bind(null, id, )}>
+                        <form className="form__add-post" action={removePost.bind(null, id)}>
                             <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
                         </form>
 
