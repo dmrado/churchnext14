@@ -4,7 +4,7 @@ import Link from "next/link";
 import dynamic from 'next/dynamic'
 import LoginModal from "../LoginModal";
 import {BACKEND_URL} from "../../../config";
-import {MainProvider} from "../../context/MainProvider";
+import {useMainContext} from "../../context/MainProvider";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
@@ -12,7 +12,7 @@ const QuillEditor = dynamic(
 )
 
 const AddPost = ({createPost}) => {
-    // const {token,} = MainProvider
+    const {token} = useMainContext()
 
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
@@ -83,7 +83,7 @@ const AddPost = ({createPost}) => {
                 <LoginModal/>
                 {/*}*/}
 
-                <form className="form__add-post" action={formData => createPost(formData, htmlBody, text)}>
+                <form className="form__add-post" action={formData => createPost(formData, htmlBody, text, token)}>
 
                     <h1>Давайте создадим новый пост, дорогой пастор...</h1>
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import dynamic from 'next/dynamic'
 import LoginModal from "../LoginModal";
+import {useMainContext} from "../../context/MainProvider";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
@@ -11,6 +12,8 @@ const QuillEditor = dynamic(
 )
 
 const EditPost = ({post, updatePost}) => {
+    const {token} = useMainContext()
+
     const [title, setTitle] = useState(post ? post.title : '')
     const [text, setText] = useState(post?.text || '')
     const [htmlBody, setHtmlBody] = useState(post?.htmlBody || '')
@@ -41,7 +44,7 @@ const EditPost = ({post, updatePost}) => {
                     </div>
                 </div>
 
-                <form className="form__add-post" action={formData => updatePost(formData, htmlBody, text)}>
+                <form className="form__add-post" action={formData => updatePost(formData, htmlBody, text, token)}>
 
                     <h1>Приступим к редактированию...</h1>
 

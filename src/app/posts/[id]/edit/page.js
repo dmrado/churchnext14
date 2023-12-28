@@ -9,7 +9,7 @@ const getPostById = async (id) => {
     return res.json()
 }
 
-const updatePost = async (formData, htmlBody, text) => {
+const updatePost = async (formData, htmlBody, text, token) => {
     'use server'
     const {title, id} = Object.fromEntries(formData)
 
@@ -17,14 +17,18 @@ const updatePost = async (formData, htmlBody, text) => {
 
     await fetch(BACKEND_URL + `/posts/${id}`, {
         method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
+        headers:
+            {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
         body: JSON.stringify({title, text, htmlBody})
     })
     // так как метод PUT в случае успеха возвращает единицу cм Postman и не возвращает никакого поста мы используем все тот же id, по которому вернется пост
 
-        revalidatePath(`/posts/${id}`)
-        revalidatePath(`/posts/${id}/edit`)
-        redirect(`/posts/${id}`)
+    revalidatePath(`/posts/${id}`)
+    revalidatePath(`/posts/${id}/edit`)
+    redirect(`/posts/${id}`)
 }
 
 const Page = async ({params: {id}}) => {

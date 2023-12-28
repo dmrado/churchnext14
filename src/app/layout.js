@@ -20,7 +20,9 @@ export default function RootLayout({children}) {
         <Header/>
 
         <MainProvider>
-            <main>{children}</main>
+            <FileProvider>
+                <main>{children}</main>
+            </FileProvider>
         </MainProvider>
 
         <Footer/>
@@ -29,6 +31,6 @@ export default function RootLayout({children}) {
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
         </body>
-        </html>
-    )
+</html>
+)
 }

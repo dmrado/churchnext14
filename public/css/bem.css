@@ -977,11 +977,16 @@ body {
     justify-content: center;
     align-items: center;
     padding: 22px;
-}
-
-.btn-blog:not(:last-child) {
     margin-right: 20px;
 }
+
+.btn-blog-wrapper .btn{
+    margin: 1px 10px;
+}
+
+/*.btn-blog:not(:last-child) {*/
+/*    margin-right: 20px;*/
+/*}*/
 
 .cards-list {
     display: grid;
