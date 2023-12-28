@@ -96,7 +96,7 @@ const getById = async (req, res, next) => {
     try {
         const id = req.params.id
         console.log('files getById id', id)
-        //todo в файле модели отсутствует Pk - id возможно поэтому грузятся все, хотя в базе он есть так как тоже сидер содержит
+        //в файле модели отсутствует Pk - id возможно поэтому грузятся все, хотя в базе он есть так как тоже сидер содержит
         res.json({item: await Post.findByPk(id)})
     } catch (err) {
         console.log('catch error', err)

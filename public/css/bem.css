@@ -68,7 +68,7 @@ body {
     border-radius: 12px;
     background-color: #FF6700;
     color: #f0f0f0;
-    font-size: 19px;
+    font-size: 18px;
     transition: .3s;
 }
 
@@ -77,7 +77,7 @@ body {
     border: none;
     background-color: #FF6700;
     color: #fff;
-    font-size: 19px;
+    font-size: 18px;
     box-shadow: 2px 2px 10px #FF6700;
 }
 
@@ -92,14 +92,14 @@ body {
     border-radius: 12px;
     background-color: #FF6700;
     color: #f0f0f0;
-    font-size: 19px;
+    font-size: 18px;
     box-shadow: 2px 2px 10px #002952;
 }
 
 .btn:focus {
     background-color: #FF6700;
     color: #fff;
-    font-size: 19px;
+    font-size: 18px;
     border: none;
     box-shadow: 1px 1px 1px #FF6700 inset;
 }

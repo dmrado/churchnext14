@@ -32,10 +32,8 @@ const Page = async ({params: {id}}) => {
     const post = data.item
 
     return (<>
-            <h5>post id: {post.id}</h5>
-
             <EditPost post={post} updatePost={updatePost}/>
-
+            <h5>post id: {post.id}</h5>
         </>
     );
 };

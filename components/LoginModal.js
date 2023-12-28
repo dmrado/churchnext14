@@ -65,7 +65,7 @@ const LoginModal = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (!data || data.message === "Invalid email/password!!!") {
+                if (!data || data.message === "Данные для входа не верны") {
                     //чистим и закрываем модальное окно логина
                     setEmail('')
                     setPassword('')
@@ -128,25 +128,27 @@ const LoginModal = () => {
 
                         <div>{message}</div>
 
-                        {!!token ?
+                        {!!token &&
                             <form action="">
                                 <div className="col-auto">
                                     <h3>Хотите выйти?</h3>
                                     {/*<Link href='/posts'>*/}
-                                    <button type="submit" className="btn btn-outline-danger mb-3"
+                                    <button type="submit" className="btn"
                                             onClick={e => logoutHandler(e)}
                                             style={{marginRight: "30px"}}>Выйти
                                     </button>
                                     {/*</Link>*/}
 
 
-                                    <button type="submit" className="btn btn-outline-success mb-3"
+                                    <button type="submit" className="btn"
                                             onClick={() => setOpenLogin(false)}>Остаться
                                     </button>
                                 </div>
                             </form>
 
-                            :
+                        }
+
+                        {!token &&
                             <form>
 
 

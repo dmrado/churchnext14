@@ -54,7 +54,7 @@ app.delete('/posts/:id', isPrivate, postController.remove)
 
 //files Api
 app.post('/files/upload', isPrivate, upload.single('file'), fileController.uploadFile)
-app.get('/files', isPrivate, fileController.list)
+app.get('/files',  fileController.list)
 
 //mail Api
 app.post('/mail', mailController.send)

@@ -2,7 +2,7 @@ const Admin = require("../adminModel/Admin");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const _sendError = (res, message = "Не правильный email/password!!!") => {
+const _sendError = (res, message = "Invalid email/password!!!") => {
     return res.json({
         success: false,
         message,

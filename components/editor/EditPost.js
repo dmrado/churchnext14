@@ -24,6 +24,23 @@ const EditPost = ({post, updatePost}) => {
 
                 <LoginModal/>
 
+                <div className="one-post-banner">
+
+                    <div className="one-post-banner">
+                        <img
+                            // src={!!imgLink ? BACKEND_URL + imgLink : postPicture} alt="Pic"
+                            onClick={() => {
+                                // if(!token){
+                                //     return
+                                // }
+                                // setOpenModalPicture(true)
+                                // setEditedPost(item)
+                                // setActiveImgLink(imgLink)
+                            }}
+                        />
+                    </div>
+                </div>
+
                 <form className="form__add-post" action={formData => updatePost(formData, htmlBody, text)}>
 
                     <h1>Приступим к редактированию...</h1>
