@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
 //admin auth
 app.post('/login', authController.login)
 app.get('/logout', authController.logout)
-//my
+//my в этом проекте функци ниже отсутствуют
 // app.post("/user/login", userController.login)
 // app.post("/user/register", userController.register)
 
@@ -47,10 +47,10 @@ app.get('/logout', authController.logout)
 //здесь req.query незримо содержит часть строки запроса после вопросительного знака
 app.get('/posts', postController.list)
 app.get('/posts/:id', postController.getById)
-app.post('/posts', postController.create)
-app.put('/posts/:id', postController.update)
+app.post('/posts', isPrivate, postController.create)
+app.put('/posts/:id', isPrivate, postController.update)
 //req.params - это динамическая часть пути :id
-app.delete('/posts/:id', postController.remove)
+app.delete('/posts/:id', isPrivate, postController.remove)
 
 //files Api
 app.post('/files/upload', isPrivate, upload.single('file'), fileController.uploadFile)

@@ -16,7 +16,7 @@ const PostsPage = ({
 
     return (<>
             <div className="card">
-                    <img className="card__img" src="img/banner/clouds.jpeg" alt="Pic"/>
+                    <img className="card__img" src="img/posts/clouds.jpeg" alt="Post_picture"/>
 
                     <div className="card__body">
                         <h5 className="card__title">

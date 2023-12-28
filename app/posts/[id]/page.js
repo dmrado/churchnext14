@@ -8,7 +8,7 @@ export const generateMetadata = ({params: {id}}) => {
 }
 
 const getPost = async (id) => {
-    return null
+    // return null
     const res = await fetch(BACKEND_URL + `/posts/${id}`)
     return await res.json()
 }
@@ -32,7 +32,7 @@ const Post = async ({params: {id}}) => {
     return (<>
 
             <div className="one-post-banner">
-                <img className="one-post-banner__img" src="/img/banner/cloudsWIDE.webp" alt=""/>
+                <img className="one-post-banner__img" src="/img/posts/clouds.jpeg" alt=""/>
             </div>
 
             <div className="container">
@@ -52,7 +52,7 @@ const Post = async ({params: {id}}) => {
                     <div className="btn-blog-wrapper">
                         <Link href="/posts"><button className="btn btn-blog">Назад</button></Link>
 
-                        <form className="form" action={removePost.bind(null, id)}>
+                        <form className="form__add-post" action={removePost.bind(null, id)}>
                             <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
                         </form>
 

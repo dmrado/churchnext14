@@ -17,39 +17,54 @@ const EditPost = ({createPost}) => {
     // const [previewId, setPreviewId] = useState(null)
 
     return (<>
-            <LoginModal/>
+            <div className="container">
 
-            <form className="form" action={formData => createPost(formData, htmlBody, text)}>
+                <LoginModal/>
 
-                <h1>Давайте создадим новый пост, дорогой пастор...</h1>
+                <form className="form__add-post" action={formData => createPost(formData, htmlBody, text)}>
 
-                <div className="modal__text-field-wrapper">
-                    <div className="modal__input-wrapper">
-                        <input defaultValue={title}
-                               onChange={e => setTitle(e.target.value)}
-                               type="text" required name="title" className="modal__input-text"
-                        />
-                        <label htmlFor="staticEmail"
-                               className="modal__input-label">Заголовок</label>
+                    <h1>Давайте создадим новый пост, дорогой пастор...</h1>
+
+                    <div className="modal__text-field-wrapper">
+                        <div className="modal__input-wrapper">
+                            <input defaultValue={title}
+                                   onChange={e => setTitle(e.target.value)}
+                                   type="text" required name="title" className="modal__input-text"
+                            />
+                            <label htmlFor="staticEmail"
+                                   className="modal__input-label">Заголовок</label>
+                        </div>
                     </div>
-                </div>
 
 
-                <div className="modal__text-field-wrapper">
-                    <QuillEditor classmName="modal__input-text"
-                                 planeValue={text}
-                                 setPlaneValue={setText}
-                                 value={htmlBody}
-                                 setValue={setHtmlBody}
-                                 onChange={e => setText(e.target.value)}
-                    />
-                </div>
+                    <div className="modal__text-field-wrapper">
+                        <QuillEditor classmName="modal__input-text"
+                                     planeValue={text}
+                                     setPlaneValue={setText}
+                                     value={htmlBody}
+                                     setValue={setHtmlBody}
+                                     onChange={e => setText(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="btn-blog-wrapper">
+                        <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
+                        <Link href={'/posts'}>
+                            <button className="btn btn-blog">Вернуться</button>
+                        </Link>
+                    </div>
+                </form>
 
                 <div className="btn-blog-wrapper">
-                    <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
-                    <Link href={'/posts'}><button className="btn btn-blog">Вернуться</button></Link>
+                    {/*{!!token && */}
+                    <button className="btn"
+                            style={{textAlign: 'center', backgroundColor:'white', color: '#FF6700', border: '2px solid #FF6700'}}
+                    >Объявление</button>
+                    {/*}*/}
                 </div>
-            </form>
+
+
+            </div>
 
 
         </>

@@ -10,7 +10,7 @@ const login = async (req, res) => {
     const {email, password} = req.body
     const user = await User.findOne({
 
-        //начинаем отсюда, хендлер на фронте и раут в апп прописаны вспоминаем как лошгиниться
+        //начинаем отсюда, хендлер на фронте и раут в апп прописаны вспоминаем как логиниться
         where: {
             email: email
         }

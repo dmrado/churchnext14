@@ -58,7 +58,7 @@ const LoginModal = () => {
         fetch(BACKEND_URL + '/login', {
             headers: {
                 "Content-Type": "application/json",
-                // Authorization: `telegramId_${chatId}`,
+                Authorization: `Bearer ${token}`,
             },
             method: "POST",
             body: JSON.stringify({email: email, password: password}),

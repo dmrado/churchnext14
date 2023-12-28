@@ -224,7 +224,6 @@ body {
 }
 
 .menu {
-
 }
 
 .menu__list {
@@ -980,7 +979,7 @@ body {
     padding: 22px;
 }
 
-.btn-blog {
+.btn-blog:not(:last-child) {
     margin-right: 20px;
 }
 
@@ -1110,7 +1109,8 @@ body {
     }
 
     .btn-blog-wrapper .btn {
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-right: 0;
     }
 }
 
@@ -1653,7 +1653,7 @@ body {
     height: 150px;
 }
 
-.contact__header h1{
+.contact__header h1 {
     color: #FFFFFF;
     text-transform: uppercase;
     text-align: center;
@@ -1716,11 +1716,17 @@ body {
 }
 
 
-/*form start*/
-.form__wrapper{
-        height: 470px;
-        width: 100%;
+/*AddPost EditPost form start*/
+
+
+/*AddPost EditPost form end*/
+
+/*ContactsPage  form start*/
+.form__wrapper {
+    height: 470px;
+    width: 100%;
 }
+
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1805,7 +1811,7 @@ body {
         height: 100%;
     }
 
-    .form{
+    .form {
         grid-template-columns: 1fr;
     }
 
@@ -1813,6 +1819,7 @@ body {
         transform: translateX(260%);
     }
 }
+
 @media (max-width: 700px) {
     .contact__form_btn {
         transform: translateX(200%);
@@ -1824,7 +1831,8 @@ body {
         grid-template-columns: 1fr;
         height: 100%;
     }
-    .form{
+
+    .form {
         height: 500px;
     }
 
@@ -1844,12 +1852,12 @@ body {
     .input_message {
         grid-row: 4/5;
     }
+
     .contact__form_btn {
         grid-row: 5/6;
         transform: translateX(80%);
     }
 }
-
 
 
 @media (max-width: 360px) {
@@ -1867,7 +1875,7 @@ body {
 
 }
 
-/*form end*/
+/*ContactsPage form end*/
 
 
 /*Footer*/
@@ -1877,7 +1885,7 @@ body {
     align-items: center;
     /*bottom: 0;*/
     height: 333px;
-    width: 100%;
+    width: 103%;
     /*background-color: #004E98;*/
     background: #EBEBEB;
     color: #004E98;
@@ -1925,7 +1933,8 @@ body {
 }
 
 .footer_signature p {
-    font-size: 7px;
+    font-size: 8px;
+    text-align: justify;
 }
 
 @media (max-width: 982px) {
@@ -1975,7 +1984,7 @@ body {
 
 @media (max-width: 373px) {
     .footer {
-        height: 373px;
+        height: 379px;
     }
 
     .footer__socials-item {
