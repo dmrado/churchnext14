@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
-import {BACKEND_URL} from "../../../config";
+import {BACKEND_URL} from "../../../../config";
 
 export const generateMetadata = ({params: {id}}) => {
     return {title: `ProjectName | Post ${id}`}

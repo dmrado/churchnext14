@@ -1,6 +1,6 @@
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
-import {BACKEND_URL} from "../../../../config";
+import {BACKEND_URL} from "../../../../../config";
 import EditPost from "../../../../components/editor/EditPost";
 
 

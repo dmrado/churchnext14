@@ -3,8 +3,8 @@ import {useState, useEffect} from "react";
 import Link from "next/link";
 import dynamic from 'next/dynamic'
 import LoginModal from "../LoginModal";
-import {BACKEND_URL} from "../../config";
-import {MainProvider} from "../MainProvider";
+import {BACKEND_URL} from "../../../config";
+import {MainProvider} from "../../context/MainProvider";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
