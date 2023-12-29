@@ -12,7 +12,7 @@ const QuillEditor = dynamic(
 )
 
 const AddPost = ({createPost}) => {
-    const {token} = useMainContext()
+    const {token, logoutHandler} = useMainContext()
 
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
@@ -50,10 +50,14 @@ const AddPost = ({createPost}) => {
             .catch(err => console.log(err))
     }
 
+
     return (<>
             <div className="container">
 
-                <div className="one-post-banner">
+                <div className="one-post-banner" style={{
+                    border: '1px solid gray',
+                    borderRadius: '5px',
+                }}>
                     {/*{postPicturesList.map(item => {*/}
                     {/*    return <div className={`col-md-4 ${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>*/}
                     {/*        <img src={BACKEND_URL + item.path} onClick={() => {*/}
@@ -66,7 +70,7 @@ const AddPost = ({createPost}) => {
                     {/*})}*/}
                     <img
                         // src={!!imgLink ? BACKEND_URL + imgLink : postPicture}
-                        alt="Pic"
+                        alt="Нажмите для добавления изображения"
                         onClick={() => {
                             // if(!token){
                             //     return
@@ -79,14 +83,11 @@ const AddPost = ({createPost}) => {
                     />
                 </div>
 
-                {/*{! token && */}
                 <LoginModal/>
-                {/*}*/}
 
                 <form className="form__add-post" action={formData => createPost(formData, htmlBody, text, token)}>
 
                     <h1>Давайте создадим новый пост, дорогой пастор...</h1>
-
 
                     <div className="modal__text-field-wrapper">
                         <div className="modal__input-wrapper">
@@ -111,10 +112,18 @@ const AddPost = ({createPost}) => {
                     </div>
 
                     <div className="btn-blog-wrapper">
-                        <button className="btn btn-blog" type="submit" value="Add post">Сохранить</button>
+                        <button className="btn btn-blog" type="submit" value="Add post">
+                            Сохранить
+                        </button>
                         <Link href={'/posts'}>
-                            <button className="btn btn-blog">Вернуться</button>
+                            <button className="btn btn-blog">
+                                Вернуться
+                            </button>
                         </Link>
+                        <button className="btn btn-blog" onClick={logoutHandler}>
+                            Выйти
+                        </button>
+
                     </div>
                 </form>
 
@@ -126,7 +135,7 @@ const AddPost = ({createPost}) => {
                                 color: '#FF6700',
                                 border: '2px solid #FF6700'
                             }}
-                            // onClick={}
+                        // onClick={}
                     >Объявление
                     </button>
                 </div>

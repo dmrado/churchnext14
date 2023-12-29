@@ -2,7 +2,7 @@
 import {createContext, useContext, useState} from 'react'
 import {BACKEND_URL} from "../../config";
 import {revalidatePath} from "next/cache";
-import {redirect} from "next/navigation";
+import {usePathname, useRouter, useSearchParams} from 'next/navigation'
 
 const MainContext = createContext()
 
@@ -40,6 +40,10 @@ export const MainProvider = ({children}) => {
     const [openLogin, setOpenLogin] = useState(true)
     const [message, setMessage] = useState(true)
 
+    //для записи количества постов для задания количества страниц
+    // const [postsCount, setPostsCount] = useState(1)
+
+
     const submitLoginHandler = (event) => {
         //login админа идет без базы данных, юзеров - через БД
         event.preventDefault()
@@ -71,13 +75,26 @@ export const MainProvider = ({children}) => {
             }).catch(err => console.log(err))
     }
 
+    //редирект в клиентском компоненте, уводим при выходе
+    const router = useRouter()
+    const searchParams = useSearchParams()
+    searchParams.get('/posts')
+
+    const logoutHandler = (e) => {
+        e.preventDefault()
+        setToken(null)
+        localStorage.removeItem("token-churchscala")
+        setOpenLogin(false)
+        router.push('/posts')
+    }
+
     const value = {
         token, setToken,
         email, setEmail,
         password, setPassword,
         openLogin, setOpenLogin,
         getTokenFromLocalstorage,
-        submitLoginHandler,
+        submitLoginHandler, logoutHandler,
         message,
     }
 

@@ -1,13 +1,12 @@
 'use client'
-import {useEffect, useState} from "react";
-import {usePathname, useRouter, useSearchParams} from 'next/navigation'
+import {useEffect, } from "react";
 import Link from "next/link";
 import {useMainContext} from "../context/MainProvider";
-import {useFileContext} from "../context/FileProvider";
 
 const LoginModal = () => {
     const {
         submitLoginHandler,
+        getTokenFromLocalstorage,
         token, setToken,
         email, setEmail,
         password, setPassword,
@@ -15,71 +14,26 @@ const LoginModal = () => {
         message,
     } = useMainContext()
 
-    const {text1} = useFileContext()
-
-
-    //для записи количества постов для задания коичества страниц
-    // const [postsCount, setPostsCount] = useState(1)
-
-    // const close = () => setOpenModal(false)
-
-    // const closePic = () => setOpenModalPicture(false)
 
     //получение токена из localStorage когда admin пришел на сайт
-    // useEffect(() => {
-    //     setToken(getTokenFromLocalstorage())
-    // }, [])
+    useEffect(() => {
+        setToken(getTokenFromLocalstorage())
+    }, [])
 
-
-    //редирект в клиентском компоненте, уводим при выходе
-    const router = useRouter()
-    const searchParams = useSearchParams()
-    searchParams.get('/posts')
-
-    const logoutHandler = (e) => {
-        e.preventDefault()
-        setToken(null)
-        localStorage.removeItem("token-churchscala")
-        setOpenLogin(false)
-        router.push('/posts')
-    }
-
-
-    // const loadPostPicturesList = () => {
-    //     //получаем картинки со всеми атрибутами из storage
-    //     fetch(BACKEND_URL + `/files`, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //             Authorization: `Bearer ${token}`,
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if(!data.items){
-    //                 return
-    //             }
-    //             //получаем картинки со свеми атрибутами из storage, далее в PostPicturesListModal сохраним картинку в модель Post
-    //             setPostPicturesList(data.items)
-    //             //postPicturesCount - припасен для пагинации картинок если их будет через чур
-    //             setPostPicturesCount(data.count)
-    //             console.log("data.items in loadPostPicturesList", data.items)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
+    //перезагрузка компонента при изменении (стирании) токена после логаута, иначе он заходит без токена и при этом не блокирует модальным окном страницу
+    useEffect(() =>{
+        setOpenLogin(true)
+    }, [token])
 
     return (
         <>
-            {!!openLogin && <div className="container">
+            {!!openLogin & !token && <div className="container">
                 <div className="modal open" id="my-modal">
                     <div className="modal__box">
-                        {/*todo доделать мессадж*/}
+                        {/*todo доделать мессадж красиво*/}
                         <div>{message}</div>
-                        <h2>{text1}</h2>
-                        <h3>{token}</h3>
-                        <h2>{email}</h2>
 
-                        {!token &&
+                        {
                         <form>
                             <div>
                                 <h3>Здравствуйте, пастор, пожалуйста авторизуйтесь</h3>

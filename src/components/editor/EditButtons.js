@@ -7,7 +7,8 @@ import {useMainContext} from "../../context/MainProvider";
 const EditButtons = ({id, removePost}) => {
     const {token, } = useMainContext()
     return (<>
-            {!!token && <div>
+            {/*todo внимание ниже форма с серверным экшеном*/}
+            {!!token && <div style={{display: 'flex'}}>
                 <form className="form__add-post" action={removePost.bind(null, id)}>
                     <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
                 </form>

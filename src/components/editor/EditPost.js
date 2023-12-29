@@ -1,5 +1,5 @@
 'use client'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Link from "next/link";
 
 import dynamic from 'next/dynamic'
@@ -12,7 +12,7 @@ const QuillEditor = dynamic(
 )
 
 const EditPost = ({post, updatePost}) => {
-    const {token} = useMainContext()
+    const {token, logoutHandler} = useMainContext()
 
     const [title, setTitle] = useState(post ? post.title : '')
     const [text, setText] = useState(post?.text || '')
@@ -21,6 +21,7 @@ const EditPost = ({post, updatePost}) => {
 
     //для Alert
     const [openAlert, setOpenAlert] = useState(false)
+
 
     return (<>
             <div className="container">
@@ -77,6 +78,8 @@ const EditPost = ({post, updatePost}) => {
                             <button className="btn btn-blog">Вернутся</button>
                         </Link>
                     </div>
+                    <button className="btn btn-blog" onClick={logoutHandler}>Выйти</button>
+
                 </form>
             </div>
         </>
