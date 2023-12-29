@@ -1,5 +1,7 @@
-
+'use client'
 const Success = () => {
+
+
     return (
         <div className="success">
            Пост успешно сохранен! Спасибо!

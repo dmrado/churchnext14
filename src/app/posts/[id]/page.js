@@ -3,6 +3,7 @@ import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../../config";
 import {useMainContext} from "../../../context/MainProvider";
+import {useFileContext} from "../../../context/FileProvider";
 
 export const generateMetadata = ({params: {id}}) => {
     return {title: `ProjectName | Post ${id}`}
@@ -31,7 +32,6 @@ const removePost = async ({id, token}) => {
 //todo сделать компоненты алерты
 
 const Post = async ({params: {id}}) => {
-    const {token} = useMainContext()
     const data = await getPost(id)
     const post = data?.item
     if(!post){

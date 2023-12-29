@@ -1,7 +1,6 @@
 'use client'
-import Link from "next/link";
 import {useEffect, useState} from "react";
-import {BACKEND_URL} from "../config";
+import {BACKEND_URL} from "../../config";
 
 const CONTACTS = {
     headerAddres1: 'Адрес: ',

@@ -1,50 +1,22 @@
 'use client'
 import {useEffect, useState} from "react";
-import {BACKEND_URL} from "../../config";
 import {usePathname, useRouter, useSearchParams} from 'next/navigation'
 import Link from "next/link";
 import {useMainContext} from "../context/MainProvider";
-
-
-const setTokenToLocalstorage = token => {
-    localStorage.setItem("token-churchscala", token)
-}
-
-const getTokenFromLocalstorage = () => {
-    if (typeof window === "undefined") {
-        return ''
-    }
-    const expires = localStorage.getItem("expires-churchscala")
-    if (!expires) {
-        return ''
-    }
-    if (expires * 1000 - Date.now() < 0) {
-        localStorage.removeItem("expires-churchscala")
-        localStorage.removeItem("token-churchscala")
-    }
-    return localStorage.getItem("token-churchscala") || ''
-}
-
-const setTokenExpiresToLocalstorage = expires => {
-    localStorage.setItem("expires-churchscala", expires)
-}
+import {useFileContext} from "../context/FileProvider";
 
 const LoginModal = () => {
-    // const {
-        // token,
-        // setToken,
-        // getTokenFromLocalstorage,
-        // setTokenToLocalstorage,
-        // setTokenExpiresToLocalstorage
-    // } = useMainContext()
+    const {
+        submitLoginHandler,
+        token, setToken,
+        email, setEmail,
+        password, setPassword,
+        openLogin, setOpenLogin,
+        message,
+    } = useMainContext()
 
-    const [token, setToken] = useState(null)
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const {text1} = useFileContext()
 
-    //для модального окна логина
-    const [openLogin, setOpenLogin] = useState(true)
-    const [message, setMessage] = useState(true)
 
     //для записи количества постов для задания коичества страниц
     // const [postsCount, setPostsCount] = useState(1)
@@ -58,37 +30,6 @@ const LoginModal = () => {
     //     setToken(getTokenFromLocalstorage())
     // }, [])
 
-
-    const submitLoginHandler = (event) => {
-        //login админа идет без базы данных, юзеров - через БД
-        event.preventDefault()
-        fetch(BACKEND_URL + '/login', {
-            headers: {
-                "Content-Type": "application/json",
-                // Authorization: `Bearer ${token}`,
-            },
-            method: "POST",
-            body: JSON.stringify({email: email, password: password}),
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (!data || data.message === "Данные для входа не верны") {
-                    //чистим и закрываем модальное окно логина
-                    setEmail('')
-                    setPassword('')
-                    setOpenLogin(true)
-                    setMessage(data.message)
-                    return
-                } else {
-                    setToken(data.token)
-                    setTokenToLocalstorage(data.token)
-                    setTokenExpiresToLocalstorage(data.expires)
-                    setEmail('')
-                    setPassword('')
-                    setOpenLogin(false)
-                }
-            }).catch(err => console.log(err))
-    }
 
     //редирект в клиентском компоненте, уводим при выходе
     const router = useRouter()
@@ -134,25 +75,9 @@ const LoginModal = () => {
                     <div className="modal__box">
                         {/*todo доделать мессадж*/}
                         <div>{message}</div>
-
-                        {!!token &&
-                        <form action="">
-                            <div className="col-auto">
-                                <h3>Хотите выйти?</h3>
-                                {/*<Link href='/posts'>*/}
-                                <button type="submit" className="btn"
-                                        onClick={e => logoutHandler(e)}
-                                        style={{marginRight: "30px"}}>Выйти
-                                </button>
-                                {/*</Link>*/}
-
-
-                                <button type="submit" className="btn"
-                                        onClick={() => setOpenLogin(false)}>Остаться
-                                </button>
-                            </div>
-                        </form>
-                        }
+                        <h2>{text1}</h2>
+                        <h3>{token}</h3>
+                        <h2>{email}</h2>
 
                         {!token &&
                         <form>
@@ -183,7 +108,8 @@ const LoginModal = () => {
                                 </div>
 
                                 <button type="submit" className="btn btn-blog"
-                                        onClick={submitLoginHandler}>Войти
+                                        onClick={submitLoginHandler}>
+                                    Войти
                                 </button>
 
                                 <Link href={'/posts'}>

@@ -30,7 +30,8 @@ const QuillEditor = ({value, setValue, planeValue, setPlaneValue}) => {
         'header',
         'bold', 'italic', 'underline', 'strike', 'blockquote',
         'list', 'bullet', 'indent',
-        'link', 'image', 'video'
+        'link',
+        // 'image', 'video'
     ]
 
     return (
