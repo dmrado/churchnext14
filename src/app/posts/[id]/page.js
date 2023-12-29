@@ -4,6 +4,7 @@ import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../../config";
 import {useMainContext} from "../../../context/MainProvider";
 import {useFileContext} from "../../../context/FileProvider";
+import EditButtons from "../../../components/editor/EditButtons";
 
 export const generateMetadata = ({params: {id}}) => {
     return {title: `ProjectName | Post ${id}`}
@@ -15,6 +16,8 @@ const getPost = async (id) => {
     return await res.json()
 }
 
+
+//идет в EditButtons открывает кнопки редактирования и удаления при наличии токена
 const removePost = async ({id, token}) => {
     'use server'
     // console.log('id удаляемого поста', id)
@@ -34,7 +37,7 @@ const removePost = async ({id, token}) => {
 const Post = async ({params: {id}}) => {
     const data = await getPost(id)
     const post = data?.item
-    if(!post){
+    if (!post) {
         return ''
     }
 
@@ -59,15 +62,11 @@ const Post = async ({params: {id}}) => {
 
 
                     <div className="btn-blog-wrapper">
-                        <Link href="/posts"><button className="btn btn-blog">Назад</button></Link>
+                        <Link href="/posts">
+                            <button className="btn btn-blog">Назад</button>
+                        </Link>
 
-                        {/*<form className="form__add-post" action={removePost.bind(null, id, token)}>*/}
-                        <form className="form__add-post" action={removePost.bind(null, id)}>
-                            <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>
-                        </form>
-
-                        <Link href={`/posts/${id}/edit`}><button className="btn btn-blog">Редактировать</button></Link>
-
+                        <EditButtons removePost={removePost} id={post.id}/>
                     </div>
                 </div>
 
