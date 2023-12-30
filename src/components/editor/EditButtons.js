@@ -20,7 +20,7 @@ const EditButtons = ({id,}) => {
             return
         }
         setShowButtons(true)
-    }, [])
+    }, [token])
 
     const removePost = async ({id}) => {
         console.log('id удаляемого поста', id)
