@@ -17,21 +17,22 @@ const getPost = async (id) => {
 }
 
 
-//идет в EditButtons открывает кнопки редактирования и удаления при наличии токена
-const removePost = async ({id, token}) => {
-    'use server'
-    // console.log('id удаляемого поста', id)
-    await fetch(BACKEND_URL + `/posts/${id}`, {
-        method: 'DELETE',
-        headers:
-            {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            }
-    })
-    revalidatePath('/posts')
-    redirect(`/posts`)
-}
+//надо передать сюда токен, которого здесь на сервере нет  и быть не может. Токен есть на клиентев EditButtons и если его нет,то кнопка удалить и редактировать не появляется
+// const removePost = async ({id, }) => {
+//     'use server'
+//     // console.log('id удаляемого поста', id)
+//     await fetch(BACKEND_URL + `/posts/${id}`, {
+//         method: 'DELETE',
+//         headers:
+//             {
+//                 'Content-Type': 'application/json',
+//                 'Authorization': `Bearer ${token}`
+//             }
+//     })
+//     revalidatePath('/posts')
+//     redirect(`/posts`)
+// }
+
 //todo сделать компоненты алерты
 
 const Post = async ({params: {id}}) => {
@@ -66,7 +67,13 @@ const Post = async ({params: {id}}) => {
                             <button className="btn btn-blog">Назад</button>
                         </Link>
 
-                        <EditButtons removePost={removePost} id={post.id}/>
+                        {/*компонент добавляет кнопки удалить и отредактировать при наличии token-а*/}
+                        <EditButtons id={post.id}/>
+
+                        {/*todo внимание ниже форма с серверным экшеном*/}
+                        {/*<form className="form__add-post" action={removePost.bind(null, id)}>*/}
+                        {/*    <button className="btn btn-blog" type="submit" value="Delete post">Удалить</button>*/}
+                        {/*</form>*/}
                     </div>
                 </div>
 

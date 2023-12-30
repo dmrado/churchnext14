@@ -50,7 +50,7 @@ app.get('/posts/:id', postController.getById)
 app.post('/posts', isPrivate, postController.create)
 app.put('/posts/:id', isPrivate, postController.update)
 //req.params - это динамическая часть пути :id
-app.delete('/posts/:id', isPrivate, postController.remove)
+app.delete('/posts/:id',  postController.remove)
 
 //files Api
 app.post('/files/upload', isPrivate, upload.single('file'), fileController.uploadFile)
