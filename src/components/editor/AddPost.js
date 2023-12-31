@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import LoginModal from "../LoginModal";
 import {BACKEND_URL} from "../../../config";
 import {useMainContext} from "../../context/MainProvider";
+import {useFileContext} from "../../context/FileProvider";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
@@ -13,61 +14,78 @@ const QuillEditor = dynamic(
 
 const AddPost = ({createPost}) => {
     const {token, logoutHandler} = useMainContext()
+    const {
+        postPicturesList,
+        loadPostPicturesList,
+        activeImgLink,
+        setActiveImgLink,
+        updatePostPicture,
+        setNewPostPicture,
+        editedPost, setEditedPost
+    } = useFileContext()
 
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
     const [htmlBody, setHtmlBody] = useState('')
 
     // для картинки поста
-    const [postPicturesList, setPostPicturesList] = useState([])
-    const [postPicturesCount, setPostPicturesCount] = useState(null)
-    // const [openModalPicture, setOpenModalPicture] = useState(false)
-    //для imgLink при сравнении с path активного file в storage - для выбора картинки пользователем
-    const [activeImgLink, setActiveImgLink] = useState(null)
+    // const [postPicturesList, setPostPicturesList] = useState([])
+    // const [postPicturesCount, setPostPicturesCount] = useState(null)
+    // // const [openModalPicture, setOpenModalPicture] = useState(false)
+    // //для imgLink при сравнении с path активного file в storage - для выбора картинки пользователем
+    // const [activeImgLink, setActiveImgLink] = useState(null)
 
     // const [previewId, setPreviewId] = useState(null)
+    //
+    // const loadPostPicturesList = () => {
+    //     //получаем картинки со всеми атрибутами из storage
+    //     fetch(BACKEND_URL + `/files`, {
+    //         method: 'GET',
+    //         headers: {
+    //             'Content-type': 'application/json',
+    //             // Authorization: `Bearer ${token}`,
+    //         }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (!data.items) {
+    //                 return
+    //             }
+    //             //получаем картинки со свеми атрибутами из storage, далее в PostPicturesListModal сохраним картинку в модель Post
+    //             setPostPicturesList(data.items)
+    //             //postPicturesCount - припасен для пагинации картинок если их будет через чур
+    //             setPostPicturesCount(data.count)
+    //             console.log("data.items in loadPostPicturesList", data.items)
+    //         })
+    //         .catch(err => console.log(err))
+    // }
 
-    const loadPostPicturesList = () => {
-        //получаем картинки со всеми атрибутами из storage
-        fetch(BACKEND_URL + `/files`, {
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json',
-                // Authorization: `Bearer ${token}`,
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (!data.items) {
-                    return
-                }
-                //получаем картинки со свеми атрибутами из storage, далее в PostPicturesListModal сохраним картинку в модель Post
-                setPostPicturesList(data.items)
-                //postPicturesCount - припасен для пагинации картинок если их будет через чур
-                setPostPicturesCount(data.count)
-                console.log("data.items in loadPostPicturesList", data.items)
-            })
-            .catch(err => console.log(err))
-    }
+    useEffect(() => {
+        loadPostPicturesList()
+    }, [])
 
 
     return (<>
             <div className="container">
 
-                <div className="one-post-banner" style={{
+                <div
+                    // onClick={updatePostPicture} не правильная функция она в редактирования
+                     className="one-post-banner" style={{
                     border: '1px solid gray',
                     borderRadius: '5px',
                 }}>
-                    {/*{postPicturesList.map(item => {*/}
-                    {/*    return <div className={`col-md-4 ${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>*/}
-                    {/*        <img src={BACKEND_URL + item.path} onClick={() => {*/}
-                    {/*            setNewPostPicture(item.path)*/}
-                    {/*            setActiveImgLink(item.path)*/}
-                    {/*        }}*/}
-                    {/*             className="w-100" alt="Картинка"/>*/}
 
-                    {/*    </div>*/}
-                    {/*})}*/}
+                    {postPicturesList.map(item => {
+                        return <div className={`col-md-4 ${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>
+                            <img src={BACKEND_URL + item.path} onClick={() => {
+                                setNewPostPicture(item.path)
+                                setActiveImgLink(item.path)
+                            }}
+                                 className="w-100" alt="Картинка"/>
+
+                        </div>
+                    })}
+
                     <img
                         // src={!!imgLink ? BACKEND_URL + imgLink : postPicture}
                         alt="Нажмите для добавления изображения"
@@ -76,7 +94,7 @@ const AddPost = ({createPost}) => {
                             //     return
                             // }
                             loadPostPicturesList()
-                            // setEditedPost(item)
+                            setEditedPost(item)
                             // setOpenModalPicture(true)
                             setActiveImgLink(imgLink)
                         }}
