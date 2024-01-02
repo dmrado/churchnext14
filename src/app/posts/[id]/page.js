@@ -45,7 +45,7 @@ const Post = async ({params: {id}}) => {
     return (<>
 
             <div className="one-post-banner">
-                <img className="one-post-banner__img" src="/img/posts/clouds.jpeg" alt=""/>
+                <img className="one-post-banner__img" src={post.imgLink} alt="Картинка поста"/>
             </div>
 
             <div className="container">

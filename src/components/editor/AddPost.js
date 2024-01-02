@@ -69,21 +69,28 @@ const AddPost = ({createPost}) => {
             <div className="container">
 
                 <div
-                    // onClick={updatePostPicture} не правильная функция она в редактирования
-                     className="one-post-banner" style={{
-                    border: '1px solid gray',
-                    borderRadius: '5px',
-                }}>
+                    className="one-post-banner"
+                    style={{
+                        position: 'relative',
+                        alignItems: 'center',
+                        border: '1px solid blue',
+                        borderRadius: '5px',
+                        minHeight: '50px'
+                    }}>
 
                     {postPicturesList.map(item => {
-                        return <div className={`col-md-4 ${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>
+                        return <div className={`${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>
                             <img src={BACKEND_URL + item.path} onClick={() => {
+                                updatePostPicture()
                                 setNewPostPicture(item.path)
                                 setActiveImgLink(item.path)
+                                setEditedPost(item)
                             }}
                                  className="w-100" alt="Картинка"/>
 
                         </div>
+
+
                     })}
 
                     <img
@@ -94,7 +101,7 @@ const AddPost = ({createPost}) => {
                             //     return
                             // }
                             loadPostPicturesList()
-                            setEditedPost(item)
+                            // setEditedPost(item)
                             // setOpenModalPicture(true)
                             setActiveImgLink(imgLink)
                         }}
