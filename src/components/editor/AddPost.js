@@ -30,9 +30,6 @@ const AddPost = ({createPost}) => {
     const [text, setText] = useState('')
     const [htmlBody, setHtmlBody] = useState('')
 
-    const [previewId, setPreviewId] = useState(null)
-
-
     useEffect(() => {
         loadPostPicturesList()
     }, [])
