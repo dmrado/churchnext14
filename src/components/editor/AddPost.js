@@ -45,9 +45,9 @@ const AddPost = ({createPost}) => {
 
 
                 <div className="btn-blog-wrapper">
-                    <button className="btn btn-service" onClick={loadPostPicturesList}>Список картинок</button>
+                    <button className="btn" onClick={loadPostPicturesList}>Список картинок</button>
 
-                    {/*todo пробросить сюда пост иначе при такой логике можно только назначить картинку по умолчанию, а затем отредактировать, потому что поста еще нет а id может назначить только БД, видимо надо использовать функцию loadPostPictureToStorage*/}
+                    {/*todo пробросили imgLink вместе с постом*/}
 
                 </div>
 
@@ -57,7 +57,6 @@ const AddPost = ({createPost}) => {
                       }}>
 
                     <div className="blog__img-edit">
-
                         {/*item - это картинка - объект модели файл*/}
                         {postPicturesList.map(item => {
                             return <div className={`${imgLink === item.path ? "activeImage" : ''}`} key={item.id}>

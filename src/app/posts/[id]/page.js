@@ -52,7 +52,6 @@ const Post = async ({params: {id}}) => {
                 <div className="one-post__text-wrapper">
                     <div className="one-post__text">
                         <h1>{post.title}</h1>
-
                         <p>
                             {/*Специальный атрибут dangerouslySetInnerHTML позволяющий встраивать произвольный html c бекенда, для безопастности*/}
                             {post.htmlBody ? <div dangerouslySetInnerHTML={{__html: post.htmlBody}}>

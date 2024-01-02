@@ -7,16 +7,15 @@ const PostsPage = ({
                        link,
                        // updateHandler,
                        // deleteHandler,
-                       // postPicture,
+                       postPicture,
                        // setEditedPost,
-                       // setOpenModalPicture
                    }) => {
     const {userId, id, title, text, updatedAt} = item
     // console.log('link', link, 'item', item)
 
     return (<>
             <div className="card">
-                    <img className="card__img" src="img/posts/clouds.jpeg" alt="Post_picture"/>
+                    <img className="card__img" src={postPicture} alt="Post_picture"/>
 
                     <div className="card__body">
                         <h5 className="card__title">

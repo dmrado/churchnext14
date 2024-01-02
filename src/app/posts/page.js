@@ -40,8 +40,7 @@ const Posts = async () => {
                         return <PostsPage key={post.id}
                                           item={post}
                                           link={`/posts/${post.id}`}
-                            // postPicture={postPicture}
-                            // setOpenModalPicture={setOpenModalPicture}
+                            postPicture={post.imgLink}
                             // setEditedPost={setEditedPost}
                             // updateHandler={token ? () => {
                             //     setEditedPost(post)
