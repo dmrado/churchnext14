@@ -43,13 +43,14 @@ const EditButtons = ({id,}) => {
     return (<>
             {!!showButtons && <div style={{display: 'flex'}}>
 
-                <button onClick={() => removePost(id)} className="btn btn-blog" type="submit"
-                        value="Delete post">Удалить
-                </button>
-
                 <Link href={`/posts/${id}/edit`}>
                     <button className="btn btn-blog">Редактировать</button>
                 </Link>
+
+                <button onClick={() => removePost(id)} className="btn btn-service btn-service-danger" type="submit"
+                        value="Delete post">Удалить
+                </button>
+
             </div>
             }
         </>

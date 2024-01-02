@@ -44,7 +44,7 @@ const uploadFile = async (req, res, next) => {
         fs.renameSync(sourcePath, destPath);
 
         //сохраняем в БД информацию о файле
-        //path - ставим путь внутри сайта, т.е. после хоста (здесь после localhost:3001/)
+        //path - ставим путь внутри сайта, т.е. после хоста (здесь после localhost:3005/)
         const createdFile = new File({userId, name: newFileName, path: `/storage/${userId}/${newFileName}`})
 
         await createdFile.save()

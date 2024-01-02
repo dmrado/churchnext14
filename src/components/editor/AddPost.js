@@ -1,16 +1,18 @@
 'use client'
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRouter} from "react";
 import Link from "next/link";
 import dynamic from 'next/dynamic'
 import LoginModal from "../LoginModal";
 import {BACKEND_URL} from "../../../config";
 import {useMainContext} from "../../context/MainProvider";
 import {useFileContext} from "../../context/FileProvider";
+// import {useRouter} from "next/dist/client/compat/router";
 
 const QuillEditor = dynamic(
     () => import('./Quill'),
     {ssr: false}
 )
+
 
 const AddPost = ({createPost}) => {
     const {token, logoutHandler} = useMainContext()
@@ -24,41 +26,13 @@ const AddPost = ({createPost}) => {
         editedPost, setEditedPost
     } = useFileContext()
 
+
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
     const [htmlBody, setHtmlBody] = useState('')
 
-    // для картинки поста
-    // const [postPicturesList, setPostPicturesList] = useState([])
-    // const [postPicturesCount, setPostPicturesCount] = useState(null)
-    // // const [openModalPicture, setOpenModalPicture] = useState(false)
-    // //для imgLink при сравнении с path активного file в storage - для выбора картинки пользователем
-    // const [activeImgLink, setActiveImgLink] = useState(null)
+    const [previewId, setPreviewId] = useState(null)
 
-    // const [previewId, setPreviewId] = useState(null)
-    //
-    // const loadPostPicturesList = () => {
-    //     //получаем картинки со всеми атрибутами из storage
-    //     fetch(BACKEND_URL + `/files`, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //             // Authorization: `Bearer ${token}`,
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (!data.items) {
-    //                 return
-    //             }
-    //             //получаем картинки со свеми атрибутами из storage, далее в PostPicturesListModal сохраним картинку в модель Post
-    //             setPostPicturesList(data.items)
-    //             //postPicturesCount - припасен для пагинации картинок если их будет через чур
-    //             setPostPicturesCount(data.count)
-    //             console.log("data.items in loadPostPicturesList", data.items)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
 
     useEffect(() => {
         loadPostPicturesList()
@@ -69,48 +43,49 @@ const AddPost = ({createPost}) => {
             <div className="container">
 
                 <div
-                    className="one-post-banner"
+                    // className="one-post-banner"
                     style={{
                         position: 'relative',
+                        display: 'flex',
+                        flexWrap: 'wrap',
                         alignItems: 'center',
                         border: '1px solid blue',
                         borderRadius: '5px',
-                        minHeight: '50px'
+                        minHeight: '50px',
+                        maxHeight: '400px',
                     }}>
 
+                    {/*item - это картинка - объект модели файл*/}
                     {postPicturesList.map(item => {
                         return <div className={`${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>
-                            <img src={BACKEND_URL + item.path} onClick={() => {
-                                updatePostPicture()
+                            <img
+                                src={BACKEND_URL + item.path} onClick={() => {
+                                //файл path идет в updatePostPicture
                                 setNewPostPicture(item.path)
+                                //для выделения выбранной картинки className activeImage
                                 setActiveImgLink(item.path)
-                                setEditedPost(item)
                             }}
-                                 className="w-100" alt="Картинка"/>
+                                alt="Картинка"/>
 
                         </div>
-
-
                     })}
-
-                    <img
-                        // src={!!imgLink ? BACKEND_URL + imgLink : postPicture}
-                        alt="Нажмите для добавления изображения"
-                        onClick={() => {
-                            // if(!token){
-                            //     return
-                            // }
-                            loadPostPicturesList()
-                            // setEditedPost(item)
-                            // setOpenModalPicture(true)
-                            setActiveImgLink(imgLink)
-                        }}
-                    />
                 </div>
 
-                <LoginModal/>
+                <div className="btn-blog-wrapper">
+                    <button className="btn btn-service" onClick={loadPostPicturesList}>Выбрать картинку</button>
 
-                <form className="form__add-post" action={formData => createPost(formData, htmlBody, text, token)}>
+                    {/*todo пробросить сюда пост иначе при такой логике можно только назначить картинку по умолчанию, а затем отредактировать, потому что поста еще нет а id может назначить только БД, видимо надо использовать функцию loadPostPictureToStorage*/}
+
+                </div>
+
+                {!token && <LoginModal/>}
+
+                <form className="form__add-post"
+                      action={formData => {
+                    createPost(formData, htmlBody, text, token)
+                    // куда то надо пристроить функцию ниже или создать другую так как поста собственно еще нету editedPost не передать
+                    updatePostPicture()
+                }}>
 
                     <h1>Давайте создадим новый пост, дорогой пастор...</h1>
 
@@ -141,11 +116,11 @@ const AddPost = ({createPost}) => {
                             Сохранить
                         </button>
                         <Link href={'/posts'}>
-                            <button className="btn btn-blog">
+                            <button className="btn">
                                 Вернуться
                             </button>
                         </Link>
-                        <button className="btn btn-blog" onClick={logoutHandler}>
+                        <button className="btn btn-service btn-service-danger" onClick={logoutHandler}>
                             Выйти
                         </button>
 

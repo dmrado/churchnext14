@@ -38,13 +38,14 @@ export const FileProvider = ({children}) => {
                 setPostPicturesList(data.items)
                 //postPicturesCount - припасен для пагинации картинок если их будет через чур
                 setPostPicturesCount(data.count)
+                console.log("data.count in loadPostPicturesList", data.count)
                 console.log("data.items in loadPostPicturesList", data.items)
             })
             .catch(err => console.log(err))
     }
 
     //Files path записывает в Posts imgLink для поста с конкретным id
-    //todo пост сюда в FileProvider setEditedPost как editedPost передается из AddPost строкой setEditedPost(item)
+    //todo весь пост сюда в FileProvider setEditedPost как editedPost передается из AddPost
     const updatePostPicture = async () => {
         await fetch(BACKEND_URL + `/posts/${editedPost.id}`, {
             method: 'PUT',
