@@ -14,7 +14,7 @@ export const FileProvider = ({children}) => {
     const [postPicturesList, setPostPicturesList] = useState([])
     const [postPicturesCount, setPostPicturesCount] = useState(null)
     //для imgLink при сравнении с path активного file в storage - для выбора картинки пользователем
-    const [activeImgLink, setActiveImgLink] = useState(null)
+    const [imgLink, setImgLink] = useState(null)
     //устанавливаем новую картинку
     const [newPostPicture, setNewPostPicture] = useState('')
 
@@ -91,8 +91,7 @@ export const FileProvider = ({children}) => {
         // text1
         postPicturesList,
         loadPostPicturesList,
-        activeImgLink,
-        setActiveImgLink,
+        imgLink, setImgLink,
         updatePostPicture,
         setNewPostPicture,
         editedPost, setEditedPost

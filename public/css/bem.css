@@ -994,6 +994,17 @@ body {
 }
 
 
+.blog__img-edit{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid blue;
+    border-radius: 5px;
+    min-height: 50px;
+    max-height: 400px
+}
+
 /*blog header on the posts/page.js FINISH*/
 
 /*Card block*/

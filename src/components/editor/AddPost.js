@@ -19,8 +19,7 @@ const AddPost = ({createPost}) => {
     const {
         postPicturesList,
         loadPostPicturesList,
-        activeImgLink,
-        setActiveImgLink,
+        imgLink, setImgLink,
         updatePostPicture,
         setNewPostPicture,
         editedPost, setEditedPost
@@ -42,52 +41,40 @@ const AddPost = ({createPost}) => {
     return (<>
             <div className="container">
 
-                <div
-                    // className="one-post-banner"
-                    style={{
-                        position: 'relative',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        alignItems: 'center',
-                        border: '1px solid blue',
-                        borderRadius: '5px',
-                        minHeight: '50px',
-                        maxHeight: '400px',
-                    }}>
+                {!token && <LoginModal/>}
 
-                    {/*item - это картинка - объект модели файл*/}
-                    {postPicturesList.map(item => {
-                        return <div className={`${activeImgLink === item.path ? "activeImage" : ''}`} key={item.id}>
-                            <img
-                                src={BACKEND_URL + item.path} onClick={() => {
-                                //файл path идет в updatePostPicture
-                                setNewPostPicture(item.path)
-                                //для выделения выбранной картинки className activeImage
-                                setActiveImgLink(item.path)
-                            }}
-                                alt="Картинка"/>
-
-                        </div>
-                    })}
-                </div>
 
                 <div className="btn-blog-wrapper">
-                    <button className="btn btn-service" onClick={loadPostPicturesList}>Выбрать картинку</button>
+                    <button className="btn btn-service" onClick={loadPostPicturesList}>Список картинок</button>
 
                     {/*todo пробросить сюда пост иначе при такой логике можно только назначить картинку по умолчанию, а затем отредактировать, потому что поста еще нет а id может назначить только БД, видимо надо использовать функцию loadPostPictureToStorage*/}
 
                 </div>
 
-                {!token && <LoginModal/>}
-
                 <form className="form__add-post"
                       action={formData => {
-                    createPost(formData, htmlBody, text, token)
-                    // куда то надо пристроить функцию ниже или создать другую так как поста собственно еще нету editedPost не передать
-                    updatePostPicture()
-                }}>
+                          createPost(formData, htmlBody, text, token, imgLink)
+                      }}>
 
-                    <h1>Давайте создадим новый пост, дорогой пастор...</h1>
+                    <div className="blog__img-edit">
+
+                        {/*item - это картинка - объект модели файл*/}
+                        {postPicturesList.map(item => {
+                            return <div className={`${imgLink === item.path ? "activeImage" : ''}`} key={item.id}>
+                                <img
+                                    src={BACKEND_URL + item.path} onClick={() => {
+                                    //файл path идет в updatePostPicture
+                                    setNewPostPicture(item.path)
+                                    //для выделения выбранной картинки className activeImage
+                                    setImgLink(item.path)
+                                }}
+                                    alt="Картинка"/>
+
+                            </div>
+                        })}
+                    </div>
+
+                    <h1>Создадим новый пост...</h1>
 
                     <div className="modal__text-field-wrapper">
                         <div className="modal__input-wrapper">

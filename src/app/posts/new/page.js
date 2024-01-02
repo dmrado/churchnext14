@@ -5,9 +5,11 @@ import AddPost from "../../../components/editor/AddPost";
 
 
 
-const createPost = async (formData, htmlBody, text, token) => {
+const createPost = async (formData, htmlBody, text, token, imgLink) => {
     'use server'
     const {title} = Object.fromEntries(formData)
+    console.log('title', title)
+    console.log('imgLink', imgLink)
 
     const response = await fetch(BACKEND_URL + '/posts', {
         method: 'POST',
@@ -16,7 +18,7 @@ const createPost = async (formData, htmlBody, text, token) => {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
-        body: JSON.stringify({title, text, htmlBody, userId: 1})
+        body: JSON.stringify({title, text, htmlBody, userId: 1, imgLink})
     })
     const data = await response.json()
     const newPost = await data.item
