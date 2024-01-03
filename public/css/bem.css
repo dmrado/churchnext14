@@ -1002,7 +1002,8 @@ body {
     border: 1px solid blue;
     border-radius: 5px;
     min-height: 50px;
-    max-height: 400px
+    max-height: 450px;
+    overflow: hidden;
 }
 
 /*blog header on the posts/page.js FINISH*/

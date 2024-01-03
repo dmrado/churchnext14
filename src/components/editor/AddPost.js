@@ -61,7 +61,7 @@ const AddPost = ({createPost}) => {
                                     src={BACKEND_URL + item.path} onClick={() => {
                                     //файл path идет в updatePostPicture
                                     setNewPostPicture(item.path)
-                                    //для выделения выбранной картинки className activeImage
+                                    //для выделения выбранной картинки className activeImage и передачи ссылки на картинку в модель Post imgLink
                                     setImgLink(item.path)
                                 }}
                                     alt="Картинка"/>
