@@ -45,22 +45,22 @@ export const FileProvider = ({children}) => {
     }
 
     //Files path записывает в Posts imgLink для поста с конкретным id
-    // const updatePostPicture = async () => {
-    //     await fetch(BACKEND_URL + `/posts/${editedPost.id}`, {
-    //         method: 'PUT',
-    //         body: JSON.stringify({...editedPost, imgLink: newPostPicture}),
-    //         headers: {
-    //             'Content-type': 'application/json',
-    //             Authorization: `Bearer ${token}`,
-    //         }
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             //на фронтенде не можем использовать revalidatepath сделать функцию перехода на страницу постовs
-    //             // loadPosts()
-    //         })
-    //         .catch(err => console.log(err))
-    // }
+    const updatePostPicture = async () => {
+        await fetch(BACKEND_URL + `/posts/${editedPost.id}`, {
+            method: 'PUT',
+            body: JSON.stringify({...editedPost, imgLink: newPostPicture}),
+            headers: {
+                'Content-type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                //на фронтенде не можем использовать revalidatepath сделать функцию перехода на страницу постовs
+                // loadPosts()
+            })
+            .catch(err => console.log(err))
+    }
 
     //записывает путь к файлу картинки внутри сайта т.е. в storage
     // const loadPostPictureToStorage = async (file) => {

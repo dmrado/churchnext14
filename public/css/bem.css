@@ -1852,7 +1852,29 @@ body {
     cursor: pointer;
     transform: translateX(190%);
 }
+.contact__form_btn:hover {
+    max-width: 50px;
+    padding: 10px;
+    background-color: #af4702;
+    color: #fff;
+}
+.contact__form_btn:focus {
+    max-width: 50px;
+    padding: 10px;
+    background-color: #fff;
+    color: #FF6700;
+}
 
+.contact__form_btn:active {
+    max-width: 50px;
+    padding: 10px;
+    background-color: #853601;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: translateX(190%);
+}
 .input_name {
     width: 100%;
     grid-row: 1/2;
