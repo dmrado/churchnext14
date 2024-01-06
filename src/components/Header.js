@@ -10,10 +10,15 @@ const Header = () => {
             const burger = document.getElementById('burger')
 
             burger.addEventListener('click', () => {
-                if (header.classList !== 'open') {
+                // if (header.classList !== 'open') {
                     header.classList.add('open')
-                } else return
+                // } else return
             })
+
+            //скрыть при нажатии на пункт меню
+            document.querySelectorAll('.menu__link').forEach(item => item.addEventListener('click', () => {
+                header.classList.remove('open')
+            }))
 
             //  Закрыть по esc
             window.addEventListener('keydown', e => {
@@ -128,6 +133,11 @@ const Header = () => {
                                           href="https://www.youtube.com/@Stranger-pilgrim">
                                         <i className="fa-brands fa-square-youtube"></i>
                                     </Link>
+                                </li>
+                                <li className="menu__item">
+                                    <div className="menu__link">
+                                        Скрыть
+                                    </div>
                                 </li>
                             </ul>
                         </div>

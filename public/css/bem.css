@@ -267,6 +267,7 @@ body {
 
 /*крестик с классом open */
 .header.open .header__burger-btn span {
+    visibility: hidden;
     background-color: white;
 }
 
