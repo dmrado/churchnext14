@@ -14,7 +14,9 @@ export default function RootLayout({children}) {
         <html lang="en">
 
         <body className={inter.className}>
-
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                async defer>
+        </script>
         <script src="https://kit.fontawesome.com/42b4beafb6.js" crossOrigin="anonymous"></script>
 
         <Header/>

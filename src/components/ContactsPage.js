@@ -1,6 +1,7 @@
 'use client'
 import {useEffect, useState} from "react";
 import {BACKEND_URL} from "../../config";
+import {ReCAPTCHA} from "react-google-recaptcha";
 
 const CONTACTS = {
     headerAddres1: 'Адрес: ',
@@ -19,7 +20,6 @@ const ContactsPage = () => {
     const [email, setEmail] = useState('')
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-
 
     useEffect(() => {
         if (typeof AOS !== 'undefined') {
@@ -145,6 +145,11 @@ const ContactsPage = () => {
                                   value={body}
                                   onChange={e => setBody(e.target.value)}
                         />
+
+                        <ReCAPTCHA
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        />
+                        <br style={{padding: '0', margin:'0'}}/>
 
                         {/*<div className="loading">Загрузка...</div>*/}
                         {/*<div className="error-message"/>*/}

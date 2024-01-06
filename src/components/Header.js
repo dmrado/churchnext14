@@ -134,11 +134,11 @@ const Header = () => {
                                         <i className="fa-brands fa-square-youtube"></i>
                                     </Link>
                                 </li>
-                                <li className="menu__item">
-                                    <div className="menu__link">
-                                        Скрыть
-                                    </div>
-                                </li>
+                                {/*<li className="menu__item">*/}
+                                {/*    <div className="menu__link">*/}
+                                {/*        Скрыть*/}
+                                {/*    </div>*/}
+                                {/*</li>*/}
                             </ul>
                         </div>
                     </div>
