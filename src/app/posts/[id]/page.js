@@ -11,6 +11,7 @@ export const generateMetadata = ({params: {id}}) => {
 }
 
 const getPost = async (id) => {
+    // следующая строка для размещения на хостинге без БД
     return null
     const res = await fetch(BACKEND_URL + `/posts/${id}`)
     return await res.json()
@@ -81,4 +82,4 @@ const Post = async ({params: {id}}) => {
         </>
     );
 };
-export default Post;
+// export default Post;

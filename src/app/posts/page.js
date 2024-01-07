@@ -11,7 +11,8 @@ export const metadata = {
 }
 
 const getPosts = async () => {
-    // return []
+    // следующая строка для размещения на хостинге без БД
+    return []
     const res = await fetch(BACKEND_URL + '/posts')
     return await res.json()
 }
