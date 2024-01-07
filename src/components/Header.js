@@ -92,21 +92,21 @@ const Header = () => {
                                     О нас
                                 </Link>
                             </li>
-                            <li className="menu__item">
-                                <Link className="menu__link" href="/posts">
-                                    Блог
-                                </Link>
-                            </li>
+                            {/*<li className="menu__item">*/}
+                            {/*    <Link className="menu__link" href="/posts">*/}
+                            {/*        Блог*/}
+                            {/*    </Link>*/}
+                            {/*</li>*/}
                             {/*<li className="menu__item">*/}
                             {/*    <Link className="menu__link" href="/contacts">*/}
                             {/*        Контакты*/}
                             {/*    </Link>*/}
                             {/*</li>*/}
-                            <li className="menu__item">
-                                <Link className="menu__link" href="/media">
-                                    Медиа
-                                </Link>
-                            </li>
+                            {/*<li className="menu__item">*/}
+                            {/*    <Link className="menu__link" href="/media">*/}
+                            {/*        Медиа*/}
+                            {/*    </Link>*/}
+                            {/*</li>*/}
                             <li className="menu__item">
                                 <Link className="menu__link" href="/information">
                                     Полезное

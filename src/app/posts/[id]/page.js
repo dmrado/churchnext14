@@ -11,7 +11,7 @@ export const generateMetadata = ({params: {id}}) => {
 }
 
 const getPost = async (id) => {
-    // return null
+    return null
     const res = await fetch(BACKEND_URL + `/posts/${id}`)
     return await res.json()
 }
