@@ -17,7 +17,7 @@ const getPosts = async () => {
 }
 
 //добавляет новый пост в том месте где находится очищая кеш рендерит именно изменный пост
-revalidatePath('/posts')
+// revalidatePath('/posts')
 
 const Posts = async () => {
     const data = await getPosts()
