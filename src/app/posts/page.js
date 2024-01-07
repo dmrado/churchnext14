@@ -1,9 +1,9 @@
 import Link from "next/link";
 import PostsPage from "../../components/PostsPage";
 import React from "react";
-import {revalidatePath} from "next/cache";
+// import {revalidatePath} from "next/cache";
 import {BACKEND_URL, SHOW_BANNER} from "../../../config";
-import LoginModal from "../../components/LoginModal";
+// import LoginModal from "../../components/LoginModal";
 
 
 export const metadata = {

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import {revalidatePath} from "next/cache";
-import {redirect} from "next/navigation";
+// import {revalidatePath} from "next/cache";
+// import {redirect} from "next/navigation";
 import {BACKEND_URL} from "../../../../config";
-import {useMainContext} from "../../../context/MainProvider";
-import {useFileContext} from "../../../context/FileProvider";
+// import {useMainContext} from "../../../context/MainProvider";
+// import {useFileContext} from "../../../context/FileProvider";
 import EditButtons from "../../../components/editor/EditButtons";
 
 export const generateMetadata = ({params: {id}}) => {
