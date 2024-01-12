@@ -21,15 +21,15 @@ const ContactsPage = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
 
-    useEffect(() => {
-        if (typeof AOS !== 'undefined') {
-            AOS.init()
-            console.log('is working')
-
-        } else {
-            console.log('check')
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (typeof AOS !== 'undefined') {
+    //         AOS.init()
+    //         console.log('is working')
+    //
+    //     } else {
+    //         console.log('check')
+    //     }
+    // }, [])
 
     const submitHandler = async (e) => {
         e.preventDefault()
@@ -53,7 +53,7 @@ const ContactsPage = () => {
     }
     return <div>
 
-        <div className="contact__header aos-init aos-animate" data-aos="fade-in">
+        <div className="contact__header" >
             <h1>Приезжайте к нам</h1>
             <p>У нас вы найдете хороших друзей, мы будем рады общению, окажем всевозможную помощь.</p>
         </div>
@@ -73,16 +73,14 @@ const ContactsPage = () => {
                 >
                     Улица Пушкина, 16 Еврейская община города Артем — Яндекс&nbsp;Карты
                 </a>
-                <div data-aos="fade-up">
                     <iframe style={{border: 0, width: '100%', height: '350px'}}
                             src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=132.179308%2C43.349194&mode=whatshere&whatshere%5Bpoint%5D=132.178066%2C43.349638&whatshere%5Bzoom%5D=17&z=16.39"
                             width="1670" height="400"
 
-                            frameBorder={0}
+                            // frameBorder={0}
                             allowFullScreen="true"
                         // style={{ position: "relative" }}
                     />
-                </div>
             </div>
         </div>
 
