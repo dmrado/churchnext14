@@ -148,6 +148,7 @@ const ContactsPage = () => {
 
                         <ReCAPTCHA
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                            size="normal"
                         />
                         <br style={{padding: '0', margin:'0'}}/>
 
