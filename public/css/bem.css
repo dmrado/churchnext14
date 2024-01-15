@@ -378,6 +378,16 @@ body {
         position: absolute;
         display: flex;
         transform: translateY(-110%);
+        gap: 6px;
+    }
+
+    .menu_socials li,
+    .menu_socials a
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
     .menu_socials_first {
