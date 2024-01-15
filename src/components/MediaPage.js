@@ -24,7 +24,7 @@ const MediaPage = () => {
                             <h3>Кирил Полонский-2023</h3>
                             <Link target="_blank"
                                   href="https://cloud.mail.ru/public/uwcQ/cwZAWLkF3/%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%20%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-2023">
-                                <img className="media__img vertical" src="/img/mediapage/KirillPolonsk23.webp"
+                                <img className="media__img vertical" src="/img/mediapage/Polonsky.webp"
                                      alt="Pic"/>
                             </Link>
                         </div>
