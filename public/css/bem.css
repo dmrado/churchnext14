@@ -1,6 +1,7 @@
 /*принятые вводные для всего проекта*/
 * {
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 /*обнуление потока*/
@@ -769,6 +770,46 @@ body {
 
 /*about и mission конец*/
 
+/*books начало*/
+.books__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.books__wrapper h2{
+    text-transform: uppercase;
+    color: #FF6700;
+}
+
+.books__list ul{
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+}
+
+.books__list li{
+    text-decoration: none;
+    margin: 20px;
+}
+
+.books__item{
+    position: relative;
+    height: 150px;
+    min-height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 20px;
+    color: #fff
+}
+
+.books__price{
+    position: absolute;
+    bottom:0;
+    padding-bottom: 7px;
+}
+/*books конец*/
 
 /*media начало*/
 .youtube {
