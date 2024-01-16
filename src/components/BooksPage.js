@@ -1,3 +1,4 @@
+'use client'
 const books = [
     {
         id: 1,
@@ -241,6 +242,10 @@ const books = [
     },
 ]
 
+function handleClick() {
+    alert('open modal with annotation of the book')
+}
+
 const BooksPage = () => {
     return (
         <div className="container">
@@ -253,10 +258,13 @@ const BooksPage = () => {
                 <ul>
                     {books.map(book => <li key={book.id}>
 
-                        <div className="books__item" style={{backgroundColor: book.color}}>
+                        <div className="books__item"
+                             style={{backgroundColor: book.color}}
+                             onClick={handleClick}
+                        >
                             {book.name}
 
-                            <div className="books__price">Цена:  {book.price}</div>
+                            <div className="books__price">Цена: {book.price} p.</div>
                         </div>
 
                     </li>)
