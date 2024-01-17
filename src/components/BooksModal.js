@@ -20,7 +20,7 @@ const BooksModal = ({book, setOpenBookModal}) => {
                         <img src={book.href} alt="Picture"/>
                         <h2 style={{color: '#FF6700', textTransform: 'uppercase'}}>{book.name}</h2>
                         <p style={{color: 'gray'}}>{book.annot}</p>
-                        <div style={{color: '#004E98'}} className="books__price_modal">Цена: {book.price} p.</div>
+                        {/*<div style={{color: '#004E98'}} className="books__price_modal">Цена: {book.price} p.</div>*/}
                         <button style={{color: '#FF6700', backgroundColor: '#fff', border: '1px solid'}} className="btn btn-blog" onClick={handleClick}>
                             Закрыть
                         </button>
