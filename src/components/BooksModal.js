@@ -16,14 +16,22 @@ const BooksModal = ({book, setOpenBookModal}) => {
         <>
             <div className="container">
                 <div className="modal open" id="my-modal">
-                    <div className="modal__box">
-                        <img src={book.href} alt="Picture"/>
-                        <h2 style={{color: '#FF6700', textTransform: 'uppercase'}}>{book.name}</h2>
-                        <p style={{color: 'gray'}}>{book.annot}</p>
-                        {/*<div style={{color: '#004E98'}} className="books__price_modal">Цена: {book.price} p.</div>*/}
-                        <button style={{color: '#FF6700', backgroundColor: '#fff', border: '1px solid'}} className="btn btn-blog" onClick={handleClick}>
-                            Закрыть
-                        </button>
+                    <div className="modal__box book_box">
+
+                        <div className="book_box-header">
+                            <img src={book.href} alt="Picture"/>
+                            <h2>{book.name}</h2>
+                        </div>
+
+                        <p>{book.annot}</p>
+
+                        <div className="book_box-header">
+                            <div className="books__price">Цена: {book.price} p.</div>
+                            <button className="btn btn-blog" onClick={handleClick}>
+                                Закрыть
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
