@@ -75,23 +75,24 @@ body {
 /*у блоков не должно быть margin-ов*/
 .btn {
     border: none;
-    padding: 13px 20px;
+    padding: 10px 20px;
     min-width: 130px;
     border-radius: 12px;
     background-color: #FF6700;
     color: #f0f0f0;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 400;
     transition: .3s;
     margin: 0 10px;
     text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
-    border: none;
-    background-color: #FF6700;
+    background-color: #e15b01;
     color: #fff;
-    /*font-size: 18px;*/
-    box-shadow: 2px 0 10px #FF6700;
+    transform: translateX(1px) translateY(-1px);
+    box-shadow: 0 4px 10px 0px rgba(117, 117, 117, 0.2);
 }
 
 .btn:focus {
@@ -543,7 +544,7 @@ body {
 }
 
 .about__list-item {
-    height: 218px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     object-fit: cover;
@@ -551,7 +552,7 @@ body {
 }
 
 .about__text{
-    font-size: 19px;
+    font-size: 20px;
     color: #505050;
 }
 
@@ -673,7 +674,7 @@ body {
 .mission__list-item_4 p {
     width: 490px;
     /*font-family: Open Sans;*/
-    font-size: 16px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1190,9 +1191,9 @@ body {
     margin-right: 20px;
 }
 
-.btn-blog-wrapper .btn {
-    margin: 1px 10px;
-}
+/*.btn-blog-wrapper .btn {*/
+/*    margin: 1px 10px;*/
+/*}*/
 
 /*.btn-blog:not(:last-child) {*/
 /*    margin-right: 20px;*/
@@ -1916,7 +1917,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     margin: 5px;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 

@@ -29,7 +29,7 @@ const BooksModal = ({book, setOpenBookModal}) => {
                             <div className="books__price">
                                 {/*Цена: {book.price} p.*/}
                             </div>
-                            <button className="btn btn-blog" onClick={handleClick}>
+                            <button className="btn" onClick={handleClick}>
                                 Закрыть
                             </button>
                         </div>
