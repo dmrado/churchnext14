@@ -1916,7 +1916,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     margin: 5px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -1946,6 +1946,7 @@ body {
     gap: 20px;
     height: 100px;
     padding: 20px;
+    color: #505050;
 }
 
 .address {

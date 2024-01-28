@@ -56,7 +56,7 @@ const ContactsPage = () => {
 
         <div className="contact__header" >
             <h1>Приезжайте к нам</h1>
-            <p>Приглашаем вас на Богослужения, которые проходят каждую субботу в 11-00 час по адресу г. Артем, ул Пушкина 16. <br/> Примите участие в радостном прославлении Бога, молитве и изученнии Библии. <br/> У
+            <p>Приглашаем вас на Богослужения, каждую субботу в 11-00, по адресу г. Артем, ул Пушкина 16. <br/> Примите участие в радостном прославлении Бога, молитве и изученнии Библии. <br/> У
                 нас вы найдёте хороших друзей, мы будем рады общению с вами.</p>
         </div>
 
@@ -91,19 +91,19 @@ const ContactsPage = () => {
 
                 <div className="address__list">
                     <div className="address thin">
-                        <i className="bi bi-geo-alt"/>
+                        {/*<i className="bi bi-geo-alt"/>*/}
                         <h4>{CONTACTS.headerAddres1}</h4>
                         <p><i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.headerAddres2}</p>
                     </div>
 
                     <div className="email thin">
-                        <i className="bi bi-envelope"/>
+                        {/*<i className="bi bi-envelope"/>*/}
                         <h4>Напишите нам:</h4>
                         <p><i className="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.refMail}</p>
                     </div>
 
                     <div className="phone thin">
-                        <i className="bi bi-phone"/>
+                        {/*<i className="bi bi-phone"/>*/}
                         <h4>Позвоните нам:</h4>
                         <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone1}</p>
                         <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone2}</p>
