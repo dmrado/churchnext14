@@ -672,7 +672,6 @@ body {
 
 .mission__list-item_4 p {
     width: 490px;
-    color: #000;
     /*font-family: Open Sans;*/
     font-size: 16px;
     font-style: normal;
@@ -1917,7 +1916,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     margin: 5px;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 
