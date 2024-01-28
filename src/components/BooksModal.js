@@ -26,7 +26,9 @@ const BooksModal = ({book, setOpenBookModal}) => {
                         <p>{book.annot}</p>
 
                         <div className="book_box-header">
-                            {/*<div className="books__price">Цена: {book.price} p.</div>*/}
+                            <div className="books__price">
+                                {/*Цена: {book.price} p.*/}
+                            </div>
                             <button className="btn btn-blog" onClick={handleClick}>
                                 Закрыть
                             </button>

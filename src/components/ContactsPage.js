@@ -13,6 +13,7 @@ const CONTACTS = {
     textAddres2: '',
     yandexMaps: 'yandexMaps',
     coordinatesAddres: '',
+    bankCard: ''
 }
 
 const ContactsPage = () => {
@@ -54,8 +55,9 @@ const ContactsPage = () => {
     return <div>
 
         <div className="contact__header" >
-            <h1>Приезжайте к нам</h1>
-            <p>У нас вы найдете хороших друзей, мы будем рады общению, окажем всевозможную помощь.</p>
+            <h2>Приезжайте к нам</h2>
+            <p>Приглашаем вас на Богослужения, которые проходят каждую субботу в 11-00 час по адресу г. Артем, ул Пушкина 16. <br/> Примите участие в радостном прославлении Бога, молитве и изученнии Библии. <br/> У
+                нас вы найдёте хороших друзей, мы будем рады общению с вами.</p>
         </div>
 
         <div className="contact__map">
@@ -93,19 +95,28 @@ const ContactsPage = () => {
                         <h4>{CONTACTS.headerAddres1}</h4>
                         <p><i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.headerAddres2}</p>
                     </div>
+
                     <div className="email thin">
                         <i className="bi bi-envelope"/>
                         <h4>Напишите нам:</h4>
                         <p><i className="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.refMail}</p>
                     </div>
+
                     <div className="phone thin">
                         <i className="bi bi-phone"/>
                         <h4>Позвоните нам:</h4>
                         <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone1}</p>
                         <p><i className="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.phone2}</p>
                     </div>
+
+                    {/*<div className="email thin">*/}
+                    {/*    <i className="bi bi-envelope"/>*/}
+                    {/*    <h4>Карта для пожертвований:</h4>*/}
+                    {/*    <p><i className="fa-solid fa-credit-card"></i>&nbsp;&nbsp;&nbsp;{CONTACTS.bankCard}</p>*/}
+                    {/*</div>*/}
+
                     <div className="coordinates thin">
-                        <i className="bi bi-geo-alt"/>
+                        {/*<i className="bi bi-geo-alt"/>*/}
                         {/*todo remove this style when will put reach the place sheme*/}
                         {/*<h4 style={{color: '#FF6700', fontSize: '22px', textAlign: 'center'}}>Мы рады вам!</h4>*/}
                         {/*<p>{CONTACTS.instructionTransport}</p>*/}
