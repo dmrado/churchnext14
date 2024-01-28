@@ -550,6 +550,11 @@ body {
     z-index: 5;
 }
 
+.about__text{
+    font-size: 19px;
+    color: #505050;
+}
+
 .about__list-item p {
     text-align: justify;
 }
@@ -627,9 +632,8 @@ body {
 
 .mission__list-item_1 p {
     width: 490px;
-    color: #000;
     /*font-family: Open Sans;*/
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -670,7 +674,7 @@ body {
     width: 490px;
     color: #000;
     /*font-family: Open Sans;*/
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -847,7 +851,7 @@ body {
 
 
 .media__list-wrapper p {
-    color: #9c9c9c;
+    color: #505050;
 }
 
 .media__list-header {
@@ -872,6 +876,7 @@ body {
     /*font-family: Ubuntu;*/
     font-style: normal;
     font-weight: 700;
+    font-size: 18px;
     line-height: normal;
     margin-bottom: 50px;
     text-align: center;
@@ -1063,7 +1068,7 @@ body {
 /* TEXT */
 .text {
     max-width: 1000px;
-    color: #000;
+    color: #505050;
     /*font-family: Open Sans;*/
     font-size: 16px;
     font-style: normal;
@@ -1648,7 +1653,6 @@ body {
 }
 
 .book_box p {
-    color: gray;
     text-align: justify;
     padding: 25px 15px;
 }
@@ -1899,7 +1903,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #004E98;
-    height: 150px;
+    min-height: 180px;
 }
 
 .contact__header h1 {
@@ -1913,6 +1917,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     margin: 5px;
+    font-size: 22px;
 }
 
 
