@@ -19,14 +19,15 @@ const MediaPage = () => {
                     </p>
 
                     <div className="media__list">
+
                         {/*левый блок 1*/}
                         <div className="media__li media__li_1">
-                            <h3>Кирил Полонский-2023</h3>
+                            <h3>Симха 2021</h3>
                             <Link target="_blank"
-                                  href="https://cloud.mail.ru/public/uwcQ/cwZAWLkF3/%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%20%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-2023">
-                                <img className="media__img vertical" src="/img/mediapage/Polonsky.webp"
-                                     alt="Pic"/>
+                                  href="https://cloud.mail.ru/public/uwcQ/cwZAWLkF3/%D0%A1%D0%B8%D0%BC%D1%85%D0%B0%202021">
+                                <img className="media__img vertical" src="/img/mediapage/Simkha2021.webp" alt="Pic"/>
                             </Link>
+
                         </div>
                         <div className="media__li media__li_2">
                             <h3>Артем церковь</h3>
@@ -59,11 +60,14 @@ const MediaPage = () => {
                             </Link>
                         </div>
                         <div className="media__li media__li_6">
-                            <h3>Симха 2021</h3>
+                            <h3>Кирил Полонский-2023</h3>
                             <Link target="_blank"
-                                  href="https://cloud.mail.ru/public/uwcQ/cwZAWLkF3/%D0%A1%D0%B8%D0%BC%D1%85%D0%B0%202021">
-                                <img className="media__img vertical" src="/img/mediapage/Simkha2021.webp" alt="Pic"/>
+                                  href="https://cloud.mail.ru/public/uwcQ/cwZAWLkF3/%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%20%D0%9F%D0%BE%D0%BB%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-2023">
+                                <img className="media__img vertical" src="/img/mediapage/Polonsky.webp"
+                                     alt="Pic"/>
                             </Link>
+
+
                         </div>
 
                         {/*левый блок 2*/}
