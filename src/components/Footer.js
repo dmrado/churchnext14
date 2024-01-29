@@ -126,35 +126,14 @@ const Footer = () => {
                         {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
                         {/*</svg>*/}
 
-                        {/*<svg className="footer__socials-item"*/}
-                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                        {/*    width={36}*/}
-                        {/*    height={36}*/}
-                        {/*    viewBox="0 0 36 36"*/}
-                        {/*    fill="none"*/}
-                        {/*>*/}
-                        {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
-                        {/*</svg>*/}
-
-                        {/*<svg className="footer__socials-item"*/}
-                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                        {/*    width={36}*/}
-                        {/*    height={36}*/}
-                        {/*    viewBox="0 0 36 36"*/}
-                        {/*    fill="none"*/}
-                        {/*>*/}
-                        {/*    <circle cx={18} cy={18} r={18} fill="#004E98"/>*/}
-                        {/*</svg>*/}
-
-
                     </div>
                 </div>
 
                 <div className="footer_signature">
                     <p>*Полное наименование организации "Местная религиозная организация мессианских христиан
                         Мессианская община "Бейт Йешуа" г. Артем*. Запись о некоммерческой организации внесена в ЕГРЮЛ
-                        за основным гос. рег. номером 1182500001617</p>
-                    <p> Designed by Polina&copy; Powered by Dm&copy; {fullYear}</p>
+                        за основным гос. рег. номером 1182500001617<br/>
+                    Designed by Polina&copy; Powered by Dm&copy; {fullYear}</p>
                 </div>
             </footer>
         </>
