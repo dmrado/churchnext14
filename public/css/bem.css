@@ -1768,6 +1768,37 @@ body {
 
 /*Modal end*/
 
+
+/*Holidays start*/
+.header__banner_holidays{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    flex-shrink: 0;
+    top: 100px;
+    left: 0;
+    /*это праздники*/
+    background-image: url("../img/holidays/holidaysBanner.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*padding: 30vh 0 70vh 0;*/
+    text-align: center;
+}
+.header__banner_holidays h1{
+    font-size: 76px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.holiday__item{
+    width: 226px;
+    height: 100%;
+}
+/*Holidays end*/
+
 /*Blog start*/
 
 

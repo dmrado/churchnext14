@@ -108,6 +108,11 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="menu__item">
+                                <Link className="menu__link" href="/holidays">
+                                    Праздники
+                                </Link>
+                            </li>
+                            <li className="menu__item">
                                 <Link className="menu__link" href="/information">
                                     Полезное
                                 </Link>
