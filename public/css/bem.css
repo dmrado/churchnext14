@@ -634,11 +634,13 @@ body {
     text-align: justify;
     padding: 20px 0;
 }
-.mission__list-item_1 p{
+
+.mission__list-item_1 p {
     font-size: 18px;
 
 }
-.mission__list-item_4 p{
+
+.mission__list-item_4 p {
     font-size: 17px;
 }
 
@@ -781,12 +783,15 @@ body {
 .books__wrapper h2 {
     text-transform: uppercase;
     color: #FF6700;
+    font-size: 36px;
 }
 
 .books__list ul {
     display: flex;
+    justify-content: center;
     float: left;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .books__list li {
@@ -1770,33 +1775,91 @@ body {
 
 
 /*Holidays start*/
-.header__banner_holidays{
+.header__banner_holidays {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 500px;
-    flex-shrink: 0;
     top: 100px;
     left: 0;
-    /*это праздники*/
-    background-image: url("../img/holidays/holidaysBanner.webp");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    /*padding: 30vh 0 70vh 0;*/
     text-align: center;
 }
-.header__banner_holidays h1{
+
+.wrapper_holidays {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #FF6700;
+    font-size: 36px;
+    margin-bottom: -50px;
+}
+
+.header__banner_holidays img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.header__banner_holidays h1 {
     font-size: 76px;
     font-weight: 700;
     color: #fff;
 }
 
-.holiday__item{
-    width: 226px;
+.holiday__item {
+    width: 380px;
+    /*width: 100%;*/
     height: 100%;
 }
+.book_box-header_holiday h2{
+    font-size: 36px;
+    padding: 0 20px;
+}
+
+@media (max-width: 960px) {
+    .header__banner_holidays,
+    .header__banner_holidays img {
+        height: 400px;
+        width: 100%;
+    }
+    .holiday__item {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .header__banner_holidays,
+    .header__banner_holidays img {
+        height: 300px;
+        width: 100%;
+    }
+    .wrapper_holidays{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__banner_holidays,
+    .header__banner_holidays img {
+        height: 200px;
+        width: 100%;
+    }
+    .wrapper_holidays{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__banner_holidays h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 /*Holidays end*/
 
 /*Blog start*/
