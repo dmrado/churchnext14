@@ -31,7 +31,7 @@ const AboutPage = () => {
                     <div className="header__info">
                         {/*<h3>Шалом и добро пожаловать</h3>*/}
                         {/*<h1>в МЕССИАНСКУЮ ОБЩИНУ <br/>города Артем <icon>*</icon></h1>*/}
-<h1>ОБЩИНА МЕССИАНСКИХ ХРИСТИАН <icon>«</icon>БЕЙТ ЙЕШУА<icon>»</icon> <br/> В ГОРОДЕ АРТЁМЕ <icon>*</icon></h1>
+<h1>ОБЩИНА <br/>МЕССИАНСКИХ ХРИСТИАН <icon>«</icon>БЕЙТ ЙЕШУА<icon>»</icon> <br/> В ГОРОДЕ АРТЁМЕ <icon>*</icon></h1>
 
                         <a href="#mission">
                             <button className="btn header__btn">Наша миссия</button>
