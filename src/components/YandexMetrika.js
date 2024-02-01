@@ -20,35 +20,25 @@ const YandexMetrika = () => {
                 })
                 (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-                //
-                // window.ym = window.ym || function() {
-                //     (window.ym.q = window.ym.q || []).push(arguments);
-                // };
                 ym(96326668, "init", {
                     clickmap: true,
                     trackLinks: true,
                     accurateTrackBounce: true,
                     webvisor: true
                 });
-                console.log('init');
             } catch (e) {
                 console.error(e);
-
-                console.log('error');
             }
-        } else console.log('No window');
+        }
     }, []);
 
     return (
         <>
             <noscript>
-                <div><img src="https://mc.yandex.ru/watch/96326668" style={{position:"absolute", left:"-9999px"}} alt=""/>
+                <div>
+                    <img src="https://mc.yandex.ru/watch/96326668" style={{position:"absolute", left:"-9999px"}} alt=""/>
                 </div>
             </noscript>
-            {/*<Script*/}
-            {/*    strategy="afterInteractive"*/}
-            {/*    src="https://mc.yandex.ru/metrika/tag.js?id=96326668"*/}
-            {/*/>*/}
         </>
     );
 };
