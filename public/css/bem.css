@@ -184,7 +184,7 @@ body {
     left: 0;
     right: 0;
     background: #f0f0f0;
-    padding: 15px 150px;
+    padding: 15px 120px;
     transition: 0.7s;
     z-index: 25;
     /*opacity: 100%;*/
@@ -198,7 +198,7 @@ body {
 .nav-text {
     position: absolute;
     display: block;
-    left: 220px;
+    left: 180px;
     transition: 0.7s;
 }
 
@@ -306,7 +306,7 @@ body {
     font-weight: 400;
     color: #004E98 !important;
     /*font-family: "Dosis", "Helvetica Neue", Helvetica, sans-serif;*/
-    margin-left: 5px;
+    margin-left: 0;
     transition: .1s ease;
     text-transform: uppercase;
 
@@ -323,13 +323,13 @@ body {
     box-shadow: #01213f;
 }
 
-@media (max-width: 982px) {
+@media (max-width: 1040px) {
     .nav {
         padding: 15px 25px;
     }
 
     .nav-text {
-        transform: translateX(-135%);
+        transform: translateX(-100%);
     }
 
     .header__burger-btn {
@@ -408,7 +408,7 @@ body {
     }
 
     .nav-text {
-        left: 260px;
+        left: 210px;
     }
 
     .nav-text_1 {
@@ -426,7 +426,7 @@ body {
     }
 
     .nav-text {
-        left: 220px;
+        left: 170px;
     }
 
     .nav-text_1 {
@@ -2266,7 +2266,7 @@ body {
     background: #EBEBEB;
     color: #004E98;
     z-index: 20;
-    padding: 15px 143px;
+    padding: 15px 118px;
     transition: .7s;
     margin-top: 30px;
 }
@@ -2314,9 +2314,9 @@ body {
     text-align: center;
 }
 
-@media (max-width: 982px) {
+@media (max-width: 1040px) {
     .footer {
-        padding-left: 17px;
+        padding-left: 25px;
         height: 353px;
     }
 
@@ -2349,7 +2349,7 @@ body {
 
 @media (max-width: 650px) {
     .footer__info {
-        transform: translateX(80%);
+        transform: translateX(50%);
     }
 }
 
@@ -2358,8 +2358,12 @@ body {
         margin-right: 7px;
     }
 
+    .footer__info {
+        transform: translateX(65%);
+    }
+
     .nav-text {
-        left: 220px;
+        left: 165px;
     }
 
     .footer_signature p {
@@ -2372,13 +2376,13 @@ body {
     .footer {
         height: 379px;
     }
+    .footer__info {
+        transform: translateX(70%);
+    }
+
 
     .footer__socials-item {
         margin-right: 1px;
-    }
-
-    .nav-text {
-        left: 200px;
     }
 }
 

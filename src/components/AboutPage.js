@@ -58,11 +58,11 @@ const AboutPage = () => {
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/11.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/22.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
-                            <img className="about__img" src="/img/aboutpage/22.webp" alt="Pic"/>
+                            <img className="about__img" src="/img/aboutpage/222.webp" alt="Pic"/>
                         </div>
 
                         <div className="about__list-item">
@@ -76,7 +76,7 @@ const AboutPage = () => {
                         <div className="about__list-item">
                             <p className="about__text">
                                 Община была образована в 2011 году Приморский край г. Артём, мы входим в международную
-                                конгрегацию "Чозен пипл министриз" или "Служение избранному народу". Мы регулярно
+                                конгрегацию "Чозен пипл министриз" или "Служение избранному народу", а также в Мессианский Союз России. Мы регулярно
                                 собираемся по субботам в городе Артем, ул. Пушкина 16. Начало Богослужения в 11-00 час.
                                 Отмечаем праздники и проводим время вместе, изучая Слово Божье в простоте сердца.
                             </p>
