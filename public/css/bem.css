@@ -1811,14 +1811,15 @@ body {
     width: 380px;
     /*width: 100%;*/
     height: 100%;
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .holiday__item:hover {
     width: 380px;
     /*width: 100%;*/
     height: 100%;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    /*box-shadow: 1px 1px 10px #6b6b6b;*/
 }
 .book_box-header_holiday h2{
     font-size: 36px;
@@ -1856,6 +1857,15 @@ body {
     }
     .wrapper_holidays{
         font-size: 18px;
+    }
+
+
+    .holiday__item {
+        width: 300px;
+    }
+
+    .holiday__item:hover {
+        width: 300px;
     }
 }
 
