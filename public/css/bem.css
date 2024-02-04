@@ -1795,6 +1795,12 @@ body {
     margin-bottom: -50px;
 }
 
+.holidays__description{
+    font-size: 18px;
+    margin: 30px 0;
+    padding: 5px 15px;
+    text-align: justify;
+}
 .header__banner_holidays img {
     height: 100%;
     width: 100%;
@@ -1819,7 +1825,7 @@ body {
     /*width: 100%;*/
     height: 100%;
     transform: scale(1.1);
-    box-shadow: 1px 1px 10px #6b6b6b;
+    /*box-shadow: 1px 1px 10px #6b6b6b;*/
 }
 .book_box-header_holiday h2{
     font-size: 36px;
