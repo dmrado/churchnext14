@@ -34,6 +34,7 @@ img {
 p {
     margin: 0;
     padding: 5px 15px;
+    color: #505050;
 }
 
 body {
@@ -1801,11 +1802,11 @@ body {
     padding: 5px 15px;
     text-align: justify;
 }
+
 .header__banner_holidays img {
     height: 100%;
     width: 100%;
 }
-
 
 .header__banner_holidays h1 {
     font-size: 76px;
@@ -2331,6 +2332,9 @@ body {
     bottom: 0;
     font-size: 11px;
     transition: 0.7s;
+}
+.footer_signature p{
+    color: #004E98;
 }
 
 .footer_signature p {
