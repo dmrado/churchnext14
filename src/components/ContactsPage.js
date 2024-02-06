@@ -53,9 +53,10 @@ const ContactsPage = () => {
     }
     return <div>
 
-        <div className="contact__header" >
+        <div className="contact__header">
             <h1>Приезжайте к нам</h1>
-            <p>Приглашаем вас на Богослужения, каждую субботу в 11-00, по адресу г. Артем, ул Пушкина 16. <br/> Примите участие в радостном прославлении Бога, молитве и изученнии Библии. <br/> У
+            <p>Приглашаем вас на Богослужения, каждую субботу в 11-00, по адресу г. Артем, ул Пушкина 16. <br/> Примите
+                участие в радостном прославлении Бога, молитве и изученнии Библии. <br/> У
                 нас вы найдёте хороших друзей, мы будем рады общению с вами.</p>
         </div>
 
@@ -74,14 +75,14 @@ const ContactsPage = () => {
                 >
                     Улица Пушкина, 16 Еврейская община города Артем — Яндекс&nbsp;Карты
                 </a>
-                    <iframe style={{border: 0, width: '100%', height: '350px'}}
-                            src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=132.179308%2C43.349194&mode=whatshere&whatshere%5Bpoint%5D=132.178066%2C43.349638&whatshere%5Bzoom%5D=17&z=16.39"
-                            width="1670" height="400"
+                <iframe style={{border: 0, width: '100%', height: '350px'}}
+                        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=132.179308%2C43.349194&mode=whatshere&whatshere%5Bpoint%5D=132.178066%2C43.349638&whatshere%5Bzoom%5D=17&z=16.39"
+                        width="1670" height="400"
 
-                            // frameBorder={0}
-                            allowFullScreen="true"
-                        // style={{ position: "relative" }}
-                    />
+                    // frameBorder={0}
+                        allowFullScreen="true"
+                    // style={{ position: "relative" }}
+                />
             </div>
         </div>
         {/*ADDRESS===============================================================*/}
@@ -100,8 +101,9 @@ const ContactsPage = () => {
                                     d="M17.0001 2.83337C14.0138 2.83322 11.1482 4.0117 9.02601 6.11266C6.90382 8.21362 5.69661 11.0673 5.66675 14.0534C5.66675 21.8167 15.6542 30.4584 16.0792 30.8267C16.3359 31.0462 16.6624 31.1668 17.0001 31.1668C17.3377 31.1668 17.6643 31.0462 17.9209 30.8267C18.4167 30.4584 28.3334 21.8167 28.3334 14.0534C28.3036 11.0673 27.0963 8.21362 24.9742 6.11266C22.852 4.0117 19.9863 2.83322 17.0001 2.83337ZM17.0001 18.4167C16.0194 18.4167 15.0608 18.1259 14.2454 17.5811C13.43 17.0362 12.7945 16.2619 12.4192 15.3558C12.0439 14.4498 11.9457 13.4529 12.137 12.4911C12.3283 11.5292 12.8006 10.6457 13.494 9.9523C14.1874 9.25887 15.0709 8.78663 16.0328 8.59531C16.9946 8.404 17.9915 8.50219 18.8976 8.87747C19.8036 9.25276 20.578 9.88828 21.1228 10.7037C21.6676 11.5191 21.9584 12.4777 21.9584 13.4584C21.9584 14.7734 21.436 16.0346 20.5062 16.9644C19.5763 17.8943 18.3151 18.4167 17.0001 18.4167Z"
                                     fill="#505050"/>
                             </svg>
-                            <path d="M 17.0001 2.83337 C 14.0138 2.83322 11.1482 4.0117 9.02601 6.11266 C 6.90382 8.21362 5.69661 11.0673 5.66675 14.0534 C 5.66675 21.8167 15.6542 30.4584 16.0792 30.8267 C 16.3359 31.0462 16.6624 31.1668 17.0001 31.1668 C 17.3377 31.1668 17.6643 31.0462 17.9209 30.8267 C 18.4167 30.4584 28.3334 21.8167 28.3334 14.0534 C 28.3036 11.0673 27.0963 8.21362 24.9742 6.11266 C 22.852 4.0117 19.9863 2.83322 17.0001 2.83337 Z M 17.0001 18.4167 C 16.0194 18.4167 15.0608 18.1259 14.2454 17.5811 C 13.43 17.0362 12.7945 16.2619 12.4192 15.3558 C 12.0439 14.4498 11.9457 13.4529 12.137 12.4911 C 12.3283 11.5292 12.8006 10.6457 13.494 9.9523 C 14.1874 9.25887 15.0709 8.78663 16.0328 8.59531 C 16.9946 8.404 17.9915 8.50219 18.8976 8.87747 C 19.8036 9.25276 20.578 9.88828 21.1228 10.7037 C 21.6676 11.5191 21.9584 12.4777 21.9584 13.4584 C 21.9584 14.7734 21.436 16.0346 20.5062 16.9644 C 19.5763 17.8943 18.3151 18.4167 17.0001 18.4167 Z"
-                                  fill="#505050"/>
+                            <path
+                                d="M 17.0001 2.83337 C 14.0138 2.83322 11.1482 4.0117 9.02601 6.11266 C 6.90382 8.21362 5.69661 11.0673 5.66675 14.0534 C 5.66675 21.8167 15.6542 30.4584 16.0792 30.8267 C 16.3359 31.0462 16.6624 31.1668 17.0001 31.1668 C 17.3377 31.1668 17.6643 31.0462 17.9209 30.8267 C 18.4167 30.4584 28.3334 21.8167 28.3334 14.0534 C 28.3036 11.0673 27.0963 8.21362 24.9742 6.11266 C 22.852 4.0117 19.9863 2.83322 17.0001 2.83337 Z M 17.0001 18.4167 C 16.0194 18.4167 15.0608 18.1259 14.2454 17.5811 C 13.43 17.0362 12.7945 16.2619 12.4192 15.3558 C 12.0439 14.4498 11.9457 13.4529 12.137 12.4911 C 12.3283 11.5292 12.8006 10.6457 13.494 9.9523 C 14.1874 9.25887 15.0709 8.78663 16.0328 8.59531 C 16.9946 8.404 17.9915 8.50219 18.8976 8.87747 C 19.8036 9.25276 20.578 9.88828 21.1228 10.7037 C 21.6676 11.5191 21.9584 12.4777 21.9584 13.4584 C 21.9584 14.7734 21.436 16.0346 20.5062 16.9644 C 19.5763 17.8943 18.3151 18.4167 17.0001 18.4167 Z"
+                                fill="#505050"/>
                             &nbsp;&nbsp;&nbsp;{CONTACTS.headerAddres2}</p>
                     </div>
 
@@ -171,42 +173,45 @@ const ContactsPage = () => {
                 <div className="form__wrapper">
                     <h1>Напишите нам</h1>
                     <form onSubmit={submitHandler} method="post" role="form" className="form">
+                        <div className="form__person">
+                            <input type="text" name="name" className="form-control input_name" id="name"
+                                   placeholder="Ваше имя" required
+                                   value={name}
+                                   onChange={e => setName(e.target.value)}
+                            />
 
-                        <input type="text" name="name" className="form-control input_name" id="name"
-                               placeholder="Ваше имя" required
-                               value={name}
-                               onChange={e => setName(e.target.value)}
-                        />
+                            <input type="email" className="form-control input_email" name="email" id="email"
+                                   placeholder="Ваш Email" required
+                                   value={email}
+                                   onChange={e => setEmail(e.target.value)}
+                            />
+                        </div>
 
-                        <input type="email" className="form-control input_email" name="email" id="email"
-                               placeholder="Ваш Email" required
-                               value={email}
-                               onChange={e => setEmail(e.target.value)}
-                        />
+                        <div className="form__message">
+                            <input type="text" className="form-control input_title" name="subject" id="subject"
+                                   placeholder="Заголовок сообщения" required
+                                   value={title}
+                                   onChange={e => setTitle(e.target.value)}
+                            />
 
-                        <input type="text" className="form-control input_title" name="subject" id="subject"
-                               placeholder="Заголовок сообщения" required
-                               value={title}
-                               onChange={e => setTitle(e.target.value)}
-                        />
-
-                        <textarea className="form-control input_message" name="message" placeholder="Сообщение"
-                                  required defaultValue={""}
-                                  value={body}
-                                  onChange={e => setBody(e.target.value)}
-                        />
+                            <textarea className="form-control input_message" name="message" placeholder="Сообщение"
+                                      required defaultValue={""}
+                                      value={body}
+                                      onChange={e => setBody(e.target.value)}
+                            />
 
                         <ReCAPTCHA
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                             size="normal"
                         />
-                        <br style={{padding: '0', margin:'0'}}/>
+                        <br style={{padding: '0', margin: '0'}}/>
 
                         {/*<div className="loading">Загрузка...</div>*/}
                         {/*<div className="error-message"/>*/}
                         {/*<div className="sent-message">Ваше сообщение отправлено. Большое спасибо!</div>*/}
 
                         <button className="btn contact__form_btn" type="submit">Отправить</button>
+                        </div>
                     </form>
                 </div>
             </div>
