@@ -86,21 +86,14 @@ body {
     transition: .3s;
     margin: 0 10px;
     text-transform: uppercase;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
     background-color: #e15b01;
     color: #fff;
-    transform: translateX(1px) translateY(-1px);
-    box-shadow: 0 4px 10px 0px rgba(117, 117, 117, 0.2);
-}
-
-.btn:focus {
-    background-color: #FF6700;
-    color: #fff;
-    border: none;
-    /*box-shadow: 1px 1px 1px #FF6700 inset;*/
+    transform: translateX(3px) translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .btn:active {
@@ -110,9 +103,16 @@ body {
     border-radius: 12px;
     background-color: #FF6700;
     color: #f0f0f0;
-    box-shadow: 2px 2px 10px #9d3f00 inset;
+    transform: translateX(-2px) translateY(2px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+.btn:focus {
+    background-color: #FF6700;
+    color: #fff;
+    border: none;
+    transform: translateX(1px) translateY(-1px);
+}
 
 .btn-service {
     display: flex;
@@ -148,9 +148,9 @@ body {
 
 
 .btn-service-danger:hover {
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: #ff0a00;
     border: none;
-    color: #ff0a00;
+    color: #fff;
 }
 
 
@@ -168,10 +168,6 @@ body {
 
 
 /*Header*/
-
-.fa-brands, .fab {
-    font-size: 30px;
-}
 
 .nav {
     display: flex;
@@ -203,6 +199,11 @@ body {
     transition: 0.7s;
 }
 
+.logo {
+    /*коррекция смещения меню влево т к относительно logo*/
+    margin-right: 82px;
+}
+
 .nav-text_1 {
     color: #004E98;
     /*font-family: Ubuntu;*/
@@ -222,10 +223,6 @@ body {
     line-height: normal;
     padding: 2px;
 }
-
-/*.logo {*/
-/*    display: block;*/
-/*}*/
 
 .header__burger-btn {
     display: none;
@@ -325,6 +322,10 @@ body {
 }
 
 @media (max-width: 1040px) {
+
+    .logo {
+        margin-right: 0;
+    }
     .nav {
         padding: 15px 25px;
     }
@@ -1796,7 +1797,7 @@ body {
     margin-bottom: -50px;
 }
 
-.holidays__description{
+.holidays__description {
     font-size: 18px;
     margin: 30px 0;
     padding: 5px 15px;
@@ -1821,7 +1822,7 @@ body {
     overflow: hidden;
 }
 
-.holiday__item img{
+.holiday__item img {
     width: 100%;
     height: 100%;
     transition: .3s ease-in-out;
@@ -1830,7 +1831,8 @@ body {
 .holiday__item img:hover {
     transform: scale(1.05);
 }
-.book_box-header_holiday h2{
+
+.book_box-header_holiday h2 {
     font-size: 36px;
     padding: 0 20px;
 }
@@ -1841,6 +1843,7 @@ body {
         height: 400px;
         width: 100%;
     }
+
     .holiday__item {
         width: 100%;
         height: 100%;
@@ -1853,7 +1856,8 @@ body {
         height: 300px;
         width: 100%;
     }
-    .wrapper_holidays{
+
+    .wrapper_holidays {
         font-size: 26px;
     }
 }
@@ -1864,7 +1868,8 @@ body {
         height: 200px;
         width: 100%;
     }
-    .wrapper_holidays{
+
+    .wrapper_holidays {
         font-size: 18px;
     }
 
@@ -2101,19 +2106,21 @@ body {
 
 /*ContactsPage  form start*/
 .form__wrapper {
-    height: 500px;
+    height: 100%;
     width: 100%;
 }
 
 .form {
+    height: 75%;
     display: flex;
     flex-direction: column;
-    background-color: #004E98;
-    /*background-color: #EBEBEB;*/
+    /*background-color: #004E98;*/
+    background-color: #EBEBEB;
     padding: 20px;
     border-radius: 8px;
 }
-.form__person{
+
+.form__person {
     display: flex;
     flex-direction: row;
 }
@@ -2123,6 +2130,11 @@ body {
     flex-direction: column;
 }
 
+.form__submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .form__wrapper h1 {
     color: #004E98;
@@ -2130,9 +2142,10 @@ body {
     width: 100%;
 }
 
-.input_name{
+.input_name {
     margin-right: 10px;
 }
+
 /*.input_email{*/
 /*    margin-left: 10px;*/
 /*}*/
@@ -2165,15 +2178,13 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transform: translateX(190%);
 }
 
 .contact__form_btn:hover {
     max-width: 50px;
     padding: 10px;
-    background-color: #af4702;
+    background-color: #FF6700;
     color: #fff;
-    transform: translateX(190%);
 }
 
 .contact__form_btn:focus {
@@ -2186,12 +2197,11 @@ body {
 .contact__form_btn:active {
     max-width: 50px;
     padding: 10px;
-    background-color: #853601;
+    background-color: #FF6700;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transform: translateX(190%);
 }
 
 .input_name {
@@ -2227,11 +2237,12 @@ body {
 
     .form {
         grid-template-columns: 1fr;
+        height: 87%;
     }
 }
 
 @media (max-width: 700px) {
-    .form__person{
+    .form__person {
         flex-direction: column;
     }
 }
@@ -2241,14 +2252,6 @@ body {
         grid-template-columns: 1fr;
         height: 100%;
     }
-
-    .form {
-        height: 430px;
-    }
-
-    .contact__form_btn {
-        transform: translateX(80%);
-    }
 }
 
 
@@ -2257,18 +2260,9 @@ body {
         font-size: 14px;
     }
 
-    .contact__form_btn {
-        transform: translateX(60%);
-    }
-
     .input_title {
         margin-top: -6px;
     }
-
-    .form {
-        height: 550px;
-    }
-
 }
 
 /*ContactsPage form end*/
@@ -2329,7 +2323,8 @@ body {
     font-size: 11px;
     transition: 0.7s;
 }
-.footer_signature p{
+
+.footer_signature p {
     color: #004E98;
 }
 
@@ -2400,6 +2395,7 @@ body {
     .footer {
         height: 379px;
     }
+
     .footer__info {
         transform: translateX(70%);
     }

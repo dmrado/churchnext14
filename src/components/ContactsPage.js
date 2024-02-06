@@ -199,18 +199,18 @@ const ContactsPage = () => {
                                       value={body}
                                       onChange={e => setBody(e.target.value)}
                             />
-
+                        </div>
                         <ReCAPTCHA
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                             size="normal"
                         />
-                        <br style={{padding: '0', margin: '0'}}/>
+                        {/*<br style={{padding: '0', margin: '0'}}/>*/}
 
                         {/*<div className="loading">Загрузка...</div>*/}
                         {/*<div className="error-message"/>*/}
                         {/*<div className="sent-message">Ваше сообщение отправлено. Большое спасибо!</div>*/}
-
-                        <button className="btn contact__form_btn" type="submit">Отправить</button>
+                        <div className="form__submit">
+                            <button className="btn contact__form_btn" type="submit">Отправить</button>
                         </div>
                     </form>
                 </div>

@@ -1,5 +1,5 @@
 import '../../public/css/bem.css'
-import {Dosis,} from 'next/font/google'
+import {Dosis} from 'next/font/google'
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import {MainProvider} from '../context/MainProvider'
@@ -8,7 +8,6 @@ import YandexMetrika from "@/src/components/YandexMetrika";
 
 
 const inter = Dosis({subsets: ['latin']})
-// const inter = Ubuntu({subsets: ['latin']})
 
 export default function RootLayout({children}) {
     return (
