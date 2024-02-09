@@ -76,9 +76,9 @@ body {
 /*у блоков не должно быть margin-ов*/
 .btn {
     border: none;
-    padding: 10px 20px;
+    padding: 9px 19px;
     min-width: 130px;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #FF6700;
     color: #f0f0f0;
     font-size: 18px;
@@ -90,17 +90,16 @@ body {
 }
 
 .btn:hover {
+    border: none;
     background-color: #e15b01;
     color: #fff;
-    transform: translateX(3px) translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translateX(1px) translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.47);
 }
 
 .btn:active {
     border: none;
-    padding: 13px 20px;
     min-width: 130px;
-    border-radius: 12px;
     background-color: #FF6700;
     color: #f0f0f0;
     transform: translateX(-2px) translateY(2px);
@@ -1616,7 +1615,7 @@ body {
 .modal__box {
     /*position: relative;*/
     max-width: 500px;
-    padding: 45px;
+    padding: 45px 15px 50px 15px;
     z-index: 1;
     margin: 30px 15px;
     background-color: #fff;
@@ -1640,7 +1639,7 @@ body {
 
 .book_box-header {
     display: flex;
-    padding: 0 20px;
+    padding: 0 32px;
     justify-content: space-between;
     align-items: center;
 }
@@ -1650,10 +1649,15 @@ body {
     max-width: 120px;
 }
 
+.holiday__name{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
 .book_box h2 {
     color: #FF6700;
     text-transform: uppercase;
-    padding: 0 50px;
+    padding: 25px 15px;
 }
 
 .book_box p {
@@ -1832,7 +1836,7 @@ body {
     transform: scale(1.05);
 }
 
-.book_box-header_holiday h2 {
+.book_box-header_holiday h3 {
     font-size: 36px;
     padding: 0 20px;
 }

@@ -20,7 +20,9 @@ const HolidaysModal = ({holiday, setOpenHolidayModal}) => {
 
                         <div className="book_box-header book_box-header_holiday">
                             <img src={holiday.href} alt="Picture"/>
-                            <h2>{holiday.name}</h2>
+                            <div className="holiday__name">
+                                <h2>{holiday.name}</h2>
+                            </div>
                         </div>
 
                         <p>{holiday.annot}</p>
