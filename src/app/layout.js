@@ -9,12 +9,12 @@ import YandexMetrika from "@/src/components/YandexMetrika";
 
 const inter = Dosis({subsets: ['latin']})
 export const metadata = {
-    icons: {
-        icon: {
-            url: '/img/favicon.iso',
-            href: '/img/favicon.iso'
-        }
-    }
+    // icons: {
+    //     icon: {
+    //         url: '/img/favicon.iso',
+    //         href: '/img/favicon.iso'
+    //     }
+    // }
 }
 
 
