@@ -12,10 +12,10 @@ const Footer = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 68 68" fill="none">
                             <path xmlns="http://www.w3.org/2000/svg"
                                   d="M34.0001 11.3333V56.6666M22.6667 11.3333V17C22.6667 20.0058 23.8608 22.8884 25.9862 25.0139C28.1116 27.1393 30.9943 28.3333 34.0001 28.3333C37.0059 28.3333 39.8885 27.1393 42.014 25.0139C44.1394 22.8884 45.3334 20.0058 45.3334 17V11.3333"
-                                  stroke="#004E98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                  stroke="#004E98" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
                             <path xmlns="http://www.w3.org/2000/svg"
                                   d="M11.3334 11.3333V17C11.3334 23.0116 13.7215 28.7769 17.9723 33.0277C22.2231 37.2786 27.9885 39.6666 34 39.6666C40.0116 39.6666 45.777 37.2786 50.0278 33.0277C54.2786 28.7769 56.6667 23.0116 56.6667 17V11.3333M28.3334 56.6666H39.6667"
-                                  stroke="#004E98" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                  stroke="#004E98" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </Link>
                     {/*Minora end*/}
@@ -53,6 +53,7 @@ const Footer = () => {
                     <div className="footer__address">
                         <span>Адрес</span><br/>
                         г. Артем, Приморский край<br/>
+                        ул. Пушкина 16<br/>
                         <span>Телефон</span> <br/>
                         +7 924 269 30 05
                     </div>

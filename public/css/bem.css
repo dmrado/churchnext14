@@ -2297,9 +2297,10 @@ body {
 .footer_address {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 20px;
     color: #004E98;
     /*font-family: Open Sans;*/
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -2307,6 +2308,7 @@ body {
 
 .footer__address span {
     font-weight: 700;
+    font-size: 15px;
 }
 
 .footer__socials {
@@ -2330,9 +2332,6 @@ body {
 
 .footer_signature p {
     color: #004E98;
-}
-
-.footer_signature p {
     font-size: 14px;
     text-align: center;
 }
@@ -2366,13 +2365,16 @@ body {
 
     .footer_signature p {
         font-size: 12px;
-
     }
 }
 
 @media (max-width: 650px) {
     .footer__info {
         transform: translateX(50%);
+    }
+    .footer_signature {
+        left: 50px;
+        right: 50px;
     }
 }
 
@@ -2391,25 +2393,35 @@ body {
 
     .footer_signature p {
         font-size: 9px;
+        left: 30px;
+        right: 30px;
     }
 }
 
 
 @media (max-width: 373px) {
     .footer {
-        height: 379px;
+        height: 400px;
     }
 
     .footer__info {
         transform: translateX(70%);
     }
 
-
     .footer__socials-item {
         margin-right: 1px;
     }
-}
 
+    .menu_socials{
+        gap: 0;
+    }
+
+    .footer_signature p {
+        font-size: 9px;
+        left: 10px;
+        right: 10px;
+    }
+}
 
 /* Анимация кнопки градиентом */
 /*

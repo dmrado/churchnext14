@@ -8,6 +8,15 @@ import YandexMetrika from "@/src/components/YandexMetrika";
 
 
 const inter = Dosis({subsets: ['latin']})
+export const metadata = {
+    icons: {
+        icon: {
+            url: '/img/favicon.iso',
+            href: '/img/favicon.iso'
+        }
+    }
+}
+
 
 export default function RootLayout({children}) {
     return (
