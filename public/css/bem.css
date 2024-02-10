@@ -2023,6 +2023,14 @@ body {
 
 
 /*Контаты горизонтальные в единственном числе contact start*/
+.google__calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+
 .contact__header {
     display: flex;
     flex-direction: column;

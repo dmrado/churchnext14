@@ -85,8 +85,19 @@ const ContactsPage = () => {
                 />
             </div>
         </div>
+
+
         {/*ADDRESS===============================================================*/}
         <div className="container">
+            <div className="google__calendar">
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FVladivostok&bgcolor=%23ebebeb&src=MDhiOTRmNmRkODM4ODVmNjcwMzQ3NmE0OTMzNWU0Nzg0YmYyYzk1MjdmOGEwNmRiNGIxYWVkYzdlYjdkYzJhYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cnUucnVzc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%230B8043"
+                    style={{borderWidth: 0}}
+                    width={1040}
+                    height={600}
+                ></iframe>
+            </div>
+
             <div className="address__wrapper">
 
                 <div className="address__list">
