@@ -329,7 +329,7 @@ body {
         padding: 15px 120px;
     }
     .header__burger-btn {
-        transform: translateX(220%);
+        transform: translateX(500%);
         display: block;
         z-index: 30;
     }
@@ -398,6 +398,19 @@ body {
     }
 }
 
+@media(max-width: 870px){
+    .header__burger-btn {
+        transform: translateX(300%);
+    }
+}
+
+@media(max-width: 780px){
+    .header__burger-btn {
+        transform: translateX(250%);
+    }
+}
+
+
 @media (max-width: 670px) {
     .nav{
         /*так надо из за скрытого справа меню для телефонной ориентации шириной около 40px*/
@@ -405,6 +418,10 @@ body {
         padding-right: 130px;
         padding-bottom: 15px;
         padding-left: 15px;
+    }
+
+    .header__burger-btn {
+        transform: translateX(220%);
     }
 
     .nav-text_1 {
